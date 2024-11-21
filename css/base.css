@@ -6,6 +6,12 @@ a, h1, h2, h3, p {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
+article {
+  grid-column-start: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   margin: 0;
   background-color: #8C644D;
@@ -29,6 +35,11 @@ li a {
   color: white;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+
 nav {
     width:100%;
     overflow: hidden;
@@ -39,6 +50,7 @@ nav {
 nav a {
   display: block;
 	flex: 1 1 100%;
+  text-decoration: none;
 }
 
 nav ul {
@@ -88,32 +100,31 @@ ul {
 }
 
 .row_1 {
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  gap: 25px 25px;
   margin: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: #FFD7BF;
   border-radius: 25px;
+  max-height: 800px;
   width: 80%;
   max-width: 800px;
+  box-shadow: 10px 10px 50px black;
 }
 
 .row_1_image {
-  grid-column: 1 / span 2;
+  display: flex;
+  grid-column: 1 / span 5;
   grid-row: 1 / span 2;
-  width: 100%;
-  max-width: 400px;
+  max-width: 200px;
   border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row_1_info {
-  grid-column: 3 / span 4;
-  grid-row: 1 / span 1;
+  grid-column: 1 / span 5;
+  grid-row: 2 / span 1;
 }
 
 .row_1_button_1 {
@@ -139,13 +150,13 @@ ul {
 }
 
 .row_1_about {
-  grid-column: 5 / span 1;
-  grid-row: 2/ span 1;
+  grid-column: 4 / span 1;
+  grid-row: 3/ span 1;
 }
 
 .row_1_skills {
-  grid-column: 4 / span 1;
-  grid-row: 2/ span 1;
+  grid-column: 2 / span 1;
+  grid-row: 3/ span 1;
 }
 
 /*ids*/
