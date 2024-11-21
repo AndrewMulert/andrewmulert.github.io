@@ -24,7 +24,7 @@ li {
 
 li a {
   display: block;
-  padding: 8px;
+  padding: 5px;
   background-color: #363731;
   color: white;
 }
@@ -70,7 +70,7 @@ ul {
   
 .hero_image {
     height: 75%;
-    max-height: 700px;
+    max-height: 1000px;
     width: 100%;
     z-index: 0;
     object-fit: cover;

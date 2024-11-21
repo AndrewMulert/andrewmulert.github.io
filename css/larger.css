@@ -4,4 +4,9 @@
         float: left;
         margin-left: 0%;
       }
+
+      .hero_image {
+        height: 75%;
+        max-height: 700px;
+      }
 }
