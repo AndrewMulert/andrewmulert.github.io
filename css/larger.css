@@ -1,12 +1,26 @@
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 40em) {
 
     li {
         float: left;
         margin-left: 0%;
       }
 
-      .hero_image {
+    nav {
+        position: absolute;
+    }
+    
+    .hero {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .hero_image {
         height: 75%;
         max-height: 700px;
-      }
+    }
+
+    .hero_text {
+        transform: translate(-53%, -20%);
+        min-height: 270px;
+    }
 }
