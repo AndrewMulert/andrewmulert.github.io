@@ -75,7 +75,6 @@ ul {
   
 .hero_text {
   color: white;
-  background-color: #363731be;
   margin: 20px;
   padding: 20px;
   position: absolute;
@@ -92,6 +91,12 @@ ul {
 }
 
 .row_1 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  gap: 25px 25px;
   margin: 20px;
   margin-top: 40px;
   padding: 20px;
@@ -102,13 +107,60 @@ ul {
 }
 
 .row_1_image {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
   width: 100%;
   max-width: 400px;
   border-radius: 15px;
+}
+
+.row_1_info {
+  grid-column: 3 / span 4;
+  grid-row: 1 / span 1;
+}
+
+.row_1_button_1 {
+  width: 75px;
+  height: 40px;
+  align-items: center;
+  background-color: #848C4D;
+  border-color: #848C4D;
+  color: white;
+  border-radius: 15px;
+  border-style: solid;
+}
+
+.row_1_button_2 {
+  width: 75px;
+  height: 40px;
+  align-items: center;
+  background-color: #848C4D;
+  border-color: #848C4D;
+  color: white;
+  border-radius: 15px;
+  border-style: solid;
+}
+
+.row_1_about {
+  grid-column: 5 / span 1;
+  grid-row: 2/ span 1;
+}
+
+.row_1_skills {
+  grid-column: 4 / span 1;
+  grid-row: 2/ span 1;
 }
 
 /*ids*/
 
 #home_link{
   font-weight: 600;
+}
+
+#main_hero_image{
+  background-color: #363731be;
+}
+
+#alt_hero_image{
+  background-color: #323838be;
 }
