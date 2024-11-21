@@ -20,7 +20,21 @@
     }
 
     .hero_text {
+        position: absolute;
+        top: 30%;
+        left: 49%;
         transform: translate(-53%, -20%);
-        min-height: 270px;
+        width: 70%;
+        border-radius: 25px;
+        margin: 20px;
+        padding: 20px;
     }
+
+    #main_hero_image{
+        background-color: #363731be;
+      }
+      
+      #alt_hero_image{
+        background-color: #323838be;
+      }
 }

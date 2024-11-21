@@ -64,11 +64,6 @@ ul {
   padding: 15px;
   color: white;
 }
-
-.hero {
-    overflow: hidden;
-    position: relative;
-}
   
 .hero_image {
     height: 75%;
@@ -80,16 +75,11 @@ ul {
 }
   
 .hero_text {
-  color: white;
-  margin: 20px;
+  display: block;
+  padding-top: -5px;
   padding: 20px;
-  position: absolute;
-  top: 30%;
-  left: 49%;
-  transform: translate(-55%, -30%);
-  border-radius: 25px;
+  color: white;
   text-align: center;
-  width: 70%;
   max-height: 310px;
 }
 
@@ -165,9 +155,9 @@ ul {
 }
 
 #main_hero_image{
-  background-color: #363731be;
+  background-color: #363731;
 }
 
 #alt_hero_image{
-  background-color: #323838be;
+  background-color: #323838;
 }
