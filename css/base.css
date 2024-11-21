@@ -17,7 +17,7 @@ footer {
 }
 
 li {
-  float: left;
+  margin-left: 45%;
   text-align: center;
   width: 18%;
 }
@@ -39,6 +39,10 @@ nav a {
 	flex: 1 1 100%;
 }
 
+nav ul {
+  text-align: center;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -46,7 +50,7 @@ ul {
     overflow: hidden;
     width: 100%;
     background-color: #363731;
-    align-self: center;
+    /*align-self: center;*/
   }
 
 /*classes*/
