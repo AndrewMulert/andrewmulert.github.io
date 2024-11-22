@@ -20,7 +20,11 @@
            </ul> 
         </nav>
         <div class="hero">
-            <image class="hero_image" src="images/hero_image_mountains.jpg" alt="The Grand Tetons by Andrew Mulert" ></image>
+            <picture>
+                <source srcset="images/hero_image_mountains-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero_image_mountains-medium.webp" media="(max-width: 1000px)">
+                <image class="hero_image" src="images/hero_image_mountains-min.webp" alt="The Grand Tetons by Andrew Mulert" ></image>
+            </picture>
             <div class="hero_text" id="main_hero_image">
                 <h3 class="hero_welcome">Some of the things I've learned</h3>
                 <h1 class="hero_tag">Skills</h1>

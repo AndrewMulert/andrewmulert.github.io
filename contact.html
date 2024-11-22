@@ -20,7 +20,11 @@
            </ul> 
         </nav>
         <div class="hero">
-            <image class="hero_image" src="images/hero_image_night_sky.JPG" alt="The Night Sky above Teton River Dam by Andrew Mulert"></image>
+            <picture>
+                <source srcset="images/hero_image_night_sky-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero_image_night_sky-medium.webp" media="(max-width: 1000px)">
+                <image class="hero_image" src="images/hero_image_night_sky-min.webp" alt="The Night Sky above Teton River Dam by Andrew Mulert"></image>
+            </picture>
             <div class="hero_text" id="alt_hero_image">
                 <h3 class="hero_welcome">Ways to get in contact with me</h3>
                 <h1 class="hero_tag">Contact</h1>

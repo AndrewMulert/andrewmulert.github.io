@@ -45,7 +45,7 @@
         grid-column-end: 6;
         grid-row-start: 1;
         grid-row-end: 2;
-        gap: 25px 25px;
+        gap: 15px 15px;
         margin: 20px;
         margin-top: 40px;
         padding: 20px;
@@ -101,11 +101,4 @@
 
 /* IDs*/
 
-    #main_hero_image{
-        background-color: #363731be;
-      }
-      
-      #alt_hero_image{
-        background-color: #323838be;
-      }
 }

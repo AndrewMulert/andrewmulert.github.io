@@ -20,7 +20,11 @@
            </ul> 
         </nav>
         <div class="hero">
-            <image class="hero_image" src="images/hero_image_lake.jpg" alt="The Lake at Coeur d'Alene by Andrew Mulert" ></image>
+            <picture>
+                <source srcset="images/hero_image_lake-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero_image_lake-medium.webp" media="(max-width: 1000px)">
+                <image class="hero_image" src="images/hero_image_lake-min.webp" alt="The Lake at Coeur d'Alene by Andrew Mulert" ></image>
+            </picture>
             <div class="hero_text" id="alt_hero_image">
                 <h3 class="hero_welcome">Different Hobbies and things that I enjoy</h3>
                 <h1 class="hero_tag">Interests</h1>

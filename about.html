@@ -20,7 +20,11 @@
            </ul> 
         </nav>
         <div class="hero">
-            <image class="hero_image" src="images/hero_image_perrine_bridge.jpg" alt="The Perrine Bridge by Andrew Mulert" ></image>
+            <picture>
+                <source srcset="images/hero_image_perrine_bridge-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero_image_perrine_bridge-medium.webp" media="(max-width: 1000px)">
+                <image class="hero_image" src="images/hero_image_perrine_bridge-min.webp" alt="The Perrine Bridge by Andrew Mulert" ></image>
+            </picture>
             <div class="hero_text" id="main_hero_image">
                 <h3 class="hero_welcome">Just a little information to get to know me better</h3>
                 <h1 class="hero_tag">About</h1>
