@@ -37,19 +37,30 @@
     </header>
     <main>
         <article>
-            <div class="row_1">
+            <div class="row" id="row_1">
                 <picture>
                     <source srcset="images/row_1_image_profile-small.webp" media="(max-width: 500px)">
                     <source srcset="images/row_1_image_profile-medium.webp" media="(max-width: 1000px)">
-                    <image class="row_1_image" src="images/row_1_image_profile-min.webp" alt="A Profile Photo of Andrew Mulert at Yellowstone National Park" loading="lazy"></image>
+                    <image class="row_image" id="row_1_image" src="images/row_1_image_profile-min.webp" alt="A Profile Photo of Andrew Mulert at Yellowstone National Park" loading="lazy"></image>
                 </picture>
-                <p class="row_1_info">My Name is Andrew Mulert, and I'm currently a student at Brigham Young University - Idaho. 
+                <p id="row_1_info">My Name is Andrew Mulert, and I'm currently a student at Brigham Young University - Idaho. 
                     I've build this website to show off my skills with HTML, CSS, and Javascript, 
-                    while also using it to explain who I am and why I would make an excellent member of your team. 
-                    To learn more about me, click one of the following links or tabs at the top of the website.
+                    while also using it to explain who I am and why I would make an excellent member of your team.
                 </p>
-                <a href="about.html" class="row_1_about"><button class="row_1_button_1">About</button></a>
-                <a href="skills.html" class="row_1_skills"><button class="row_1_button_2">Skills</button></a>
+                <a href="about.html" id="row_1_about"><button class="row_button">About</button></a>
+                <a href="skills.html" id="row_1_skills"><button class="row_button">Skills</button></a>
+            </div>
+            <div class="row" id="row_2">
+                <picture>
+                    <source srcset="images/row_2_image_interests-small.webp" media="(max-width: 500px)">
+                    <source srcset="images/row_2_image_interests-medium.webp" media="(max-width: 1000px)">
+                    <image class="row_image" id="row_1_image" src="images/row_2_image_interests-min.webp" alt="A Profile Photo of Andrew Mulert at Yellowstone National Park" loading="lazy"></image>
+                </picture>
+                <p id="row_1_info">I have a lot of interests and hobbies! 
+                    Media like books, games, and movies inspire me to be more creative while looking outside of the box.
+                    Hobbies keep me focused and allow me to relieve stress, enjoy the outdoors, and improve as a person.
+                </p>
+                <a href="interests.html" id="row_2_interests"><button class="row_button">Interests</button></a>
             </div>
         </article>
     </main>
