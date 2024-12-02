@@ -59,6 +59,7 @@
     grid-row-end: 2;
     gap: 5px 15px;
     margin-top: 40px;
+    max-width: 800px;
   }
       
   .row_image {
