@@ -169,6 +169,11 @@ nav ul {
   max-width: 250px;
 }
 
+#row_1_skills {
+  text-decoration: none;
+  color: white;
+}
+
 /*#row_1_image {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
