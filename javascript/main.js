@@ -1,3 +1,5 @@
+year = document.querySelector("#year").textContent = new Date().getFullYear();
+
 let isSmallScreen = window.innerWidth < 768;
 
 function menuToggle() {
