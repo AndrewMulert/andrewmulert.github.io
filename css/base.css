@@ -77,8 +77,11 @@ nav ul {
     max-height: 1000px;
     width: 100%;
     z-index: 0;
-    object-fit: cover;
-      
+    object-fit: cover;  
+}
+
+.hero_paragraph {
+  margin: 10px;
 }
   
 .hero_text {
@@ -114,18 +117,15 @@ nav ul {
 
 .row {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 20px;
   background-color: #FFD7BF;
   border-radius: 25px;
-  /*width: 80%;*/
   box-shadow: 10px 10px 50px black;
 }
 
 .row_image {
   display: flex;
-  /*grid-column: 1 / span 5;
-  grid-row: 1 / span 2;*/
   min-width: 150px;
   border-radius: 15px;
   margin-left: auto;
@@ -202,6 +202,10 @@ nav ul {
 
 #main_hero_image{
   background-color: #363731be;
+}
+
+#paragraph_line_2 {
+  margin-top: -5px;
 }
 
 #horizontal_image {

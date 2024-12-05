@@ -38,7 +38,7 @@
   }
 
   .hero_paragraph {
-     margin: 10px;
+    margin: 10px;
   }
 
   .hero_text {
@@ -87,6 +87,10 @@
 
 #horizontal_image {
   max-width: 500px;
+}
+
+#paragraph_line_2 {
+  margin-top: -5px;
 }
 
 #row_1_button_1 {
