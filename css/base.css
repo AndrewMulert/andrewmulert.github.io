@@ -145,7 +145,11 @@ nav ul {
 }
 
 .row_button {
-  width: 75px;
+  min-width: 100px;
+  width: 25%;
+  max-width: 125px;
+  margin-top: 10px;
+  margin-left: 5px;
   height: 40px;
   align-items: center;
   background-color: #848C4D;
