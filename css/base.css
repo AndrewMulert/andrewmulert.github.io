@@ -25,6 +25,11 @@ footer {
   background-color: #363731;
 }
 
+footer > p{
+  margin-bottom: 0px;
+  padding: 15px;
+}
+
 li {
   text-align: center;
 }
@@ -61,32 +66,28 @@ nav ul {
 }
 
 /*classes*/
-
-.footer_info{
-  margin-bottom: 0px;
-  padding: 15px;
-}
   
 .hero_image {
-    height: 75%;
-    max-height: 1000px;
-    width: 100%;
-    z-index: 0;
-    object-fit: cover;  
-}
-
-.hero_paragraph {
-  margin: 10px;
+  height: 75%;
+  max-height: 1000px;
+  width: 100%;
+  z-index: 0;
+  object-fit: cover;  
 }
   
 .hero_text {
   display: block;
   padding: 20px;
   color: white;
+  background-color: #363731be;
   text-align: center;
 }
 
-.hero_tag {
+.hero_text > p {
+  margin: 10px;
+}
+
+.hero_text > h1 {
   margin: 5px;
 }
 
@@ -97,9 +98,10 @@ nav ul {
 .nav_items {
   list-style-type: none;
   margin: 0;
-  margin-left: -40px;
+  padding-left: 0px;
   overflow: hidden;
   width: 100%;
+  color: white;
   background-color: #363731;
   flex-direction: column;
 }
@@ -118,7 +120,7 @@ nav ul {
   box-shadow: 10px 10px 50px black;
 }
 
-.row_info {
+.row > p {
   max-width: 600px;
 }
 
@@ -152,7 +154,7 @@ nav ul {
   filter: grayscale(1);
 }
 
-.row_button {
+.row > a {
   display: inline-block;
   padding: 9px;
   background-color: #848C4D;
@@ -210,10 +212,6 @@ nav ul {
   background-color: #848C4D;
   flex-grow: 4;
   align-self: auto;
-}
-
-#main_hero_image{
-  background-color: #363731be;
 }
 
 #hidden_link {
