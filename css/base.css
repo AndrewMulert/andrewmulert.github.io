@@ -167,7 +167,7 @@ nav ul {
   font-size: 0.8em;
 }
 
-.row_header {
+.row > h2 {
   font-size: 1.5em;
   color: #2b1f18;
 }
