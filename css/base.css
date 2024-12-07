@@ -115,6 +115,7 @@ nav ul {
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 20px;
+  color: black;
   background-color: #FFD7BF;
   border-radius: 25px;
   box-shadow: 10px 10px 50px black;
@@ -170,11 +171,13 @@ nav ul {
 .row > h2 {
   font-size: 1.5em;
   color: #2b1f18;
+  background-color:#FFD7BF;
 }
 
 .row > h3 {
   font-size: 1em;
   color: #363731;
+  background-color:#FFD7BF;
 }
 
 .show {
@@ -190,6 +193,7 @@ nav ul {
 /*ids*/
 
 #alt_hero_image{
+  color: white;
   background-color: #323838be;
 }
 
@@ -209,6 +213,7 @@ nav ul {
 #home_link{
   position: relative;
   font-weight: 600;
+  color: white;
   background-color: #848C4D;
   flex-grow: 4;
   align-self: auto;
@@ -217,4 +222,5 @@ nav ul {
 #hidden_link {
   text-decoration: none;
   color: white;
+  background-color: #363731;
 }
