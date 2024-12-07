@@ -125,12 +125,22 @@ nav ul {
   box-shadow: 10px 10px 50px black;
 }
 
-.row_image {
+.row_image_horizontal {
   display: flex;
   min-width: 150px;
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 250px;
+}
+
+.row_image_vertical {
+  display: flex;
+  min-width: 150px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 250px;
 }
 
 .row_image_temporary {
@@ -205,14 +215,6 @@ nav ul {
 
 #paragraph_line_2 {
   margin-top: -5px;
-}
-
-#horizontal_image {
-  max-width: 250px;
-}
-
-#vertical_image {
-  max-width: 250px;
 }
 
 #row_1_skills {
