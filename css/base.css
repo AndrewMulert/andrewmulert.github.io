@@ -172,7 +172,7 @@ nav ul {
   color: #2b1f18;
 }
 
-.row_supplemental {
+.row > h3 {
   font-size: 1em;
   color: #363731;
 }
