@@ -87,63 +87,33 @@
 
 /* IDs*/
 
-#dropDown {
-  display: none;
-}
+  #dropDown {
+    display: none;
+  }
 
-#paragraph_line_2 {
-  margin-top: -5px;
-}
+  #paragraph_line_2 {
+    margin-top: -5px;
+  }
 
-#row_1_button_1 {
-  width: 75px;
-  height: 40px;
-  align-items: center;
-  background-color: #848C4D;
-  border-color: #848C4D;
-  color: white;
-  border-radius: 15px;
-  border-style: solid;
-}
+  #row_1_button_1 {
+    width: 75px;
+    height: 40px;
+    align-items: center;
+    background-color: #848C4D;
+    border-color: #848C4D;
+    color: white;
+    border-radius: 15px;
+    border-style: solid;
+  }
     
-#row_1_button_2 {
-  width: 75px;
-  height: 40px;
-  align-items: center;
-  background-color: #848C4D;
-  border-color: #848C4D;
-  color: white;
-  border-radius: 15px;
-  border-style: solid;
-}
-
-  /*#row_1_image {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 2;
+  #row_1_button_2 {
+    width: 75px;
+    height: 40px;
+    align-items: center;
+    background-color: #848C4D;
+    border-color: #848C4D;
+    color: white;
+    border-radius: 15px;
+    border-style: solid;
   }
-
-  #row_1_info {
-    grid-column: 3 / span 4;
-    grid-row: 1 / span 1;
-  }
-
-  #row_1_about {
-    grid-column: 5 / span 1;
-    grid-row: 2 / span 1;
-  }
-
-  #row_1_skills {
-    grid-column: 4 / span 1;
-    grid-row: 2 / span 1;
-  }
-
-  #row_2_interests {
-    grid-column: 4 / span 2;
-    grid-row: 2 / span 1
-  }
-
-  #row_header {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 1;
-  }*/
 }

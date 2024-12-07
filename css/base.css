@@ -23,11 +23,6 @@ footer {
   background-color: #363731;
 }
 
-h2 {
-  font-size: 1em;
-  color: #363731;
-}
-
 li {
   text-align: center;
 }
@@ -173,7 +168,13 @@ nav ul {
 }
 
 .row_header {
+  font-size: 1.5em;
   color: #2b1f18;
+}
+
+.row_supplemental {
+  font-size: 1em;
+  color: #363731;
 }
 
 .show {
