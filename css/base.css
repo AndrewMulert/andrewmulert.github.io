@@ -15,11 +15,13 @@ article {
 
 body {
   margin: 0;
+  color: black;
   background-color: #8C644D;
 }
 
 footer {
   margin: 0;
+  color: white;
   background-color: #363731;
 }
 
@@ -61,11 +63,8 @@ nav ul {
 /*classes*/
 
 .footer_info{
-  margin: 0px;
   margin-bottom: 0px;
-  background-color: #363731;
   padding: 15px;
-  color: white;
 }
   
 .hero_image {
