@@ -117,10 +117,6 @@
   border-style: solid;
 }
 
-#row_1_info {
-  max-width: 600px;
-}
-
   /*#row_1_image {
     grid-column: 1 / span 2;
     grid-row: 2 / span 2;
