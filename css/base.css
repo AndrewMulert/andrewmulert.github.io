@@ -34,11 +34,17 @@ li {
   text-align: center;
 }
 
-li a {
+li > a {
   display: block;
   padding: 5px;
   background-color: #363731;
   color: white;
+}
+
+li > a:hover {
+  background-color: #71cccc;
+  color: #1a3131;
+  font-weight:bold;
 }
 
 main {
