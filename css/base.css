@@ -127,6 +127,11 @@ nav ul {
   box-shadow: 10px 10px 50px black;
 }
 
+.row > a:hover {
+  background-color: #535831;
+  font-weight:bold;
+}
+
 .row > p {
   max-width: 600px;
 }
