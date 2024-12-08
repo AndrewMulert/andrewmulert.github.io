@@ -18,11 +18,6 @@ function menuToggle() {
   }
 }
 
-window.addEventListener('resize', () => {
-  isSmallScreen = window.innerWidth < 768;
-  menuToggle();
-});
-
 document.getElementById("dropDown").addEventListener('click', menuToggle);
 
 var prevScrollpos = window.scrollY;
