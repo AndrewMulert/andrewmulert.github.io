@@ -1,10 +1,5 @@
 @media screen and (min-width: 40em) {
 
-  li {
-    float: left;
-    margin-left: 0%;
-    width: 18%;
-  }
 
   main {
     grid-template-columns: 7% 40% 8% 40% 7%;
@@ -13,6 +8,10 @@
   article{
     grid-column: 2 / span 3;
     grid-row: 1 / span 2;
+  }
+
+  footer{
+    max-height: 60px;
   }
 
   nav{
@@ -43,6 +42,12 @@
 
   .hero_image {
     max-height: 725px;
+  }
+
+  .nav_link_container {
+    float: left;
+    margin-left: 0%;
+    width: 18%;
   }
 
   .page_link {

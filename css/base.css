@@ -20,6 +20,7 @@ body {
 }
 
 footer {
+  display: flex;
   margin: 0;
   color: white;
   background-color: #363731;
@@ -28,23 +29,8 @@ footer {
 footer > p{
   margin-bottom: 0px;
   padding: 15px;
-}
-
-li {
-  text-align: center;
-}
-
-li > a {
-  display: block;
-  padding: 5px;
-  background-color: #363731;
-  color: white;
-}
-
-li > a:hover {
-  background-color: #71cccc;
-  color: #1a3131;
-  font-weight:bold;
+  margin-top: 8px;
+  width: 60%;
 }
 
 main {
@@ -54,11 +40,11 @@ main {
 }
 
 nav {
-    width:100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+  width:100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 nav a {
@@ -72,6 +58,25 @@ nav ul {
 }
 
 /*classes*/
+
+.footer_social {
+  margin-bottom: 9px;
+  padding: 15px;
+  text-align: right;
+  width: 40%;
+}
+
+.footer_social > ul {
+  list-style-type: none;
+  text-align: left;
+  width: 0;
+}
+
+.social_container {
+  display: block;
+  margin-left: 0%;
+  width: 18%;
+}
   
 .hero_image {
   height: 75%;
@@ -110,6 +115,22 @@ nav ul {
   width: 100%;
   color: white;
   background-color: #363731;
+}
+
+.nav_link_container {
+  text-align: center;
+}
+
+.nav_link_container > a {
+  display: block;
+  background-color: #363731;
+  color: white;
+}
+
+.nav_link_container > a:hover {
+  background-color: #71cccc;
+  color: #1a3131;
+  font-weight:bold;
 }
 
 .nav_links{
