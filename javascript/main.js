@@ -3,11 +3,9 @@ year = document.querySelector("#year").textContent = new Date().getFullYear();
 let isSmallScreen = window.innerWidth < 768;
 
 document.getElementById("dropDown").addEventListener('click', menuToggle);
+const links = document.querySelectorAll('.page_link');
 
 function menuToggle() {
-  const button = document.getElementById('dropDown');
-  const links = document.querySelectorAll('.page_link');
-
   if (isSmallScreen) {
     links.forEach(link => {
       link.style.display = link.style.display === 'block' ? 'none' : 'block';
@@ -22,6 +20,16 @@ function menuToggle() {
 
 var prevScrollpos = window.scrollY;
 window.addEventListener('scroll', handleScroll);
+
+window.addEventListener('load', setNone);
+
+function setNone() {
+    if (isSmallScreen) {
+      links.forEach(link => {
+        link.style.display = 'none';
+      });
+    }
+}
 
 function handleScroll() {
   const links = document.querySelectorAll('.page_link');
