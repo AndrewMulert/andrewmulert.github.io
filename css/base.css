@@ -20,7 +20,6 @@ body {
 }
 
 footer {
-  display: flex;
   margin: 0;
   color: white;
   background-color: #363731;
@@ -30,7 +29,7 @@ footer > p{
   margin-bottom: 0px;
   padding: 15px;
   margin-top: 8px;
-  width: 60%;
+  width: 80%
 }
 
 main {
@@ -57,19 +56,19 @@ nav ul {
   text-align: center;
 }
 
+svg {
+  padding-left: 10px;;
+}
+
 /*classes*/
 
 .footer_social {
-  margin-bottom: 9px;
-  padding: 15px;
-  text-align: right;
-  width: 40%;
+  width: 80%;
 }
 
 .footer_social > ul {
   list-style-type: none;
   text-align: left;
-  width: 0;
 }
 
 .social_container {
@@ -88,7 +87,6 @@ nav ul {
   
 .hero_text {
   display: block;
-  min-width: 325px;
   padding: 20px;
   color: white;
   background-color: #363731be;
