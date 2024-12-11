@@ -201,7 +201,7 @@ nav ul {
 }
 
 .show {
-  display:block;
+  display:none;
 }
 
 .page_link {
@@ -223,7 +223,7 @@ nav ul {
   right: 10px;
   z-index: 2;
   height: 30px;
-  width: 30px;
+  width: 60px;
   background-color:#363731;
   color: white;
   border-style: none;
