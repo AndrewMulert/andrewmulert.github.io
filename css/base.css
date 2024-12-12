@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --primary-color: #8C644D;
+  --darker-primary-color: #2b1f18;
+  --secondary-color: #848C4D;
+  --medium-secondary-color: #535831;
+  --darker-secondary-color: #363731;
+  --transparent-secondary-color: #363731be;
+  --tertiary-color: #71cccc;
+  --darker-tertiary-color: #1a3131;
+  --transparent-tertiary-color: #323838be;
+  --lighter-primary-color: #FFD7BF;
+  --primary-font-color:#ffffff;
+  --secondary-font-color: #000000;
+
+
+}
+
 /*elements*/
 
 a, h1, h2, h3, p {
@@ -15,14 +32,14 @@ article {
 
 body {
   margin: 0;
-  color: black;
-  background-color: #8C644D;
+  color: var(--secondary-font-color);
+  background-color: var(--primary-color);
 }
 
 footer {
   margin: 0;
-  color: white;
-  background-color: #363731;
+  color: var(--primary-font-color);
+  background-color: var(--darker-secondary-color);
 }
 
 footer > p{
@@ -88,8 +105,8 @@ svg {
 .hero_text {
   display: block;
   padding: 20px;
-  color: white;
-  background-color: #363731be;
+  color: var(--primary-font-color);
+  background-color: var(--transparent-secondary-color);
   text-align: center;
 }
 
@@ -111,8 +128,8 @@ svg {
   padding-left: 0px;
   overflow: hidden;
   width: 100%;
-  color: white;
-  background-color: #363731;
+  color: var(--primary-font-color);
+  background-color: var(--darker-secondary-color);
 }
 
 .nav_link_container {
@@ -121,13 +138,13 @@ svg {
 
 .nav_link_container > a {
   display: block;
-  background-color: #363731;
+  background-color: var(--darker-secondary-color);
   color: white;
 }
 
 .nav_link_container > a:hover {
-  background-color: #71cccc;
-  color: #1a3131;
+  background-color: var(--tertiary-color);
+  color: var(--darker-tertiary-color);
   font-weight:bold;
 }
 
@@ -140,14 +157,14 @@ svg {
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 20px;
-  color: black;
-  background-color: #FFD7BF;
+  color: var(--secondary-font-color);
+  background-color: var(--lighter-primary-color);
   border-radius: 25px;
-  box-shadow: 10px 10px 50px black;
+  box-shadow: 10px 10px 50px var(--secondary-font-color);
 }
 
 .row > a:hover {
-  background-color: #535831;
+  background-color: var(--medium-secondary-color);
   font-weight:bold;
 }
 
@@ -176,10 +193,10 @@ svg {
 .row > a {
   display: inline-block;
   padding: 9px;
-  background-color: #848C4D;
-  border-color: #535831;
+  background-color: var(--secondary-color);
+  border-color: var(--darker-secondary-color);
   border-width: 2px;
-  color: white;
+  color: var(--primary-font-color);
   border-radius: 15px;
   border-style: solid;
   text-decoration: none;
@@ -188,14 +205,14 @@ svg {
 
 .row > h2 {
   font-size: 1.5em;
-  color: #2b1f18;
-  background-color:#FFD7BF;
+  color: var(--darker-primary-color);
+  background-color:var(--lighter-primary-color);
 }
 
 .row > h3 {
   font-size: 1em;
-  color: #363731;
-  background-color:#FFD7BF;
+  color: var(--darker-secondary-color);
+  background-color:var(--lighter-primary-color);
 }
 
 .show {
@@ -211,8 +228,8 @@ svg {
 /*ids*/
 
 #alt_hero_image{
-  color: white;
-  background-color: #323838be;
+  color: var(--primary-font-color);
+  background-color: var(--transparent-tertiary-color);
 }
 
 #dropDown {
@@ -222,8 +239,8 @@ svg {
   z-index: 2;
   height: 30px;
   width: 60px;
-  background-color:#363731;
-  color: white;
+  background-color:var(--darker-secondary-color);
+  color: var(--primary-font-color);
   border-style: none;
   border-radius: 5px;
 }
@@ -231,14 +248,14 @@ svg {
 #home_link{
   position: relative;
   font-weight: 600;
-  color: white;
-  background-color: #848C4D;
+  color: var(--primary-font-color);
+  background-color: var(--secondary-color);
   flex-grow: 4;
   align-self: auto;
 }
 
 #hidden_link {
   text-decoration: none;
-  color: white;
-  background-color: #363731;
+  color: var(--primary-font-color);
+  background-color: var(--darker-secondary-color);
 }
