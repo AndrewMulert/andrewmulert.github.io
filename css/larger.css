@@ -1,12 +1,5 @@
 @media screen and (min-width: 40em) {
 
-  footer{
-    display: flex;
-  }
-
-  main {
-    grid-template-columns: 7% 40% 8% 40% 7%;
-  }
 
   article{
     grid-column: 2 / span 3;
@@ -14,6 +7,7 @@
   }
 
   footer{
+    display: flex;
     max-height: 60px;
   }
 
@@ -21,9 +15,14 @@
     width: 60%;
   }
 
+  main {
+    grid-template-columns: 7% 40% 8% 40% 7%;
+  }
+
   nav{
     transition: top 0.3s;
   }
+
 
     
 /*Classes*/

@@ -87,12 +87,6 @@ svg {
   list-style-type: none;
   text-align: left;
 }
-
-.social_container {
-  display: block;
-  margin-left: 0%;
-  width: 18%;
-}
   
 .hero_image {
   height: 75%;
@@ -149,6 +143,12 @@ svg {
 }
 
 .nav_links{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page_link {
+  display: none;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -219,10 +219,10 @@ svg {
   display:none;
 }
 
-.page_link {
-  display: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.social_container {
+  display: block;
+  margin-left: 0%;
+  width: 18%;
 }
 
 /*ids*/
@@ -245,6 +245,12 @@ svg {
   border-radius: 5px;
 }
 
+#hidden_link {
+  text-decoration: none;
+  color: var(--primary-font-color);
+  background-color: var(--darker-secondary-color);
+}
+
 #home_link{
   position: relative;
   font-weight: 600;
@@ -252,10 +258,4 @@ svg {
   background-color: var(--secondary-color);
   flex-grow: 4;
   align-self: auto;
-}
-
-#hidden_link {
-  text-decoration: none;
-  color: var(--primary-font-color);
-  background-color: var(--darker-secondary-color);
 }
