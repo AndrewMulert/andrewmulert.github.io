@@ -99,6 +99,7 @@ svg {
 .hero_text {
   display: block;
   padding: 20px;
+  margin-top: -20px;
   color: var(--primary-font-color);
   background-color: var(--transparent-secondary-color);
   text-align: center;
