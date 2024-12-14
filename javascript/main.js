@@ -46,7 +46,7 @@ document.getElementById('darkMode').addEventListener('click', toggleDarkMode);
 
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
-  const elements = document.querySelectorAll('.row, .row_header, .circle, .row_button, .page_link, footer, #home_link');
+  const elements = document.querySelectorAll('.row, .row_header, .circle, .row_button, .page_link, footer, #home_link, .nav_items');
   elements.forEach(element => element.classList.toggle('dark-mode'));
   localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
 }

@@ -100,7 +100,7 @@ svg {
   right: 10px;
   width: 50px;
   height: 50px;
-  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;
   font-size: 2em;
   border-radius: 25px;
   border-style: solid;
@@ -173,6 +173,10 @@ svg {
   width: 100%;
   color: var(--primary-font-color);
   background-color: var(--darker-secondary-color);
+}
+
+.nav_items.dark-mode{
+  background-color: var(--darkest-secondary-color);
 }
 
 .nav_link_container {
