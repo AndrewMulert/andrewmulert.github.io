@@ -11,7 +11,6 @@ function menuToggle() {
       link.style.display = link.style.display === 'block' ? 'none' : 'block';
     });
   } else {
-    // Always show on larger screens
     links.forEach(link => {
       link.style.display = 'block';
     });
