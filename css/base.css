@@ -321,6 +321,7 @@ svg {
   color: var(--primary-font-color);
   border-style: none;
   border-radius: 5px;
+  transition: background-color 1s;
 }
 
 #dropDown:focus {
@@ -328,7 +329,8 @@ svg {
   color: var(--secondary-font-color);
   border-style: solid;
   border-width: 2px;
-  border-color: var(--medium-secondary-color)
+  border-color: var(--medium-secondary-color);
+  transition: background-color 1s;
 }
 
 #hidden_link {
