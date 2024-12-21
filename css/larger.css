@@ -100,9 +100,45 @@
     width: 100%;
   }
 
+  .row_image_horizontal:hover {
+    transform:scale(1.75);
+    box-shadow: 10px 10px 50px black;
+    animation: scaleAnimation 1s ease-in-out;
+  }
+
   .row_image_vertical{
     width: 100%;
+    transform: scale(1);
     max-height: 500px;
+  }
+
+  .row_image_vertical:hover {
+    transform: scale(1.75);
+    box-shadow: 10px 10px 50px black;
+    animation: scaleAnimation 1s ease-in-out;
+  }
+
+  
+  
+  
+  @keyframes scaleAnimation {
+  
+    0% {
+  
+      transform: scale(1);
+      box-shadow: 10px 10px 50px rgba(113, 204, 204, 0);
+  
+    }
+
+    25% {
+      box-shadow: 10px 10px 50px rgba(113, 204, 204, 0.441);
+    }
+  
+    50% {
+      transform: scale(1.75);
+      box-shadow: 10px 10px 50px rgba(113, 204, 204);
+    }
+  
   }
 
 
@@ -112,4 +148,10 @@
     display: none;
   }
 
+}
+
+@media screen and (min-width: 70em) {
+  .hero_text {
+    top: 35%;
+  }
 }
