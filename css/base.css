@@ -107,14 +107,14 @@ svg {
   background-color: var(--primary-font-color);
   border-color: var(--dark-grey);
   border-width: 3px;
-  box-shadow: 10px 10px 50px 0px var(--secondary-font-color);
+  box-shadow: 0px 0px 50px 0px var(--secondary-font-color);
 }
 
 .circle.dark-mode {
   background-color: var(--secondary-font-color);
   border-color: var(--light-grey);
   color: var(--primary-font-color);
-  box-shadow: 10px 10px 50px 0px var(--dark-grey);
+  box-shadow: 0px 0px 50px 0px var(--dark-grey);
 }
 
 .dark_mode {
