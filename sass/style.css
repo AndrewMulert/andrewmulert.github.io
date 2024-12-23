@@ -21,18 +21,18 @@ article {
 
 body {
   margin: 0px;
-  color: #000000;
   background-color: #8C644D;
+  color: #000000;
 }
 body.dark-mode {
-  color: #ffffff;
   background-color: #2b1f18;
+  color: #ffffff;
 }
 
 footer {
   margin: 0px;
-  color: #ffffff;
   background-color: #363731;
+  color: #ffffff;
 }
 footer.dark-mode {
   background-color: #1c1d1a !important;
@@ -121,8 +121,8 @@ svg {
   display: block;
   padding: 20px;
   margin-top: -20px;
-  color: #ffffff;
   background-color: rgba(54, 55, 49, 0.7450980392);
+  color: #ffffff;
   text-align: center;
 }
 .hero_text > p {
@@ -141,8 +141,8 @@ svg {
   padding-left: 0px;
   overflow: hidden;
   width: 100%;
-  color: #ffffff;
   background-color: #363731;
+  color: #ffffff;
 }
 .nav_items.dark-mode {
   background-color: #1c1d1a;
@@ -161,7 +161,7 @@ svg {
   padding-bottom: 10px;
   display: block;
   background-color: #363731;
-  color: white;
+  color: #ffffff;
 }
 .page_link:hover {
   background-color: #71cccc;
@@ -186,8 +186,8 @@ svg {
   box-shadow: 10px 10px 50px 0px #000000;
 }
 .row.dark-mode {
-  color: #ffffff;
   background-color: #8C644D;
+  color: #ffffff;
 }
 .row > p {
   max-width: 600px;
@@ -233,17 +233,17 @@ svg {
 }
 .row_header {
   font-size: 1.5em;
-  color: #2b1f18;
   background-color: #FFD7BF;
+  color: #2b1f18;
 }
 .row_header.dark-mode {
-  color: #ffffff;
   background-color: #8C644D;
+  color: #ffffff;
 }
 .row > h3 {
   font-size: 1em;
-  color: #363731;
   background-color: #FFD7BF;
+  color: #363731;
 }
 
 .show {
@@ -271,6 +271,7 @@ svg {
   background-color: #363731;
   color: #ffffff;
   border-style: none;
+  border-radius: 5px;
   transition: background-color 1s;
 }
 #dropDown:focus {
@@ -285,15 +286,15 @@ svg {
 
 #hidden_link {
   text-decoration: none;
-  color: #ffffff;
   background-color: #363731;
+  color: #ffffff;
 }
 
 #home_link {
   position: relative;
   font-weight: 600;
-  color: #ffffff;
   background-color: #848C4D;
+  color: #ffffff;
   flex-grow: 4;
   align-self: auto;
 }
@@ -330,18 +331,18 @@ article {
 
 body {
   margin: 0px;
-  color: #000000;
   background-color: #8C644D;
+  color: #000000;
 }
 body.dark-mode {
-  color: #ffffff;
   background-color: #2b1f18;
+  color: #ffffff;
 }
 
 footer {
   margin: 0px;
-  color: #ffffff;
   background-color: #363731;
+  color: #ffffff;
 }
 footer.dark-mode {
   background-color: #1c1d1a !important;
@@ -430,8 +431,8 @@ svg {
   display: block;
   padding: 20px;
   margin-top: -20px;
-  color: #ffffff;
   background-color: rgba(54, 55, 49, 0.7450980392);
+  color: #ffffff;
   text-align: center;
 }
 .hero_text > p {
@@ -450,8 +451,8 @@ svg {
   padding-left: 0px;
   overflow: hidden;
   width: 100%;
-  color: #ffffff;
   background-color: #363731;
+  color: #ffffff;
 }
 .nav_items.dark-mode {
   background-color: #1c1d1a;
@@ -470,7 +471,7 @@ svg {
   padding-bottom: 10px;
   display: block;
   background-color: #363731;
-  color: white;
+  color: #ffffff;
 }
 .page_link:hover {
   background-color: #71cccc;
@@ -495,8 +496,8 @@ svg {
   box-shadow: 10px 10px 50px 0px #000000;
 }
 .row.dark-mode {
-  color: #ffffff;
   background-color: #8C644D;
+  color: #ffffff;
 }
 .row > p {
   max-width: 600px;
@@ -542,17 +543,17 @@ svg {
 }
 .row_header {
   font-size: 1.5em;
-  color: #2b1f18;
   background-color: #FFD7BF;
+  color: #2b1f18;
 }
 .row_header.dark-mode {
-  color: #ffffff;
   background-color: #8C644D;
+  color: #ffffff;
 }
 .row > h3 {
   font-size: 1em;
-  color: #363731;
   background-color: #FFD7BF;
+  color: #363731;
 }
 
 .show {
@@ -580,6 +581,7 @@ svg {
   background-color: #363731;
   color: #ffffff;
   border-style: none;
+  border-radius: 5px;
   transition: background-color 1s;
 }
 #dropDown:focus {
@@ -594,15 +596,15 @@ svg {
 
 #hidden_link {
   text-decoration: none;
-  color: #ffffff;
   background-color: #363731;
+  color: #ffffff;
 }
 
 #home_link {
   position: relative;
   font-weight: 600;
-  color: #ffffff;
   background-color: #848C4D;
+  color: #ffffff;
   flex-grow: 4;
   align-self: auto;
 }
@@ -653,8 +655,8 @@ svg {
   }
   .circle:hover.dark-mode {
     background-color: #666666;
-    border-color: #bbbbbb;
     color: #ffffff;
+    border-color: #bbbbbb;
     box-shadow: 0px 0px 50px 20px #bbbbbb;
   }
   .footer_social {
