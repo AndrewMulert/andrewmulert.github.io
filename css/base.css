@@ -89,7 +89,7 @@ nav ul {
 }
 
 svg {
-  padding-left: 10px;;
+  padding-left: 10px;
 }
 
 /*classes*/
@@ -182,6 +182,7 @@ svg {
 .nav_link_container {
   text-align: center;
 }
+
 .nav_links{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -203,7 +204,7 @@ svg {
 .page_link:hover {
   background-color: var(--tertiary-color);
   color: var(--darker-tertiary-color);
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .page_link:hover.dark-mode {
@@ -269,7 +270,7 @@ svg {
 
 .row_button:hover {
   background-color: var(--medium-secondary-color);
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .row_button.dark-mode:hover {
@@ -279,7 +280,7 @@ svg {
 .row_header {
   font-size: 1.5em;
   color: var(--darker-primary-color);
-  background-color:var(--lighter-primary-color);
+  background-color: var(--lighter-primary-color);
 }
 
 .row_header.dark-mode{
@@ -290,7 +291,7 @@ svg {
 .row > h3 {
   font-size: 1em;
   color: var(--darker-secondary-color);
-  background-color:var(--lighter-primary-color);
+  background-color: var(--lighter-primary-color);
 }
 
 .show {
@@ -305,8 +306,7 @@ svg {
 
 /*ids*/
 
-#alt_hero_image{
-  color: var(--primary-font-color);
+#alt_hero_image {
   background-color: var(--transparent-tertiary-color);
 }
 
