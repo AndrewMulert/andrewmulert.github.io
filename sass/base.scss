@@ -29,20 +29,53 @@ $font-hierarchy: Montserrat, Arial, Helvetica, sans-serif;
 
 /* sizing */
 
-$padding-main: 10px;
-$padding-main-step: 15px;
-$padding-double: 20px;
-$padding-triple: 30px;
-$size-full: 100%;
-$size-most: 80%;
-$size-least: 10%;
-$size-none: 0%;
+$pixel-0: 0px;
+$pixel-8: 8px;
+$pixel-10: 10px;
+$pixel-15: 15px;
+$pixel-20: 20px;
+$pixel-25: 25px;
+$pixel-30: 30px;
+$pixel-50: 50px;
+$percent-0: 0%;
+$percent-10: 10%;
+$percent-80: 80%;
+$percent-100: 100%;
 
 /* display */
 
 $display-block: block;
 $display-grid: grid;
 $display-flex: flex;
+
+/* mixins */
+
+@mixin margin($value1: $pixel-20, $value2: $pixel-30) {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+@mixin box-style($background: $lighter-primary-color, $shadow: $secondary-font-color, $value: $pixel-0) {
+    background-color: $background;
+    box-shadow: $value $value 50px 0px $shadow;
+}
+
+@mixin margin-auto($auto: auto) {
+    margin-left: $auto;
+    margin-right: $auto;
+}
+
+@mixin border-values($style: none, $color: $dark-grey, $width: 2px, $radius: 2px) {
+    border-style: $style;
+    border-color: $color;
+    border-width: $width;
+    border-radius: $radius;
+}
+
+@mixin colors($background: $secondary-font-color, $text: $secondary-font-color) {
+    background-color: $background;
+    color: $text;
+}
 
 /* tags */
 
@@ -52,47 +85,42 @@ a, h1, h2, h3, p {
 
 article {
     grid-column-start: 2;
-    margin-left: auto;
-    margin-right: auto;
-    height: $size-full;
+    @include margin-auto;
+    height: $percent-100;
 }
 
 body {
-    margin: $size-none;
-    color: $secondary-font-color;
-    background-color: $primary-color;
+    margin: $pixel-0;
+    @include colors($primary-color, $secondary-font-color);
 
     &.dark-mode {
-        color: $primary-font-color;
-        background-color: $darker-primary-color;
+        @include colors($darker-primary-color, $primary-font-color);
     }
 }
 
 footer {
-    margin: $size-none;
-    color: $primary-font-color;
-    background-color: $darker-secondary-color;
+    margin: $pixel-0;
+    @include colors($darker-secondary-color, $primary-font-color);
 
     &.dark-mode{
         background-color: $darkest-secondary-color !important;
     }
 
     > p{
-        margin-bottom: $size-none;
-        padding: $padding-main-step;
-        margin-top: 8px;
-        width: $size-most;
+        @include margin($value1: $pixel-8, $value2: $pixel-0);
+        padding: $pixel-15;
+        width: $percent-80;
     }   
 }
 
 main {
     display: $display-grid;
-    grid-template-columns: $size-least $size-most $size-least;
-    margin-top: $padding-triple;
+    grid-template-columns: $percent-10 $percent-80 $percent-10;
+    margin-top: $pixel-30;
 }
 
 nav {
-    width:$size-full;
+    width: $percent-100;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -100,7 +128,7 @@ nav {
 
     a {
         display: block;
-        flex: 1 1 100%;
+        flex: 1 1 $percent-100;
         text-decoration: none;
     }
 
@@ -110,7 +138,7 @@ nav {
 }
 
 svg {
-    padding-left: 10px;
+    padding-left: $pixel-10;
 }
 
 
@@ -118,35 +146,27 @@ svg {
 
 .circle {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
+    bottom: $pixel-10;
+    right: $pixel-10;
+    width: $pixel-50;
+    height: $pixel-50;
     transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;
     font-size: 2em;
-    border-radius: 25px;
-    border-style: solid;
-    background-color: $primary-font-color;
-    border-color: $dark-grey;
-    border-width: 3px;
-    box-shadow: 0px 0px 50px 0px $secondary-font-color;
+    @include border-values(solid, $dark-grey, 3px, $pixel-25);
+    @include box-style($primary-font-color, $secondary-font-color, $pixel-0);
     
     &.dark-mode {
-        background-color: $secondary-font-color;
         border-color: $light-grey;
         color: $primary-font-color;
-        box-shadow: 0px 0px 50px 0px $dark-grey;
+        @include box-style($secondary-font-color, $dark-grey, $pixel-0);
     }
 }
 
 .dark_mode {
     color: $primary-font-color;
-    background-color: $primary-color;
-    margin-top: 20px;
-    margin-bottom: 30px;
     padding: 20px;
     border-radius: 25px;
-    box-shadow: 10px 10px 50px $secondary-font-color;
+    @include box-style($primary-color, $secondary-font-color, $pixel-10);
 }
 
 .footer_social {
@@ -171,8 +191,7 @@ svg {
         display: block;
         padding: 20px;
         margin-top: -20px;
-        color: $primary-font-color;
-        background-color: $transparent-secondary-color;
+        @include colors($transparent-secondary-color, $primary-font-color);
         text-align: center;
 
         > p {
@@ -196,8 +215,7 @@ svg {
         padding-left: 0px;
         overflow: hidden;
         width: 100%;
-        color: $primary-font-color;
-        background-color: $darker-secondary-color;
+        @include colors($darker-secondary-color, $primary-font-color);
 
         &.dark-mode{
             background-color: $darkest-secondary-color;
@@ -219,16 +237,13 @@ svg {
     padding-top: 10px;
     padding-bottom: 10px;
     display: block;
-    background-color: $darker-secondary-color;
-    color: white;
+    @include colors($darker-secondary-color, $primary-font-color);
 
     &:hover {
-        background-color: $tertiary-color;
-        color: $darker-tertiary-color;
+        @include colors($tertiary-color, $darker-tertiary-color);
         font-weight: bold;
         &.dark-mode {
-            background-color: $medium-tertiary-color;
-            color: $darker-tertiary-color;
+            @include colors($medium-tertiary-color, $darker-tertiary-color);
         }
     }
 
@@ -238,17 +253,14 @@ svg {
 }
 
 .row {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    @include margin;
     padding: 20px;
     color: $secondary-font-color;
-    background-color: $lighter-primary-color;
     border-radius: 25px;
-    box-shadow: 10px 10px 50px $secondary-font-color;
+    @include box-style ($lighter-primary-color, $secondary-font-color, $pixel-10);
 
     &.dark-mode{
-        color: $primary-font-color;
-        background-color: $primary-color;
+        @include colors($primary-color, $primary-font-color);
     }
 
     > p {
@@ -260,8 +272,7 @@ svg {
             display: flex;
             min-width: 150px;
             border-radius: 15px;
-            margin-left: auto;
-            margin-right: auto;
+            @include margin-auto;
             max-width: 250px;
         }
 
@@ -269,8 +280,7 @@ svg {
             display: flex;
             min-width: 150px;
             border-radius: 15px;
-            margin-left: auto;
-            margin-right: auto;
+            @include margin-auto;
             max-width: 250px;
         }
     }
@@ -278,12 +288,8 @@ svg {
     &_button {
         display: inline-block;
         padding: 9px;
-        background-color: $secondary-color;
-        border-color: $darker-secondary-color;
-        border-width: 2px;
-        color: $primary-font-color;
-        border-radius: 15px;
-        border-style: solid;
+        @include colors($secondary-color, $primary-font-color);
+        @include border-values (solid, $darker-secondary-color, 2px, 15px);
         text-decoration: none;
         font-size: 0.8em;
 
@@ -304,19 +310,16 @@ svg {
 
     &_header {
         font-size: 1.5em;
-        color: $darker-primary-color;
-        background-color: $lighter-primary-color;
+        @include colors($lighter-primary-color, $darker-primary-color);
 
         &.dark-mode{
-            color: $primary-font-color;
-            background-color: $primary-color;
+            @include colors($primary-color, $primary-font-color);
         }
     }
 
     > h3 {
         font-size: 1em;
-        color: $darker-secondary-color;
-        background-color: $lighter-primary-color;
+        @include colors($lighter-primary-color, $darker-secondary-color);
     }
 }
 
@@ -343,44 +346,36 @@ svg {
     z-index: 2;
     height: 30px;
     width: 60px;
-    background-color: $darker-secondary-color;
-    color: $primary-font-color;
+    @include colors ($darker-secondary-color, $primary-font-color);
     border-style: none;
     border-radius: 5px;
     transition: background-color 1s;
 
     &:focus {
-        background-color: $lighter-secondary-color;
-        color: $secondary-font-color;
-        border-style: solid;
-        border-width: 2px;
-        border-color: $medium-secondary-color;
+        @include colors($lighter-secondary-color, $secondary-font-color);
+        @include border-values (solid, $medium-secondary-color, 2px, 5px);
         transition: background-color 1s;
       }
 }
   
   #hidden_link {
     text-decoration: none;
-    color: $primary-font-color;
-    background-color: $darker-secondary-color;
+    @include colors($darker-secondary-color, $primary-font-color);
 }
 
 #home_link {
     position: relative;
     font-weight: 600;
-    color: $primary-font-color;
-    background-color: $secondary-color;
+    @include colors($secondary-color, $primary-font-color);
     flex-grow: 4;
     align-self: auto;
 
     &:hover {
-        background-color: $lighter-secondary-color;
-        color: $secondary-font-color;
+        @include colors($lighter-secondary-color, $secondary-font-color);
         font-weight: bolder;
 
         &.dark-mode {
-            background-color: $secondary-color;
-            color: $primary-font-color;
+            @include colors($secondary-color, $primary-font-color);
         }
     }
 

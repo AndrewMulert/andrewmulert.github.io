@@ -4,6 +4,7 @@
 /* fonts */
 /* sizing */
 /* display */
+/* mixins */
 /* tags */
 a, h1, h2, h3, p {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
@@ -17,27 +18,27 @@ article {
 }
 
 body {
-  margin: 0%;
-  color: #000000;
+  margin: 0px;
   background-color: #8C644D;
+  color: #000000;
 }
 body.dark-mode {
-  color: #ffffff;
   background-color: #2b1f18;
+  color: #ffffff;
 }
 
 footer {
-  margin: 0%;
-  color: #ffffff;
+  margin: 0px;
   background-color: #363731;
+  color: #ffffff;
 }
 footer.dark-mode {
   background-color: #1c1d1a !important;
 }
 footer > p {
-  margin-bottom: 0%;
+  margin-top: 20px;
+  margin-bottom: 30px;
   padding: 15px;
-  margin-top: 8px;
   width: 80%;
 }
 
@@ -76,28 +77,26 @@ svg {
   height: 50px;
   transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;
   font-size: 2em;
-  border-radius: 25px;
   border-style: solid;
-  background-color: #ffffff;
   border-color: #666666;
   border-width: 3px;
+  border-radius: 25px;
+  background-color: #ffffff;
   box-shadow: 0px 0px 50px 0px #000000;
 }
 .circle.dark-mode {
-  background-color: #000000;
   border-color: #bbbbbb;
   color: #ffffff;
+  background-color: #000000;
   box-shadow: 0px 0px 50px 0px #666666;
 }
 
 .dark_mode {
   color: #ffffff;
-  background-color: #8C644D;
-  margin-top: 20px;
-  margin-bottom: 30px;
   padding: 20px;
   border-radius: 25px;
-  box-shadow: 10px 10px 50px #000000;
+  background-color: #8C644D;
+  box-shadow: 10px 10px 50px 0px #000000;
 }
 
 .footer_social {
@@ -120,8 +119,8 @@ svg {
   display: block;
   padding: 20px;
   margin-top: -20px;
-  color: #ffffff;
   background-color: rgba(54, 55, 49, 0.7450980392);
+  color: #ffffff;
   text-align: center;
 }
 .hero_text > p {
@@ -140,8 +139,8 @@ svg {
   padding-left: 0px;
   overflow: hidden;
   width: 100%;
-  color: #ffffff;
   background-color: #363731;
+  color: #ffffff;
 }
 .nav_items.dark-mode {
   background-color: #1c1d1a;
@@ -160,7 +159,7 @@ svg {
   padding-bottom: 10px;
   display: block;
   background-color: #363731;
-  color: white;
+  color: #ffffff;
 }
 .page_link:hover {
   background-color: #71cccc;
@@ -180,13 +179,13 @@ svg {
   margin-bottom: 30px;
   padding: 20px;
   color: #000000;
-  background-color: #FFD7BF;
   border-radius: 25px;
-  box-shadow: 10px 10px 50px #000000;
+  background-color: #FFD7BF;
+  box-shadow: 10px 10px 50px 0px #000000;
 }
 .row.dark-mode {
-  color: #ffffff;
   background-color: #8C644D;
+  color: #ffffff;
 }
 .row > p {
   max-width: 600px;
@@ -211,11 +210,11 @@ svg {
   display: inline-block;
   padding: 9px;
   background-color: #848C4D;
+  color: #ffffff;
+  border-style: solid;
   border-color: #363731;
   border-width: 2px;
-  color: #ffffff;
   border-radius: 15px;
-  border-style: solid;
   text-decoration: none;
   font-size: 0.8em;
 }
@@ -232,17 +231,17 @@ svg {
 }
 .row_header {
   font-size: 1.5em;
-  color: #2b1f18;
   background-color: #FFD7BF;
+  color: #2b1f18;
 }
 .row_header.dark-mode {
-  color: #ffffff;
   background-color: #8C644D;
+  color: #ffffff;
 }
 .row > h3 {
   font-size: 1em;
-  color: #363731;
   background-color: #FFD7BF;
+  color: #363731;
 }
 
 .show {
@@ -277,22 +276,23 @@ svg {
   background-color: #BCC86E;
   color: #000000;
   border-style: solid;
-  border-width: 2px;
   border-color: #535831;
+  border-width: 2px;
+  border-radius: 5px;
   transition: background-color 1s;
 }
 
 #hidden_link {
   text-decoration: none;
-  color: #ffffff;
   background-color: #363731;
+  color: #ffffff;
 }
 
 #home_link {
   position: relative;
   font-weight: 600;
-  color: #ffffff;
   background-color: #848C4D;
+  color: #ffffff;
   flex-grow: 4;
   align-self: auto;
 }

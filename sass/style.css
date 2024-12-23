@@ -5,6 +5,7 @@
 /* fonts */
 /* sizing */
 /* display */
+/* mixins */
 /* tags */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 a, h1, h2, h3, p {
@@ -19,27 +20,27 @@ article {
 }
 
 body {
-  margin: 0%;
+  margin: 0px;
   color: #000000;
   background-color: #8C644D;
 }
-body .dark-mode {
+body.dark-mode {
   color: #ffffff;
   background-color: #2b1f18;
 }
 
 footer {
-  margin: 0%;
+  margin: 0px;
   color: #ffffff;
   background-color: #363731;
 }
-footer .dark-mode {
-  background-color: #1c1d1a;
+footer.dark-mode {
+  background-color: #1c1d1a !important;
 }
 footer > p {
-  margin-bottom: 0%;
+  margin-top: 20px;
+  margin-bottom: 30px;
   padding: 15px;
-  margin-top: 8px;
   width: 80%;
 }
 
@@ -78,28 +79,26 @@ svg {
   height: 50px;
   transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;
   font-size: 2em;
-  border-radius: 25px;
   border-style: solid;
-  background-color: #ffffff;
   border-color: #666666;
   border-width: 3px;
+  border-radius: 25px;
+  background-color: #ffffff;
   box-shadow: 0px 0px 50px 0px #000000;
 }
 .circle.dark-mode {
-  background-color: #000000;
   border-color: #bbbbbb;
   color: #ffffff;
+  background-color: #000000;
   box-shadow: 0px 0px 50px 0px #666666;
 }
 
 .dark_mode {
   color: #ffffff;
-  background-color: #8C644D;
-  margin-top: 20px;
-  margin-bottom: 30px;
   padding: 20px;
   border-radius: 25px;
-  box-shadow: 10px 10px 50px #000000;
+  background-color: #8C644D;
+  box-shadow: 10px 10px 50px 0px #000000;
 }
 
 .footer_social {
@@ -182,9 +181,9 @@ svg {
   margin-bottom: 30px;
   padding: 20px;
   color: #000000;
-  background-color: #FFD7BF;
   border-radius: 25px;
-  box-shadow: 10px 10px 50px #000000;
+  background-color: #FFD7BF;
+  box-shadow: 10px 10px 50px 0px #000000;
 }
 .row.dark-mode {
   color: #ffffff;
@@ -213,11 +212,11 @@ svg {
   display: inline-block;
   padding: 9px;
   background-color: #848C4D;
+  color: #ffffff;
+  border-style: solid;
   border-color: #363731;
   border-width: 2px;
-  color: #ffffff;
   border-radius: 15px;
-  border-style: solid;
   text-decoration: none;
   font-size: 0.8em;
 }
@@ -272,15 +271,15 @@ svg {
   background-color: #363731;
   color: #ffffff;
   border-style: none;
-  border-radius: 5px;
   transition: background-color 1s;
 }
 #dropDown:focus {
   background-color: #BCC86E;
   color: #000000;
   border-style: solid;
-  border-width: 2px;
   border-color: #535831;
+  border-width: 2px;
+  border-radius: 5px;
   transition: background-color 1s;
 }
 
@@ -316,6 +315,7 @@ svg {
 /* fonts */
 /* sizing */
 /* display */
+/* mixins */
 /* tags */
 a, h1, h2, h3, p {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
@@ -329,27 +329,27 @@ article {
 }
 
 body {
-  margin: 0%;
+  margin: 0px;
   color: #000000;
   background-color: #8C644D;
 }
-body .dark-mode {
+body.dark-mode {
   color: #ffffff;
   background-color: #2b1f18;
 }
 
 footer {
-  margin: 0%;
+  margin: 0px;
   color: #ffffff;
   background-color: #363731;
 }
-footer .dark-mode {
-  background-color: #1c1d1a;
+footer.dark-mode {
+  background-color: #1c1d1a !important;
 }
 footer > p {
-  margin-bottom: 0%;
+  margin-top: 20px;
+  margin-bottom: 30px;
   padding: 15px;
-  margin-top: 8px;
   width: 80%;
 }
 
@@ -388,28 +388,26 @@ svg {
   height: 50px;
   transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;
   font-size: 2em;
-  border-radius: 25px;
   border-style: solid;
-  background-color: #ffffff;
   border-color: #666666;
   border-width: 3px;
+  border-radius: 25px;
+  background-color: #ffffff;
   box-shadow: 0px 0px 50px 0px #000000;
 }
 .circle.dark-mode {
-  background-color: #000000;
   border-color: #bbbbbb;
   color: #ffffff;
+  background-color: #000000;
   box-shadow: 0px 0px 50px 0px #666666;
 }
 
 .dark_mode {
   color: #ffffff;
-  background-color: #8C644D;
-  margin-top: 20px;
-  margin-bottom: 30px;
   padding: 20px;
   border-radius: 25px;
-  box-shadow: 10px 10px 50px #000000;
+  background-color: #8C644D;
+  box-shadow: 10px 10px 50px 0px #000000;
 }
 
 .footer_social {
@@ -492,9 +490,9 @@ svg {
   margin-bottom: 30px;
   padding: 20px;
   color: #000000;
-  background-color: #FFD7BF;
   border-radius: 25px;
-  box-shadow: 10px 10px 50px #000000;
+  background-color: #FFD7BF;
+  box-shadow: 10px 10px 50px 0px #000000;
 }
 .row.dark-mode {
   color: #ffffff;
@@ -523,11 +521,11 @@ svg {
   display: inline-block;
   padding: 9px;
   background-color: #848C4D;
+  color: #ffffff;
+  border-style: solid;
   border-color: #363731;
   border-width: 2px;
-  color: #ffffff;
   border-radius: 15px;
-  border-style: solid;
   text-decoration: none;
   font-size: 0.8em;
 }
@@ -582,15 +580,15 @@ svg {
   background-color: #363731;
   color: #ffffff;
   border-style: none;
-  border-radius: 5px;
   transition: background-color 1s;
 }
 #dropDown:focus {
   background-color: #BCC86E;
   color: #000000;
   border-style: solid;
-  border-width: 2px;
   border-color: #535831;
+  border-width: 2px;
+  border-radius: 5px;
   transition: background-color 1s;
 }
 

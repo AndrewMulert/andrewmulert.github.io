@@ -39,14 +39,12 @@
         height: 60px;
         border-radius: 30px;
         transition: width 0.5s, height 0.5s, border-radius 0.5s box-shadow 2.5s;
-        background-color: $light-grey;
-        color: $secondary-font-color;
+        @include colors($light-grey, $secondary-font-color);
         box-shadow: 0px 0px 50px 20px $secondary-font-color;
 
         &.dark-mode{
-            background-color: $dark-grey;
+          @include colors($dark-grey, $primary-font-color);
             border-color: $light-grey;
-            color: $primary-font-color;
             box-shadow: 0px 0px 50px 20px $light-grey;
           }
       }
