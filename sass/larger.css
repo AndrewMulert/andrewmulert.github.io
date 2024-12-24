@@ -397,7 +397,7 @@ svg {
   }
   .row_image_horizontal:hover {
     transform: scale(1.75);
-    box-shadow: 10px 10px 50px black;
+    box-shadow: 10px 10px 50px #000000;
     animation: glowAnimation 1s ease-in-out;
   }
   .row_image_vertical {
