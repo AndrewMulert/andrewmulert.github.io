@@ -146,8 +146,8 @@ svg {
 
 .circle {
     position: fixed;
-    bottom: $pixel-10;
-    right: $pixel-10;
+    bottom: auto;
+    right: auto;
     width: $pixel-50;
     height: $pixel-50;
     transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;

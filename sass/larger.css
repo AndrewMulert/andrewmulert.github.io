@@ -331,6 +331,7 @@ svg {
   .circle {
     bottom: 70px;
     right: 30px;
+    font-size: 2.25em;
   }
   .circle:hover {
     width: 60px;
