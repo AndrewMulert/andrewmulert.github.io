@@ -1,5 +1,10 @@
 @import "base.scss";
 
+@mixin box-style-animated($background: $lighter-primary-color, $shadow: $secondary-font-color, $value: $pixel-0, $value2: $pixel-20) {
+  background-color: $background;
+  box-shadow: $value $value 50px $value2 $shadow;
+}
+
 @media screen and (min-width: 40em) {
 
 
@@ -41,11 +46,13 @@
         border-radius: 30px;
         transition: width 0.5s, height 0.5s, border-radius 0.5s;
         @include colors($light-grey, $secondary-font-color);
+        animation: lightGlow 2s ease-in-out;
         box-shadow: 0px 0px 50px 20px $secondary-font-color;
 
         &.dark-mode{
           @include colors($dark-grey, $primary-font-color);
             border-color: $light-grey;
+            animation: darkGlow 2s ease-in-out;
             box-shadow: 0px 0px 50px 20px $light-grey;
           }
       }
@@ -141,6 +148,26 @@
         box-shadow: 10px 10px 50px rgba(113, 204, 204);
       }
     
+    }
+
+    @keyframes lightGlow {
+      0% {
+        @include box-style-animated($primary-font-color, $secondary-font-color, $pixel-0, $pixel-0);
+      }
+
+      50% {
+        @include box-style-animated($primary-font-color, $secondary-font-color, $pixel-0, $pixel-20);
+      }
+    }
+
+    @keyframes darkGlow {
+      0% {
+        @include box-style-animated($secondary-font-color, $dark-grey, $pixel-0, $pixel-0);
+      }
+
+      50% {
+        @include box-style-animated($secondary-font-color, $dark-grey, $pixel-0, $pixel-20);
+      }
     }
   
   

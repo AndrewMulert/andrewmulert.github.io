@@ -73,12 +73,12 @@ svg {
 /* classes */
 .circle {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: auto;
+  right: auto;
   width: 50px;
   height: 50px;
-  transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;
-  font-size: 2em;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  font-size: 2.25em;
   border-style: solid;
   border-color: #666666;
   border-width: 3px;
@@ -383,12 +383,12 @@ svg {
 /* classes */
 .circle {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: auto;
+  right: auto;
   width: 50px;
   height: 50px;
-  transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;
-  font-size: 2em;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  font-size: 2.25em;
   border-style: solid;
   border-color: #666666;
   border-width: 3px;
@@ -643,13 +643,13 @@ svg {
   .circle {
     bottom: 70px;
     right: 30px;
-    font-size: 2.25em;
+    font-size: 2em;
   }
   .circle:hover {
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    transition: width 0.5s, height 0.5s, border-radius 0.5s box-shadow 2.5s;
+    transition: width 0.5s, height 0.5s, border-radius 0.5s;
     background-color: #bbbbbb;
     color: #000000;
     box-shadow: 0px 0px 50px 20px #000000;

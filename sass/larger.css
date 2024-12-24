@@ -75,7 +75,7 @@ svg {
   right: auto;
   width: 50px;
   height: 50px;
-  transition: width 0.5s, height 0.5s, border-radius 0.5s, box-shadow 2s;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
   font-size: 2.25em;
   border-style: solid;
   border-color: #666666;
@@ -337,15 +337,17 @@ svg {
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    transition: width 0.5s, height 0.5s, border-radius 0.5s box-shadow 2.5s;
+    transition: width 0.5s, height 0.5s, border-radius 0.5s;
     background-color: #bbbbbb;
     color: #000000;
+    animation: lightGlow 2s ease-in-out;
     box-shadow: 0px 0px 50px 20px #000000;
   }
   .circle:hover.dark-mode {
     background-color: #666666;
     color: #ffffff;
     border-color: #bbbbbb;
+    animation: darkGlow 2s ease-in-out;
     box-shadow: 0px 0px 50px 20px #bbbbbb;
   }
   .footer_social {
@@ -417,6 +419,26 @@ svg {
     }
     50% {
       box-shadow: 10px 10px 50px rgb(113, 204, 204);
+    }
+  }
+  @keyframes lightGlow {
+    0% {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 50px 0px #000000;
+    }
+    50% {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 50px 20px #000000;
+    }
+  }
+  @keyframes darkGlow {
+    0% {
+      background-color: #000000;
+      box-shadow: 0px 0px 50px 0px #666666;
+    }
+    50% {
+      background-color: #000000;
+      box-shadow: 0px 0px 50px 20px #666666;
     }
   }
   /* IDs*/
