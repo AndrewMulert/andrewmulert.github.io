@@ -62,6 +62,21 @@
       margin-bottom: 9px;
       padding: 15px;
     }
+
+    .glow::before {
+      content: "";
+      border-radius: 35px;
+      position: absolute;
+      inset: -10px;
+      z-index: 1; 
+      top: -100%;
+      left: -100%;
+      width: 300%;
+      height: 300%;
+      background: conic-gradient(from 0deg, $lighter-primary-color, $lighter-secondary-color, $lighter-primary-color);
+      filter: blur(80px);
+      animation: glowRotate 4s infinite linear;
+}
   
     .hero {
       overflow: hidden;

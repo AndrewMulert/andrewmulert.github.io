@@ -52,7 +52,7 @@ nav {
   overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 nav a {
   display: block;
@@ -82,6 +82,7 @@ svg {
   border-radius: 25px;
   background-color: #ffffff;
   box-shadow: 0px 0px 50px 0px #000000;
+  z-index: 2;
 }
 .circle.dark-mode {
   border-color: #bbbbbb;
@@ -181,8 +182,22 @@ svg {
   padding: 20px;
   color: #000000;
   border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  /*animation: glowRotate 4s infinite linear;*/
   background-color: #F5D2B8;
   box-shadow: 10px 10px 50px 0px #000000;
+}
+.row_content {
+  /*background-color: #38383880;
+  border: #B8EEF5 3px solid;*/
+  border-radius: 25px;
+  /*
+  padding: 20px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);*/
+  z-index: 1;
+  position: relative;
 }
 .row.dark-mode {
   background-color: #A08673;
@@ -232,16 +247,13 @@ svg {
 }
 .row_header {
   font-size: 1.5em;
-  background-color: #F5D2B8;
   color: #1F160E;
 }
 .row_header.dark-mode {
-  background-color: #A08673;
   color: #ffffff;
 }
 .row > h3 {
   font-size: 1em;
-  background-color: #F5D2B8;
   color: #34595e;
 }
 
@@ -311,6 +323,15 @@ svg {
   background-color: #627c80;
 }
 
+/*animations*/
+@keyframes glowRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (min-width: 40em) {
   article {
     display: grid;
@@ -356,6 +377,20 @@ svg {
     width: 40%;
     margin-bottom: 9px;
     padding: 15px;
+  }
+  .glow::before {
+    content: "";
+    border-radius: 35px;
+    position: absolute;
+    inset: -10px;
+    z-index: 1;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: conic-gradient(from 0deg, #F5D2B8, #B8EEF5, #F5D2B8);
+    filter: blur(80px);
+    animation: glowRotate 4s infinite linear;
   }
   .hero {
     overflow: hidden;

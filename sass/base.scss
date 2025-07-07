@@ -106,7 +106,7 @@ nav {
     overflow: hidden;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 
     a {
         display: block;
@@ -136,6 +136,7 @@ svg {
     font-size: 2.25em;
     @include border-values(solid, $dark-grey, 3px, 25px);
     @include box-style($primary-font-color, $secondary-font-color, 0px);
+    z-index: 2;
     
     &.dark-mode {
         border-color: $light-grey;
@@ -243,7 +244,22 @@ svg {
     padding: 20px;
     color: $secondary-font-color;
     border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    /*animation: glowRotate 4s infinite linear;*/
     @include box-style ($lighter-primary-color, $secondary-font-color, 10px);
+
+    &_content{
+        /*background-color: #38383880;
+        border: #B8EEF5 3px solid;*/
+        border-radius: 25px;
+        /*
+        padding: 20px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);*/
+        z-index: 1;
+        position: relative;
+    }
 
     &.dark-mode{
         @include colors($primary-color, $primary-font-color);
@@ -296,16 +312,16 @@ svg {
 
     &_header {
         font-size: 1.5em;
-        @include colors($lighter-primary-color, $darker-primary-color);
+        color: $darker-primary-color;
 
         &.dark-mode{
-            @include colors($primary-color, $primary-font-color);
+            color: $primary-font-color;
         }
     }
 
     > h3 {
         font-size: 1em;
-        @include colors($lighter-primary-color, $darker-secondary-color);
+        color: $darker-secondary-color;
     }
 }
 
@@ -369,4 +385,11 @@ svg {
     &.dark-mode {
         background-color: $medium-secondary-color;
     }
+}
+
+/*animations*/
+
+@keyframes glowRotate { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); }
 }
