@@ -150,6 +150,14 @@
                 max-height: 500px;
             }
         }
+
+        &_content {
+          border-radius: 15px;
+          padding: 20px;
+          width: calc(100% - 40px);
+          height: calc(100% - 40px);
+          background-color: #ffffffBF;
+        }
     }
 
     @keyframes lightGlow {

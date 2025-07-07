@@ -452,6 +452,13 @@ svg {
     width: 100%;
     max-height: 500px;
   }
+  .row_content {
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    background-color: rgba(255, 255, 255, 0.7490196078);
+  }
   @keyframes lightGlow {
     0% {
       background-color: #ffffff;
