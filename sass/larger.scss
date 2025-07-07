@@ -1,6 +1,6 @@
 @import "base.scss";
 
-@mixin box-style-animated($background: $lighter-primary-color, $shadow: $secondary-font-color, $value: $pixel-0, $value2: $pixel-20) {
+@mixin box-style-animated($background: $lighter-primary-color, $shadow: $secondary-font-color, $value: 0px, $value2: 20px) {
   background-color: $background;
   box-shadow: $value $value 50px $value2 $shadow;
 }
@@ -9,8 +9,9 @@
 
 
     article{
-        grid-column: 2 / span 3;
-        grid-row: 1 / span 2;
+      display: grid;
+      grid-template-columns: 1fr 20px 1fr;
+      grid-template-rows: 20px 1fr 10px 1fr 20px;
     }
   
     footer{
@@ -18,12 +19,9 @@
         max-height: 60px;
 
         > p {
+            margin-top: 6px;
             width: 60%;
         }
-    }
-  
-    main {
-      grid-template-columns: 7% 40% 8% 40% 7%;
     }
   
     nav{
@@ -89,98 +87,317 @@
       }
     }
   
-    .nav_link_container {
-      float: left;
-      margin-left: 0%;
-      width: 18%;
+    .nav{
+      &_link_container {
+        float: left;
+        margin-left: 0%;
+        width: 20%;
+
+        > a {
+            font-size: 16px;
+        }
+      }
+
+      &_items{
+        height: 50px;
+      }
     }
   
     .page_link {
       display: block;
+      height: 30px;
+      padding-top: 15px;
+      padding-bottom: 5px;
+
+      &:hover {
+        @include colors($darkest-secondary-color, $lighter-secondary-color);
+        font-weight: bold;
+        &.dark-mode {
+          @include colors($medium-secondary-color, $darker-primary-color);
+        }
+      }
     }
   
     .row {
-        margin-top: 40px;
+        margin-top: 5px;
+        margin-bottom: 0px;
 
         &_image {
 
             &_horizontal {
                 width: 100%;
                 max-width: 500px;
-                transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-                transform: scale(1);
                 width: 100%;
-
-                &:hover {
-                    transform: scale(1.75);
-                    box-shadow: 10px 10px 50px $secondary-font-color;
-                    animation: glowAnimation 1s ease-in-out;
-                }
             }
 
             &_vertical {
                 width: 100%;
                 max-height: 500px;
-                transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-
-                &:hover {
-                    transform: scale(1.75);
-                    box-shadow: 10px 10px 50px $secondary-font-color;
-                    animation: glowAnimation 1s ease-in-out;
-                }
             }
         }
-    }
-  
-    @keyframes glowAnimation {
-    
-      0% {
-    
-        box-shadow: 10px 10px 50px rgba(127, 204, 112, 0);
-    
-      }
-  
-      25% {
-        box-shadow: 10px 10px 50px rgba(112, 204, 152, 0.441);
-      }
-    
-      50% {
-        box-shadow: 10px 10px 50px rgba(113, 204, 204);
-      }
-    
     }
 
     @keyframes lightGlow {
       0% {
-        @include box-style-animated($primary-font-color, $secondary-font-color, $pixel-0, $pixel-0);
+        @include box-style-animated($primary-font-color, $secondary-font-color, 0px, 0px);
       }
 
       50% {
-        @include box-style-animated($primary-font-color, $secondary-font-color, $pixel-0, $pixel-20);
+        @include box-style-animated($primary-font-color, $secondary-font-color, 0px, 20px);
       }
     }
 
     @keyframes darkGlow {
       0% {
-        @include box-style-animated($secondary-font-color, $dark-grey, $pixel-0, $pixel-0);
+        @include box-style-animated($secondary-font-color, $dark-grey, 0px, 0px);
       }
 
       50% {
-        @include box-style-animated($secondary-font-color, $dark-grey, $pixel-0, $pixel-20);
+        @include box-style-animated($secondary-font-color, $dark-grey, 0px, 20px);
       }
     }
   
   
   /* IDs*/
+
+    #articleInterests {
+      grid-template-columns: 1fr 20px 1fr;
+      grid-template-rows: 20px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 20px;
+    }
+
+    #articleContact {
+      grid-template-columns: 1fr 20px 1fr;
+      grid-template-rows: 20px 1fr 10px 1fr 20px;
+    }
   
     #dropDown {
       display: none;
     }
+
+    #home_link {
+      height: 30px;
+      padding-top: 15px;
+      padding-bottom: 5px;
+    }
   
+    #card1{
+      grid-column: 1 /1;
+      grid-row: 2 /2;
+    }
+
+    #card1_contact{
+      grid-column: 1 /1;
+      grid-row: 2 /2;
+    }
+
+    #card2{
+      grid-column: 3 /3;
+      grid-row: 2 /2;
+    }
+
+    #card2_contact{
+      grid-column: 3 /3;
+      grid-row: 2 /2;
+    }
+
+    #card3{
+      grid-column: 1 /1;
+      grid-row: 4 /4;
+    }
+
+    #card3_contact{
+      grid-column: 1 /1;
+      grid-row: 4 /4;
+    }
+
+    #card4{
+      grid-column: 3 /3;
+      grid-row: 4 /4;
+    }
+
+    #card4_contact{
+      grid-column: 3 /3;
+      grid-row: 4 /4;
+    }
+
+    #card5{
+      grid-column: 1 /1;
+      grid-row: 6 /6;
+    }
+
+    #card1_skills{
+      grid-column: 1 /1;
+      grid-row: 2 /2;
+    }
+
+    #card2_skills{
+      grid-column: 3 /3;
+      grid-row: 2 /2;
+    }
+
+    #card3_skills{
+      grid-column: 1 /1;
+      grid-row: 4 /4;
+    }
+
+    #card4_interests{
+      grid-column: 3 /3;
+      grid-row: 4 /4;
+    }
+
+    #card5_interests{
+      grid-column: 1 /1;
+      grid-row: 6 /6;
+    }
+
+    #card6_interests{
+      grid-column: 3 /3;
+      grid-row: 6 /6;
+    }
+
+    #card7_interests{
+      grid-column: 1 /1;
+      grid-row: 8 /8;
+    }
+
+    #card8_interests{
+      grid-column: 3 /3;
+      grid-row: 8 /8;
+    }
+
+    #card9_interests{
+      grid-column: 1 /1;
+      grid-row: 10 /10;
+    }
+
+    #card10_interests{
+      grid-column: 3 /3;
+      grid-row: 10 /10;
+    }
   }
   
   @media screen and (min-width: 70em) {
+    article{
+      grid-template-columns: 1fr 20px 1fr 20px 1fr;
+      grid-template-rows: none;
+    }
+    
     .hero_text {
       top: 35%;
+    }
+
+    .row{
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    #articleContact {
+      grid-template-columns: 1fr 20px 1fr 20px 1fr;
+      grid-template-rows: 20px 1fr 10px 1fr 20px;
+    }
+
+    #articleSkills {
+      grid-template-columns: 1fr 20px 1fr 20px 1fr;
+      grid-template-rows: 20px 1fr 10px 1fr 20px;
+    }
+
+    #articleInterests {
+      grid-template-columns: 1fr 20px 1fr 20px 1fr;
+      grid-template-rows: 20px 1fr 10px 1fr 20px 1fr 20px 1fr 20px;
+    }
+
+    #card1{
+      grid-column: 1 /1;
+      grid-row: none;
+    }
+
+    #card1_contact{
+      grid-column: 1 /1;
+      grid-row: 2 /2;
+    }
+
+    #card1_skills{
+      grid-column: 1 /1;
+      grid-row: 2 /2;
+    }
+
+    #card2{
+      grid-column: 3 /3;
+      grid-row: none;
+    }
+
+    #card2_contact{
+      grid-column: 3 /3;
+      grid-row: 2 /2;
+    }
+
+    #card2_skills{
+      grid-column: 3 /3;
+      grid-row: 2 /2;
+    }
+
+    #card3{
+      grid-column: 5 /5;
+      grid-row: none;
+    }
+
+    #card3_contact{
+      grid-column: 5 /5;
+      grid-row: 2 /2;
+    }
+
+    #card3_skills{
+      grid-column: 5 /5;
+      grid-row: 2 /2;
+    }
+
+    #card4{
+      grid-column: 1 /1;
+      grid-row: 4 /4;
+    }
+
+    #card4_contact{
+      grid-column: 1 /1;
+      grid-row: 4 /4;
+    }
+
+    #card4_interests{
+      grid-column: 1 /1;
+      grid-row: 4 /4;
+    }
+
+    #card5{
+      grid-column: 3 /3;
+      grid-row: 4 /4;
+    }
+
+    #card5_interests{
+      grid-column: 3 /3;
+      grid-row: 4 /4;
+    }
+
+    #card6_interests{
+      grid-column: 5 /5;
+      grid-row: 4 /4;
+    }
+
+    #card7_interests{
+      grid-column: 1 /1;
+      grid-row: 6 /6;
+    }
+
+    #card8_interests{
+      grid-column: 3 /3;
+      grid-row: 6 /6;
+    }
+
+    #card9_interests{
+      grid-column: 5 /5;
+      grid-row: 6 /6;
+    }
+
+    #card10_interests{
+      grid-column: 1 /1;
+      grid-row: 8 /8;
     }
   }

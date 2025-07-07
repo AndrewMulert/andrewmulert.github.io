@@ -4,20 +4,16 @@
 
 /* colors */
 
-$lighter-primary-color: #FFD7BF;
-$primary-color: #8C644D;
-$monotone-primary-color: #373331;
-$darker-primary-color: #2b1f18;
-$lighter-secondary-color: #BCC86E;
-$secondary-color: #848C4D;
-$medium-secondary-color: #535831;
-$darker-secondary-color: #363731;
-$darkest-secondary-color: #1c1d1a;
-$transparent-secondary-color: #363731be;
-$tertiary-color: #71cccc;
-$medium-tertiary-color: #59A2A2;
-$darker-tertiary-color: #1a3131;
-$transparent-tertiary-color: #323838be;
+$lighter-primary-color: #F5D2B8;
+$primary-color: #A08673;
+$monotone-primary-color: #8b7d72;
+$darker-primary-color: #1F160E;
+$lighter-secondary-color: #B8EEF5;
+$secondary-color: #91B1B5;
+$medium-secondary-color: #627c80;
+$darker-secondary-color: #34595e;
+$darkest-secondary-color: #171921;
+$transparent-secondary-color: #d8faffbe;
 $primary-font-color:#ffffff;
 $secondary-font-color: #000000;
 $dark-grey:#666666;
@@ -27,20 +23,6 @@ $light-grey: #bbbbbb;
 
 $font-hierarchy: Montserrat, Arial, Helvetica, sans-serif;
 
-/* sizing */
-
-$pixel-0: 0px;
-$pixel-8: 8px;
-$pixel-10: 10px;
-$pixel-15: 15px;
-$pixel-20: 20px;
-$pixel-25: 25px;
-$pixel-30: 30px;
-$pixel-50: 50px;
-$percent-0: 0%;
-$percent-10: 10%;
-$percent-80: 80%;
-$percent-100: 100%;
 
 /* display */
 
@@ -50,12 +32,12 @@ $display-flex: flex;
 
 /* mixins */
 
-@mixin margin($value1: $pixel-20, $value2: $pixel-30) {
+@mixin margin($value1: 20px, $value2: 30px) {
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-@mixin box-style($background: $lighter-primary-color, $shadow: $secondary-font-color, $value: $pixel-0) {
+@mixin box-style($background: $lighter-primary-color, $shadow: $secondary-font-color, $value: 0px) {
     background-color: $background;
     box-shadow: $value $value 50px 0px $shadow;
 }
@@ -86,11 +68,11 @@ a, h1, h2, h3, p {
 article {
     grid-column-start: 2;
     @include margin-auto;
-    height: $percent-100;
+    height: 100%;
 }
 
 body {
-    margin: $pixel-0;
+    margin: 0px;
     @include colors($primary-color, $secondary-font-color);
 
     &.dark-mode {
@@ -99,7 +81,7 @@ body {
 }
 
 footer {
-    margin: $pixel-0;
+    margin: 0px;
     @include colors($darker-secondary-color, $primary-font-color);
 
     &.dark-mode{
@@ -107,20 +89,20 @@ footer {
     }
 
     > p{
-        @include margin($value1: $pixel-8, $value2: $pixel-0);
-        padding: $pixel-15;
-        width: $percent-80;
+        @include margin($value1: 8px, $value2: 0px);
+        padding: 15px;
+        width: 80%;
     }   
 }
 
 main {
     display: $display-grid;
-    grid-template-columns: $percent-10 $percent-80 $percent-10;
-    margin-top: $pixel-30;
+    grid-template-columns: 20px 1fr 20px;
+    margin-top: 30px;
 }
 
 nav {
-    width: $percent-100;
+    width: 100%;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -128,7 +110,7 @@ nav {
 
     a {
         display: block;
-        flex: 1 1 $percent-100;
+        flex: 1 1 100%;
         text-decoration: none;
     }
 
@@ -138,7 +120,7 @@ nav {
 }
 
 svg {
-    padding-left: $pixel-10;
+    padding-left: 10px;
 }
 
 
@@ -148,17 +130,17 @@ svg {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: $pixel-50;
-    height: $pixel-50;
+    width: 50px;
+    height: 50px;
     transition: width 0.5s, height 0.5s, border-radius 0.5s;
     font-size: 2.25em;
-    @include border-values(solid, $dark-grey, 3px, $pixel-25);
-    @include box-style($primary-font-color, $secondary-font-color, $pixel-0);
+    @include border-values(solid, $dark-grey, 3px, 25px);
+    @include box-style($primary-font-color, $secondary-font-color, 0px);
     
     &.dark-mode {
         border-color: $light-grey;
         color: $primary-font-color;
-        @include box-style($secondary-font-color, $dark-grey, $pixel-0);
+        @include box-style($secondary-font-color, $dark-grey, 0px);
     }
 }
 
@@ -166,7 +148,7 @@ svg {
     color: $primary-font-color;
     padding: 20px;
     border-radius: 25px;
-    @include box-style($primary-color, $secondary-font-color, $pixel-10);
+    @include box-style($primary-color, $secondary-font-color, 10px);
 }
 
 .footer_social {
@@ -191,15 +173,22 @@ svg {
         display: block;
         padding: 20px;
         margin-top: -20px;
-        @include colors($transparent-secondary-color, $primary-font-color);
+        @include colors($transparent-secondary-color, $darkest-secondary-color);
         text-align: center;
 
         > p {
             margin: 10px;
+            margin-bottom: 0px;
+            margin-top: 6px;
+            font-weight: 500;
         }
 
         > h1 {
             margin: 5px;
+        }
+
+        > h3 {
+            margin-top: 10px;
         }
     }
 }
@@ -224,6 +213,9 @@ svg {
 
     &_link_container {
         text-align: center;
+        > a {
+            font-size: 20px;
+        }
     }
       
     &_links{
@@ -234,18 +226,12 @@ svg {
 
 .page_link {
     display: none;
+    height: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: block;
+    font-weight: 500;
     @include colors($darker-secondary-color, $primary-font-color);
-
-    &:hover {
-        @include colors($tertiary-color, $darker-tertiary-color);
-        font-weight: bold;
-        &.dark-mode {
-            @include colors($medium-tertiary-color, $darker-tertiary-color);
-        }
-    }
 
     &.dark-mode {
         background-color: $darkest-secondary-color;
@@ -257,7 +243,7 @@ svg {
     padding: 20px;
     color: $secondary-font-color;
     border-radius: 25px;
-    @include box-style ($lighter-primary-color, $secondary-font-color, $pixel-10);
+    @include box-style ($lighter-primary-color, $secondary-font-color, 10px);
 
     &.dark-mode{
         @include colors($primary-color, $primary-font-color);
@@ -336,7 +322,7 @@ svg {
 /* IDs */
 
 #alt_hero_image {
-    background-color: $transparent-tertiary-color;
+    background-color: $transparent-secondary-color;
   }
   
 #dropDown {
@@ -344,11 +330,11 @@ svg {
     top: 5px;
     right: 10px;
     z-index: 2;
-    height: 30px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     @include colors ($darker-secondary-color, $primary-font-color);
     border-style: none;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: background-color 1s;
 
     &:focus {
@@ -366,6 +352,7 @@ svg {
 #home_link {
     position: relative;
     font-weight: 600;
+    height: 30px;
     @include colors($secondary-color, $primary-font-color);
     flex-grow: 4;
     align-self: auto;
