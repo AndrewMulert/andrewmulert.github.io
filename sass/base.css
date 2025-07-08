@@ -256,6 +256,7 @@ svg {
 }
 .row_button.dark-mode:hover {
   background-color: #91B1B5;
+  color: #000000;
 }
 .row_header {
   font-size: 1.7em;

@@ -704,7 +704,6 @@ svg {
   footer {
     display: flex;
     max-height: 60px;
-    margin-bottom: 30px;
   }
   footer > p {
     margin-top: 6px;
@@ -825,6 +824,9 @@ svg {
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     background-color: rgba(255, 255, 255, 0.7490196078);
+  }
+  .row_content.dark-mode {
+    background-color: rgba(0, 0, 0, 0.7490196078);
   }
   @keyframes lightGlow {
     0% {

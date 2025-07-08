@@ -476,6 +476,9 @@ svg {
     height: calc(100% - 40px);
     background-color: rgba(255, 255, 255, 0.7490196078);
   }
+  .row_content.dark-mode {
+    background-color: rgba(0, 0, 0, 0.7490196078);
+  }
   @keyframes lightGlow {
     0% {
       background-color: #ffffff;
