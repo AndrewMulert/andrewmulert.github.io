@@ -59,7 +59,7 @@
     .footer_social{
       text-align: right;
       width: 40%;
-      margin-bottom: 9px;
+      margin-bottom: 20px;
       padding: 15px;
     }
 
@@ -137,6 +137,12 @@
         margin-top: 5px;
         margin-bottom: 0px;
 
+        &_button {
+           &:hover {
+            background-color: $darkest-secondary-color;
+        }
+        }
+
         &_image {
 
             &_horizontal {
@@ -199,8 +205,8 @@
 
     #home_link {
       height: 30px;
-      padding-top: 15px;
-      padding-bottom: 5px;
+      padding-top: 13px;
+      padding-bottom: 20px;
     }
   
     #card1{

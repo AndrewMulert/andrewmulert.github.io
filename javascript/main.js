@@ -20,15 +20,35 @@ function menuToggle() {
 var prevScrollpos = window.scrollY;
 window.addEventListener('scroll', handleScroll);
 
-window.addEventListener('load', setNone);
+window.addEventListener('load', () => {
+  isSmallScreen = window.innerWidth < 720;
 
-function setNone() {
-    if (isSmallScreen) {
-      links.forEach(link => {
-        link.style.display = 'none';
-      });
-    }
+  if (isSmallScreen) {
+    links.forEach(link => {
+      link.style.display = 'none';
+    });
+  } else {
+    links.forEach(link => {
+      link.style.display = 'block';
+    });
+  }
+});
+
+function handleResize() {
+  isSmallScreen = window.innerWidth < 720;
+  
+  if (!isSmallScreen) {
+    links.forEach(link => {
+        link.style.display = 'block';
+    });
+  } else {
+    links.forEach(link => {
+      link.style.display = 'none';
+    });
+  }
 }
+
+window.addEventListener('resize', handleResize);
 
 function handleScroll() {
   const links = document.querySelectorAll('.page_link');

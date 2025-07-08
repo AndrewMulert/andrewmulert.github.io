@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* variables */
 
@@ -7,10 +8,10 @@
 $lighter-primary-color: #F5D2B8;
 $primary-color: #A08673;
 $monotone-primary-color: #8b7d72;
-$darker-primary-color: #1F160E;
+$darker-primary-color: #201D18;
 $lighter-secondary-color: #B8EEF5;
-$secondary-color: #91B1B5;
-$medium-secondary-color: #627c80;
+$secondary-color: #19828A;
+$medium-secondary-color: #91B1B5;
 $darker-secondary-color: #34595e;
 $darkest-secondary-color: #171921;
 $transparent-secondary-color: #d8faffbe;
@@ -92,6 +93,7 @@ footer {
         @include margin($value1: 8px, $value2: 0px);
         padding: 15px;
         width: 80%;
+        margin-bottom: 0px;
     }   
 }
 
@@ -107,6 +109,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 2;
+    box-shadow: 0px 10px 100px 15px $secondary-font-color;
 
     a {
         display: block;
@@ -154,6 +157,7 @@ svg {
 
 .footer_social {
     width: 80%;
+    padding-bottom: 20px;
 
     > ul {
         list-style-type: none;
@@ -186,10 +190,12 @@ svg {
 
         > h1 {
             margin: 5px;
+            font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
         }
 
         > h3 {
             margin-top: 10px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -215,7 +221,7 @@ svg {
     &_link_container {
         text-align: center;
         > a {
-            font-size: 20px;
+            font-size: 1.15em;
         }
     }
       
@@ -251,12 +257,13 @@ svg {
 
     &_content{
         /*background-color: #38383880;
-        border: #B8EEF5 3px solid;*/
-        border-radius: 25px;
-        /*
+        border: #B8EEF5 3px solid;
         padding: 20px;
         width: calc(100% - 4px);
-        height: calc(100% - 4px);*/
+        height: calc(100% - 4px);
+        display: grid;
+        grid-template-rows: 48px 1fr 1fr 40px;*/
+        border-radius: 25px;
         z-index: 1;
         position: relative;
     }
@@ -270,12 +277,18 @@ svg {
     }
 
     &_image {
+        margin-left: auto;
+        margin-right: auto;
+
         &_horizontal {
             display: flex;
             min-width: 150px;
             border-radius: 15px;
             @include margin-auto;
-            max-width: 250px;
+            width: 100%;
+            max-height: 334px;
+            margin-top: auto;
+            margin-bottom: auto;
         }
 
         &_vertical {
@@ -284,6 +297,7 @@ svg {
             border-radius: 15px;
             @include margin-auto;
             max-width: 250px;
+            max-height: 334px;
         }
     }
 
@@ -294,11 +308,7 @@ svg {
         @include border-values (solid, $darker-secondary-color, 2px, 15px);
         text-decoration: none;
         font-size: 0.8em;
-
-        &:hover {
-            background-color: $medium-secondary-color;
-            font-weight:bold;
-        }
+        font-weight: 500px;
 
         &.dark-mode {
             background-color: $darker-secondary-color;
@@ -311,8 +321,11 @@ svg {
     }
 
     &_header {
-        font-size: 1.5em;
+        font-size: 1.7em;
+        font-family:  'Crimson Pro', Georgia, 'Times New Roman', serif;
         color: $darker-primary-color;
+        margin-top: 15px;
+        margin-bottom: 10px;
 
         &.dark-mode{
             color: $primary-font-color;
@@ -354,8 +367,7 @@ svg {
     transition: background-color 1s;
 
     &:focus {
-        @include colors($lighter-secondary-color, $secondary-font-color);
-        @include border-values (solid, $medium-secondary-color, 2px, 5px);
+        @include colors($darkest-secondary-color, $lighter-secondary-color);
         transition: background-color 1s;
       }
 }
@@ -367,14 +379,17 @@ svg {
 
 #home_link {
     position: relative;
-    font-weight: 600;
+    font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+    font-size: 1.25em;
+    font-weight: 700;
     height: 30px;
-    @include colors($secondary-color, $primary-font-color);
+    padding-top: 10px;
+    @include colors($lighter-secondary-color, $secondary-font-color);
     flex-grow: 4;
     align-self: auto;
 
     &:hover {
-        @include colors($lighter-secondary-color, $secondary-font-color);
+        @include colors($darkest-secondary-color, $primary-font-color);
         font-weight: bolder;
 
         &.dark-mode {
