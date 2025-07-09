@@ -76,7 +76,11 @@
       background: conic-gradient(from 0deg, $lighter-primary-color, $lighter-secondary-color, $lighter-primary-color);
       filter: blur(80px);
       animation: glowRotate 4s infinite linear;
-}
+    }
+
+    .glow.dark-mode::before{
+      background: conic-gradient(from 0deg, $primary-color, $secondary-color, $primary-color);
+    }
   
     .hero {
       overflow: hidden;
@@ -84,7 +88,7 @@
       
       &_text {
         position: absolute;
-        top: 20%;
+        top: 40%;
         margin-left: auto;
         margin-right: auto;
         left: 0;
@@ -128,14 +132,13 @@
         @include colors($darkest-secondary-color, $lighter-secondary-color);
         font-weight: bold;
         &.dark-mode {
-          @include colors($medium-secondary-color, $darker-primary-color);
+          @include colors($secondary-color, $primary-font-color);
         }
       }
     }
   
     .row {
         margin-top: 5px;
-        margin-bottom: 0px;
 
         &_button {
            &:hover {

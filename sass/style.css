@@ -259,6 +259,7 @@ svg {
 }
 .row_button.dark-mode:hover {
   background-color: #91B1B5;
+  color: #000000;
 }
 .row_header {
   font-size: 1.7em;
@@ -605,6 +606,7 @@ svg {
 }
 .row_button.dark-mode:hover {
   background-color: #91B1B5;
+  color: #000000;
 }
 .row_header {
   font-size: 1.7em;
@@ -755,6 +757,9 @@ svg {
     filter: blur(80px);
     animation: glowRotate 4s infinite linear;
   }
+  .glow.darkMode::before {
+    background: conic-gradient(from 0deg, #A08673, #19828A, #A08673);
+  }
   .hero {
     overflow: hidden;
     position: relative;
@@ -799,8 +804,8 @@ svg {
     font-weight: bold;
   }
   .page_link:hover.dark-mode {
-    background-color: #91B1B5;
-    color: #201D18;
+    background-color: #19828A;
+    color: #ffffff;
   }
   .row {
     margin-top: 5px;

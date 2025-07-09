@@ -127,6 +127,10 @@ svg {
   color: #171921;
   text-align: center;
 }
+.hero_text.dark-mode {
+  background-color: rgba(54, 62, 64, 0.7450980392);
+  color: #ffffff;
+}
 .hero_text > p {
   margin: 10px;
   margin-bottom: 0px;
@@ -284,10 +288,6 @@ svg {
 }
 
 /* IDs */
-#alt_hero_image {
-  background-color: rgba(216, 250, 255, 0.7450980392);
-}
-
 #dropDown {
   position: absolute;
   top: 5px;

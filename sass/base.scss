@@ -15,6 +15,7 @@ $medium-secondary-color: #91B1B5;
 $darker-secondary-color: #34595e;
 $darkest-secondary-color: #171921;
 $transparent-secondary-color: #d8faffbe;
+$transparent-darker-secondary-color: #363e40be;
 $primary-font-color:#ffffff;
 $secondary-font-color: #000000;
 $dark-grey:#666666;
@@ -180,6 +181,10 @@ svg {
         margin-top: -20px;
         @include colors($transparent-secondary-color, $darkest-secondary-color);
         text-align: center;
+
+        &.dark-mode{
+            @include colors($transparent-darker-secondary-color, $primary-font-color);
+        }
 
         > p {
             margin: 10px;
@@ -350,10 +355,6 @@ svg {
 }
 
 /* IDs */
-
-#alt_hero_image {
-    background-color: $transparent-secondary-color;
-  }
   
 #dropDown {
     position: absolute;

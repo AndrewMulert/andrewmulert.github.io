@@ -21,7 +21,7 @@ var prevScrollpos = window.scrollY;
 window.addEventListener('scroll', handleScroll);
 
 window.addEventListener('load', () => {
-  isSmallScreen = window.innerWidth < 720;
+  isSmallScreen = window.innerWidth < 640;
 
   if (isSmallScreen) {
     links.forEach(link => {
@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
 });
 
 function handleResize() {
-  isSmallScreen = window.innerWidth < 720;
+  isSmallScreen = window.innerWidth < 640;
   
   if (!isSmallScreen) {
     links.forEach(link => {
@@ -61,14 +61,27 @@ function handleScroll() {
   }
 }
 
-document.getElementById('darkMode').addEventListener('click', toggleDarkMode);
-
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-  const elements = document.querySelectorAll('.row, .row_header, .row_content, .circle, .row_button, .page_link, footer, #home_link, .nav_items');
-  elements.forEach(element => element.classList.toggle('dark-mode'));
-  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+function toggleDarkMode(enabled) {
+  document.body.classList.toggle('dark-mode', enabled);
+  const elements = document.querySelectorAll('.row, .row_header, .row_content, .circle, .row_button, .page_link, footer, #home_link, .nav_items, .glow, .hero_text');
+  elements.forEach(element => element.classList.toggle('dark-mode', enabled));
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedDarkMode = localStorage.getItem('darkMode');
+  if (savedDarkMode === 'enabled') {
+    toggleDarkMode(true);
+  } else {
+    toggleDarkMode(false);
+  }
+});
+
+document.getElementById('darkMode').addEventListener('click', () => {
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  toggleDarkMode(!isDarkMode);
+
+  localStorage.setItem('darkMode', !isDarkMode ? 'enabled' : 'disabled');
+});
 
 /*document.addEventListener('DOMContentLoaded', (event) => {
   if (localStorage.getItem('darkMode') === 'enabled') {
