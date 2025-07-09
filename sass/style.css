@@ -26,7 +26,7 @@ body {
   color: #000000;
 }
 body.dark-mode {
-  background-color: #201D18;
+  background-color: #403a30;
   color: #ffffff;
 }
 
@@ -129,6 +129,10 @@ svg {
   background-color: rgba(216, 250, 255, 0.7450980392);
   color: #171921;
   text-align: center;
+}
+.hero_text.dark-mode {
+  background-color: rgba(54, 62, 64, 0.7450980392);
+  color: #ffffff;
 }
 .hero_text > p {
   margin: 10px;
@@ -287,10 +291,6 @@ svg {
 }
 
 /* IDs */
-#alt_hero_image {
-  background-color: rgba(216, 250, 255, 0.7450980392);
-}
-
 #dropDown {
   position: absolute;
   top: 5px;
@@ -373,7 +373,7 @@ body {
   color: #000000;
 }
 body.dark-mode {
-  background-color: #201D18;
+  background-color: #403a30;
   color: #ffffff;
 }
 
@@ -476,6 +476,10 @@ svg {
   background-color: rgba(216, 250, 255, 0.7450980392);
   color: #171921;
   text-align: center;
+}
+.hero_text.dark-mode {
+  background-color: rgba(54, 62, 64, 0.7450980392);
+  color: #ffffff;
 }
 .hero_text > p {
   margin: 10px;
@@ -634,10 +638,6 @@ svg {
 }
 
 /* IDs */
-#alt_hero_image {
-  background-color: rgba(216, 250, 255, 0.7450980392);
-}
-
 #dropDown {
   position: absolute;
   top: 5px;
@@ -757,7 +757,7 @@ svg {
     filter: blur(80px);
     animation: glowRotate 4s infinite linear;
   }
-  .glow.darkMode::before {
+  .glow.dark-mode::before {
     background: conic-gradient(from 0deg, #A08673, #19828A, #A08673);
   }
   .hero {
@@ -766,7 +766,7 @@ svg {
   }
   .hero_text {
     position: absolute;
-    top: 20%;
+    top: 40%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -784,7 +784,7 @@ svg {
   .nav_link_container {
     float: left;
     margin-left: 0%;
-    width: 20%;
+    width: 16.6666%;
   }
   .nav_link_container > a {
     font-size: 16px;
@@ -809,7 +809,6 @@ svg {
   }
   .row {
     margin-top: 5px;
-    margin-bottom: 0px;
   }
   .row_button:hover {
     background-color: #171921;
@@ -826,12 +825,14 @@ svg {
   .row_content {
     border-radius: 15px;
     padding: 20px;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    width: calc(100% - 44px);
+    height: calc(100% - 44px);
     background-color: rgba(255, 255, 255, 0.7490196078);
+    border: 2px solid #A08673;
   }
   .row_content.dark-mode {
     background-color: rgba(0, 0, 0, 0.7490196078);
+    border: 2px solid #F5D2B8;
   }
   @keyframes lightGlow {
     0% {
@@ -864,6 +865,32 @@ svg {
   }
   #dropDown {
     display: none;
+  }
+  #infinitytrain:hover {
+    background-color: #89EC92;
+    color: #0e180f;
+    border-color: #bdecc1;
+    box-shadow: 0px 0px 50px 15px #25EE37;
+  }
+  #infinitytraingradient_card1 {
+    grid-column: 1/1;
+    grid-row: 2/2;
+  }
+  #infinitytraingradient_card1:hover::before {
+    background: conic-gradient(from 0deg, #89EC92, #bdecc1, #89EC92);
+  }
+  #infinitytraingradient_card1.dark-mode:hover::before {
+    background: conic-gradient(from 0deg, #25EE37, #89EC92, #25EE37);
+  }
+  #infinitytraingradient_card8 {
+    grid-column: 3/3;
+    grid-row: 8/8;
+  }
+  #infinitytraingradient_card8:hover::before {
+    background: conic-gradient(from 0deg, #89EC92, #bdecc1, #89EC92);
+  }
+  #infinitytraingradient_card8.dark-mode:hover::before {
+    background: conic-gradient(from 0deg, #0c4e12, #169621, #0c4e12);
   }
   #home_link {
     height: 30px;
@@ -934,10 +961,6 @@ svg {
     grid-column: 1/1;
     grid-row: 8/8;
   }
-  #card8_interests {
-    grid-column: 3/3;
-    grid-row: 8/8;
-  }
   #card9_interests {
     grid-column: 1/1;
     grid-row: 10/10;
@@ -970,6 +993,26 @@ svg {
   #articleInterests {
     grid-template-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-rows: 20px 1fr 10px 1fr 20px 1fr 20px 1fr 20px;
+  }
+  #infinitytraingradient_card1 {
+    grid-column: 1/1;
+    grid-row: none;
+  }
+  #infinitytraingradient_card1:hover::before {
+    background: conic-gradient(from 0deg, #89EC92, #bdecc1, #89EC92);
+  }
+  #infinitytraingradient_card1.dark-mode:hover::before {
+    background: conic-gradient(from 0deg, #0c4e12, #169621, #0c4e12);
+  }
+  #infinitytraingradient_card8 {
+    grid-column: 3/3;
+    grid-row: 6/6;
+  }
+  #infinitytraingradient_card8:hover::before {
+    background: conic-gradient(from 0deg, #89EC92, #bdecc1, #89EC92);
+  }
+  #infinitytraingradient_card8.dark-mode:hover::before {
+    background: conic-gradient(from 0deg, #0c4e12, #169621, #0c4e12);
   }
   #card1 {
     grid-column: 1/1;
@@ -1033,10 +1076,6 @@ svg {
   }
   #card7_interests {
     grid-column: 1/1;
-    grid-row: 6/6;
-  }
-  #card8_interests {
-    grid-column: 3/3;
     grid-row: 6/6;
   }
   #card9_interests {

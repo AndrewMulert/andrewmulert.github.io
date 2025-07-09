@@ -8,7 +8,8 @@
 $lighter-primary-color: #F5D2B8;
 $primary-color: #A08673;
 $monotone-primary-color: #8b7d72;
-$darker-primary-color: #201D18;
+$darker-primary-color: #403a30;
+$darkest-primary-color: #201D18;
 $lighter-secondary-color: #B8EEF5;
 $secondary-color: #19828A;
 $medium-secondary-color: #91B1B5;
@@ -302,7 +303,7 @@ svg {
             border-radius: 15px;
             @include margin-auto;
             max-width: 250px;
-            max-height: 334px;
+            height: 334px;
         }
     }
 
@@ -329,7 +330,7 @@ svg {
     &_header {
         font-size: 1.7em;
         font-family:  'Crimson Pro', Georgia, 'Times New Roman', serif;
-        color: $darker-primary-color;
+        color: $darkest-primary-color;
         margin-top: 15px;
         margin-bottom: 10px;
 
