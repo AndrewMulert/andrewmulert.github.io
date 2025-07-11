@@ -307,6 +307,13 @@ svg {
   transition: background-color 1s;
 }
 
+#full_length {
+  width: calc(100% - 22px);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
 #hidden_link {
   text-decoration: none;
   background-color: #34595e;
