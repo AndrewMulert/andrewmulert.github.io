@@ -1,0 +1,13 @@
+<%- navHTML %>
+<div class="hero">
+    <picture>
+        <source srcset="/images/<%= heroImage || 'hero_image_waterfall' %>-small.webp" media="(max-width: 500px)">
+        <source srcset="/images/<%= heroImage || 'hero_image_waterfall' %>-medium.webp" media="(max-width: 1000px)">
+        <img class="hero_image" src="/images/<%= heroImage || 'hero_image_waterfall' %>-min.webp" alt="<%= heroAlt || 'The Upper Mesa Waterfall by Andrew Mulert' %>" >
+    </picture>
+    <div class="hero_text">
+        <h3><%= heroTextAlt %></h3>
+        <h1><%- heroTextHeader %></h1>
+        <p><%- heroTextParagraph %></p>
+    </div>
+</div>
