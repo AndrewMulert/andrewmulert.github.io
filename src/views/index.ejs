@@ -1,48 +1,37 @@
 <article>
-    <div class="row glow" id="card1">
-        <div class="row_content">
-            <h2 class="row_header">Nice to meet you</h2>
-            <picture>
-                <source srcset="images/row_1_image_profile-small.webp" media="(max-width: 500px)">
-                <source srcset="images/row_1_image_profile-medium.webp" media="(max-width: 1000px)">
-                <img class="row_image_vertical" src="images/row_1_image_profile-min.webp" alt="A Profile Photo of Andrew Mulert at Yellowstone National Park" loading="lazy">
-            </picture>
-            <p>My Name is Andrew Mulert, and I'm currently a student at Brigham Young University - Idaho. 
-                I've built this website to show off my skills with HTML, CSS, and Javascript, 
-                while also using it to explain who I am and why I would make an excellent member of your team.
-            </p>
-            <a href="about.html" class="row_button">About</a>
-            <a href="skills.html" class="row_button">Skills</a>
-        </div>
-    </div>
-    <div class="row glow" id="card2">
-        <div class="row_content">
-            <h2 class="row_header">Explore</h2>
-            <picture>
-                <source srcset="images/row_2_image_interests-small.webp" media="(max-width: 500px)">
-                <source srcset="images/row_2_image_interests-medium.webp" media="(max-width: 1000px)">
-                <img class="row_image_vertical" src="images/row_2_image_interests-min.webp" alt="A photo of Jonathan the Pineapple Plant sitting on a table outside taken by Andrew Mulert" loading="lazy">
-            </picture>
-            <p>I have a lot of interests and hobbies! 
-                Books, games, and movies inspire me to be more creative while looking outside of the box.
-                Many of my hobbies keep me focused, allow me to relieve stress, enjoy the outdoors, and improve as a person.
-            </p>
-            <a href="interests.html" class="row_button">Interests</a>
-        </div>
-    </div>
-    <div class="row glow" id="card3">
-        <div class="row_content">
-            <h2 class="row_header">Let's Connect</h2>
-            <picture>
-                <source srcset="images/row_1_image_flowers-small.webp" media="(max-width: 500px)">
-                <source srcset="images/row_1_image_flowers-medium.webp" media="(max-width: 1000px)">
-                <img class="row_image_horizontal" src="images/row_1_image_flowers-min.webp" alt="A photo of pink flowers on a tree taken by Andrew Mulert" loading="lazy">
-            </picture>
-            <p>I'm always excited to hear how I can improve!
-                If you would like to message me because you found a bug in this site, or maybe you want to set up an interview, please reach out through some of the resources I've linked on the Contact page.
-            </p>
-            <a href="contact.html" class="row_button">Contact Me</a>
-        </div>
-    </div>
+    <% if (home && home.length > 0) { %>
+        <% home.forEach((home, index) => { %>
+            <%
+                let cardClasses = 'row glow';
+
+                if (home.order && home.order.mediumView) {
+                    cardClasses += ` md-grid-row-${home.order.mediumView.row} md-grid-col-${home.order.mediumView.column}`;
+                }
+
+                if (home.order && home.order.largeView) {
+                    cardClasses += ` lg-grid-row-$home.order.largeView.row} lg-grid-col-${home.order.largeView.column}`;
+                }
+            %>
+            <div class="<%= cardClasses %>" id="card<%= index + 1 %>">
+                <div class="row_content">
+                    <h2 class="row_header"><%= home.title %></h2>
+                    <picture>
+                        <source srcset="<%= home.image.smallSrc %>" media="(max-width: 500px)">
+                        <source srcset="<%= home.image.mediumSrc %>" media="(max-width: 1000px)">
+                        <img class="row_image_<%= home.image.orientation %>" src="<%= home.image.minSrc %>" alt="<%= home.image.alt %>" loading="lazy">
+                    </picture>
+                    <h3 class="row_header"><%= home.timeStamp %></h3>
+                    <p><%= home.description %></p>
+                    <% if (home.button && home.button.length > 0) { %>
+                        <% home.button.forEach(btn => { %>
+                        <a href="<%= btn.href %>" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
+                        <% }) %>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>Plot Twist! Either I'm just boring, or the database broke</p>
+    <% } %>
 </article>
 <button class="circle" id="darkMode">◑</button>

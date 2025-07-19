@@ -237,6 +237,11 @@
       grid-row: 2 /2;
     }
 
+    #card1_interests{
+      grid-column: 1 /1;
+      grid-row: 2 /2;
+    }
+
     #card2{
       grid-column: 3 /3;
       grid-row: 2 /2;
@@ -247,7 +252,17 @@
       grid-row: 2 /2;
     }
 
+    #card2_interests{
+      grid-column: 3 /3;
+      grid-row: 2 /2;
+    }
+
     #card3{
+      grid-column: 1 /1;
+      grid-row: 4 /4;
+    }
+
+    #card3_interests{
       grid-column: 1 /1;
       grid-row: 4 /4;
     }
@@ -267,7 +282,17 @@
       grid-row: 4 /4;
     }
 
+    #card4_skills{
+      grid-column: 3 /3;
+      grid-row: 4 /4;
+    }
+
     #card5{
+      grid-column: 1 /1;
+      grid-row: 6 /6;
+    }
+
+    #card5_skills{
       grid-column: 1 /1;
       grid-row: 6 /6;
     }
@@ -399,6 +424,11 @@
       grid-row: 2 /2;
     }
 
+    #card1_interests{
+      grid-column: 1 /1;
+      grid-row: 2 /2;
+    }
+
     #card1_skills{
       grid-column: 1 /1;
       grid-row: 2 /2;
@@ -414,6 +444,11 @@
       grid-row: 2 /2;
     }
 
+    #card2_interests{
+      grid-column: 3 /3;
+      grid-row: 2 /2;
+    }
+
     #card2_skills{
       grid-column: 3 /3;
       grid-row: 2 /2;
@@ -422,6 +457,11 @@
     #card3{
       grid-column: 5 /5;
       grid-row: none;
+    }
+
+    #card3_interests {
+      grid-column: 5 /5;
+      grid-row: 2 /2;
     }
 
     #card3_contact{
@@ -449,12 +489,22 @@
       grid-row: 4 /4;
     }
 
+    #card4_skills{
+      grid-column: 1 /1;
+      grid-row: 4 /4;
+    }
+
     #card5{
       grid-column: 3 /3;
       grid-row: 4 /4;
     }
 
     #card5_interests{
+      grid-column: 3 /3;
+      grid-row: 4 /4;
+    }
+
+    #card5_skills{
       grid-column: 3 /3;
       grid-row: 4 /4;
     }

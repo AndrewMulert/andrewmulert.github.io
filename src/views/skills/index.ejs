@@ -1,5 +1,36 @@
 <article id="articleSkills">
-    <div class="row glow" id="card1_skills">
+    <% if (skills && skills.length > 0) { %>
+        <% skills.forEach((skill, index) => { %>
+            <%
+                let cardClasses = 'row glow';
+
+                if (skill.order && skill.order.mediumView) {
+                    cardClasses += ` md-grid-row-${skill.order.mediumView.row} md-grid-col-${skill.order.mediumView.column}`;
+                }
+
+                if (skill.order && skill.order.largeView) {
+                    cardClasses += ` lg-grid-row-${skill.order.largeView.row} lg-grid-col-${skill.order.largeView.column}`;
+                }
+            %>
+            <div class="<%= cardClasses %>" id="card<%= index + 1 %>_skills">
+                <div class="row_content">
+                    <h2 class="row_header"><%= skill.title %></h2>
+                    <picture>
+                        <source srcset="<%= skill.image.smallSrc %>" media="(max-width: 500px)">
+                        <source srcset="<%= skill.image.mediumSrc %>" media="(max-width: 1000px)">
+                        <img class="row_image_<%= skill.image.orientation %>" src="<%= skill.image.minSrc %>" alt="<%= skill.image.alt %>" loading="lazy">
+                    </picture>
+                    <p><%= skill.description %></p>
+                    <% if (skill.button && skill.button.href && skill.button.text) { %>
+                        <a href="<%= skill.button.href %>" target="_blank" class="row_button" <% if (skill.button.id) { %> id="<%= skill.button.id %>"<% } %>><%= skill.button.text %></a>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>Plot Twist! Either I'm just boring, or the database broke</p>
+    <% } %>
+    <!--<div class="row glow" id="card1_skills">
         <div class="row_content">
             <h2 class="row_header">HTML</h2>
             <picture>
@@ -73,6 +104,6 @@
                 I have used Javascript on this website and many other school projects, and am still learning how I can continue to apply it in new ways.
             </p>
         </div>
-    </div>
+    </div>-->
 </article>
 <button class="circle" id="darkMode">◑</button>

@@ -36,8 +36,6 @@ const layouts = (req, res, next) => {
             // Store the rendered content in `options.body`, so the layout can use it
             mergedOptions.body = body || '';
 
-            console.log('Options passed to default layout for view:', view, mergedOptions);
-
             // Determine which layout to use (default layout or a custom one if specified)
             const layoutFile = `${mergedOptions.layout || defaultLayout}.ejs`;
             const layoutPath = path.join(layoutDir, layoutFile);

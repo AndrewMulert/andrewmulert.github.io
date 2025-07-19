@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import connectDB from './src/config/db.js';
 
 import configNodeEnv from './src/middleware/node-env.js';
 import express from 'express';
@@ -20,15 +21,17 @@ const __dirname = path.dirname(__filename);
 const mode = process.env.NODE_ENV;
 const port = process.env.PORT;
 
-
 const app = express();
 
 app.use(configNodeEnv);
 
 configureStaticPaths(app);
 
+async function startServer() {
+    try {
+        await connectDB();
 
-app.set('view engine', 'ejs');
+        app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 
 app.set('layout default', 'default');
@@ -75,3 +78,11 @@ if (mode.includes('dev')) {
 app.listen(port, async () => {
     console.log(`Server running on http://127.0.0.1:${port}`);
 });
+    } catch (error) {
+        console.error('Failed to start server due to database connection error:', error);
+        process.exit(1);
+    }
+
+}
+
+startServer();
