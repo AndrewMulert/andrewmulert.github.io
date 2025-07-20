@@ -1,5 +1,40 @@
 <article id="articleContact">
-    <div class="row glow" id="card1_contact">
+    <% if (contacts && contacts.length > 0) { %>
+        <% contacts.forEach((contact, index) => { %>
+            <%
+                let cardClasses = 'row glow';
+
+                if (contact.order && contact.order.mediumView) {
+                    cardClasses += ` md-grid-row-${contact.order.mediumView.row} md-grid-col-${contact.order.mediumView.column}`;
+                }
+
+                if (contact.order && contact.order.largeView) {
+                    cardClasses += ` lg-grid-row-${contact.order.largeView.row} lg-grid-col-${contact.order.largeView.column}`;
+                }
+            %>
+            <div class="<%= cardClasses %>" id="card<%= index + 1 %>_contact">
+                <div class="row_content">
+                    <h2 class="row_header"><%= contact.title %></h2>
+                    <% if (contact.image && contact.image.minSrc) { %>
+                        <picture>
+                            <source srcset="<%= contact.image.smallSrc %>" media="(max-width: 500px)">
+                            <source srcset="<%= contact.image.mediumSrc %>" media="(max-width: 1000px)">
+                            <img class="row_image_<%= contact.image.orientation %>" src="<%= contact.image.minSrc %>" alt="<%= contact.image.alt %>" loading="lazy">
+                        </picture>
+                    <% } %>
+                    <p><%= contact.description %></p>
+                    <% if (contact.button && contact.button.length > 0) { %>
+                        <% contact.button.forEach(btn => { %>
+                            <a href="<%= btn.href %>" target="_blank" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
+                        <% }) %>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>Plot Twist! Either I'm unreachable, or the database broke. Probably the latter</p>
+    <% } %>
+    <!--<div class="row glow" id="card1_contact">
         <div class="row_content">
             <h2 class="row_header">Instagram</h2>
             <picture>
@@ -61,8 +96,7 @@
                 I will only hand out that information after I have confirmed your identity.
                 I plan to add a form here in the future for serious inquiries.
             </p>
-            <!--<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="row_button">My Email</a>-->
         </div>
-    </div>
+    </div>-->
 </article>
 <button class="circle" id="darkMode">◑</button>

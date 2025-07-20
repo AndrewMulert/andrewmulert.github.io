@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const projectSchema = new mongoose.Schema({
+const contactSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -10,24 +10,20 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    languages: {
-        type: String,
-        required: true
-    },
     image: {
-        smallSrc: { type: String},
-        mediumSrc: { type: String},
-        minSrc: { type: String},
-        alt: { type: String},
+        smallSrc: { type: String, required: true},
+        mediumSrc: { type: String, required: true},
+        minSrc: { type: String, required: true},
+        alt: { type: String, required: true},
         orientation: {
             type: String,
-            enum: ['horizontal', 'vertical']
+            enum: ['horizontal', 'vertical'], 
+            required: true
         }
     },
     button: [{
         text: { type: String },
-        href: { type: String },
-        id: { type: String }
+        href: { type: String }
     }],
     order: {
         mediumView: {
@@ -40,8 +36,8 @@ const projectSchema = new mongoose.Schema({
         }
     }
 },
-{collection: 'projects'});
+{collection: 'contact'});
 
-const Project = mongoose.model('Project', projectSchema);
+const Contact = mongoose.model('Contact', contactSchema);
 
-export default Project;
+export default Contact;
