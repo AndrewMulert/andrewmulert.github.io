@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const skillSchema = new mongoose.Schema({
+const projectSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -10,24 +10,20 @@ const skillSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    languages: {
-        type: String,
-        trim: true
-    },
     image: {
-        smallSrc: { type: String, required: true },
-        mediumSrc: { type: String, required: true },
-        minSrc: { type: String, required: true },
-        alt: { type: String, required: true },
+        smallSrc: { type: String},
+        mediumSrc: { type: String},
+        minSrc: { type: String},
+        alt: { type: String},
         orientation: {
             type: String,
-            enum: ['horizontal', 'vertical'],
-            required: true
+            enum: ['horizontal', 'vertical']
         }
     },
     button: [{
         text: { type: String },
-        href: { type: String }
+        href: { type: String },
+        id: { type: String }
     }],
     order: {
         mediumView: {
@@ -40,8 +36,8 @@ const skillSchema = new mongoose.Schema({
         }
     }
 },
-{collection: 'skills'});
+{collection: 'projects'});
 
-const Skill = mongoose.model('Skill', skillSchema);
+const Project = mongoose.model('Project', projectSchema);
 
-export default Skill;
+export default Project;

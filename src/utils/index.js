@@ -3,6 +3,7 @@ import path from 'path';
 
 /** @type {Array<{route: string, dir: string}|string>} Static path configurations */
 const staticPaths = [
+    { route: '/', dir: '/public'},
     { route: '/css', dir: '/public/css' },
     { route: '/js', dir: '/public/js' },
     { route: '/images', dir: '/public/images' }
