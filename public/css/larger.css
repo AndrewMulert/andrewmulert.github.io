@@ -6,7 +6,7 @@
 /* display */
 /* mixins */
 /* tags */
-a, h1, h2, h3, p {
+a, h1, h2, h3, p, input, textarea {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
@@ -27,6 +27,12 @@ body.dark-mode {
   color: #ffffff;
 }
 
+form {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
 footer {
   margin: 0px;
   background-color: #34595e;
@@ -41,6 +47,19 @@ footer > p {
   padding: 15px;
   width: 80%;
   margin-bottom: 0px;
+}
+
+input, textarea {
+  padding: 7px;
+  border-radius: 10px;
+  border: 2px solid #34595e;
+}
+
+label {
+  font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  height: 20px;
+  padding-bottom: 10px;
 }
 
 main {
@@ -68,6 +87,10 @@ nav ul {
 
 svg {
   padding-left: 10px;
+}
+
+textarea {
+  height: 100px;
 }
 
 /* classes */
@@ -100,6 +123,13 @@ svg {
   border-radius: 25px;
   background-color: #A08673;
   box-shadow: 10px 10px 50px 0px #000000;
+}
+
+.formCluster {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-rows: 20px 1fr;
 }
 
 .footer_social {
@@ -307,6 +337,10 @@ svg {
   transition: background-color 1s;
 }
 
+#fname, #lname, #email, #tel {
+  max-width: 50%;
+}
+
 #full_length {
   width: calc(100% - 22px);
   margin-right: auto;
@@ -343,6 +377,10 @@ svg {
 }
 #home_link.dark-mode {
   background-color: #91B1B5;
+}
+
+#msg {
+  max-width: 75%;
 }
 
 /*animations*/
@@ -541,8 +579,8 @@ svg {
     grid-row: 2/2;
   }
   #card1_contact {
-    grid-column: 1/1;
-    grid-row: 2/2;
+    grid-column: 3/3;
+    grid-row: 4/4;
   }
   #card1_interests {
     grid-column: 1/1;
@@ -557,8 +595,8 @@ svg {
     grid-row: 2/2;
   }
   #card2_contact {
-    grid-column: 3/3;
-    grid-row: 2/2;
+    grid-column: 1/1;
+    grid-row: 6/6;
   }
   #card2_interests {
     grid-column: 3/3;
@@ -589,8 +627,8 @@ svg {
     grid-row: 4/4;
   }
   #card4_contact {
-    grid-column: 3/3;
-    grid-row: 4/4;
+    grid-column: 1/4;
+    grid-row: 2/2;
   }
   #card4_project {
     grid-column: 3/3;
@@ -710,7 +748,7 @@ svg {
     grid-row: none;
   }
   #card1_contact {
-    grid-column: 1/1;
+    grid-column: 5/5;
     grid-row: 2/2;
   }
   #card1_interests {
@@ -730,8 +768,8 @@ svg {
     grid-row: none;
   }
   #card2_contact {
-    grid-column: 3/3;
-    grid-row: 2/2;
+    grid-column: 1/1;
+    grid-row: 4/4;
   }
   #card2_interests {
     grid-column: 3/3;
@@ -754,7 +792,7 @@ svg {
     grid-row: 2/2;
   }
   #card3_contact {
-    grid-column: 5/5;
+    grid-column: 3/3;
     grid-row: 2/2;
   }
   #card3_project {
@@ -771,7 +809,7 @@ svg {
   }
   #card4_contact {
     grid-column: 1/1;
-    grid-row: 4/4;
+    grid-row: 2/2;
   }
   #card4_interests {
     grid-column: 1/1;

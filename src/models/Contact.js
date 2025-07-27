@@ -34,6 +34,24 @@ const contactSchema = new mongoose.Schema({
             row: Number,
             column: Number
         }
+    },
+    form: {
+        information: [{ 
+            label: {
+                for: { type: String},
+                text: { type: String}
+            },
+            input: {
+                inputType: { type: String },
+                inputId: { type: String },
+                inputName: { type: String },
+                required: { type: Boolean, default: false},
+                placeholder: { type: String },
+                pattern: { type: String },
+                fieldType: { type: String }
+            }
+        }],
+        submitButtonText: { type: String }
     }
 },
 {collection: 'contact'});
