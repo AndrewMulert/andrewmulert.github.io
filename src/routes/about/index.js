@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
             heroTextAlt: 'Information to get to know me better',
             heroTextHeader: 'About',
             heroTextParagraph: 'Where I have been and what I have accomplished',
+            heroTextDescription: 'Where I have been and what I have accomplished',
             about: about
         });
     } catch (err) {

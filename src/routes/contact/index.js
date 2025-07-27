@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
             heroTextAlt: 'Ways to get in contact with me',
             heroTextHeader: 'Contact',
             heroTextParagraph: 'I am on many different Social Media platforms.<br>Please inform me of your opinions concerning my website',
+            heroTextDescription: 'I am on many different Social Media platforms. Please inform me of your opinions concerning my website',
             contacts: contacts
        });
     } catch (err) {

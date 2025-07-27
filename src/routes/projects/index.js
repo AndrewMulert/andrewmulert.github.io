@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
             heroTextAlt: 'What I have built and am currently working on',
             heroTextHeader: 'Projects',
             heroTextParagraph: 'A display of the designs I have created<br>and projects I have had a hand in',
+            heroTextDescription: 'A display of the designs I have created and projects I have had a hand in',
             projects: projects
         });
     } catch (err) {

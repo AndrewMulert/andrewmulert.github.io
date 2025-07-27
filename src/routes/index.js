@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
             heroTextAlt: 'Welcome to my Website',
             heroTextHeader: 'Enthusiastic about Design,<br>Focused on the Future.',
             heroTextParagraph: 'I have a passion for technology,<br>and an interest in how art is designed.',
+            heroTextDescription: 'I have a passion for technology, and an interest in how art is designed.',
             home: home
         });
     } catch (err) {

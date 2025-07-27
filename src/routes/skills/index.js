@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
             heroTextAlt: 'Some of the coding languages that I have learned',
             heroTextHeader: 'Skills',
             heroTextParagraph: 'There is always more you can learn,<br>and skills you can improve.',
+            heroTextDescription: 'There is always more you can learn, and skills you can improve.',
             skills: skills
         });
         

@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
             heroTextAlt: 'Different Hobbies, Activities, and Media that I enjoy',
             heroTextHeader: 'Interests',
             heroTextParagraph: 'A few of the stories, games,<br>movies, and activities that inspire and excite me.',
+            heroTextDescription: 'A few of the stories, games, movies, and activities that inspire and excite me.',
             interests: interests
         });
     } catch (err) {
