@@ -83,10 +83,26 @@ document.getElementById('darkMode').addEventListener('click', () => {
   localStorage.setItem('darkMode', !isDarkMode ? 'enabled' : 'disabled');
 });
 
-/*document.addEventListener('DOMContentLoaded', (event) => {
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-  }
-});*/
-
 time = new Date().getTime;
+
+$('form').on('submit', (e) => {
+  e.preventDefault();
+
+  const fname = $('#fname').val().trim();
+  const lname = $('#lname').val().trim();
+  const email = $('#email').val().trim();
+  const tel = $('#tel').val().trim();
+  const msg = $('#msg').val().trim();
+  
+  const data = {
+    fname,
+    lname,
+    email,
+    tel,
+    msg
+  }
+
+  $.post('/contact', data, function() {
+    console.log('Data has been received')
+  });
+});
