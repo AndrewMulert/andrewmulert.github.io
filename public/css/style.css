@@ -9,7 +9,7 @@
 /* tags */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-a, h1, h2, h3, p {
+a, h1, h2, h3, p, input, textarea {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
@@ -35,6 +35,9 @@ form {
   margin-right: auto;
   padding: 10px;
 }
+form > button {
+  margin-top: 10px;
+}
 
 footer {
   margin: 0px;
@@ -52,10 +55,17 @@ footer > p {
   margin-bottom: 0px;
 }
 
+input, textarea {
+  padding: 7px;
+  border-radius: 10px;
+  border: 2px solid #34595e;
+}
+
 label {
   font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
   font-size: 18px;
   height: 20px;
+  padding-bottom: 10px;
 }
 
 main {
@@ -217,7 +227,7 @@ textarea {
   margin-bottom: 30px;
   padding: 20px;
   color: #000000;
-  border-radius: 25px;
+  border-radius: 35px;
   position: relative;
   overflow: hidden;
   /*animation: glowRotate 4s infinite linear;*/
@@ -394,7 +404,7 @@ textarea {
 /* display */
 /* mixins */
 /* tags */
-a, h1, h2, h3, p {
+a, h1, h2, h3, p, input, textarea {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
@@ -420,6 +430,9 @@ form {
   margin-right: auto;
   padding: 10px;
 }
+form > button {
+  margin-top: 10px;
+}
 
 footer {
   margin: 0px;
@@ -437,10 +450,17 @@ footer > p {
   margin-bottom: 0px;
 }
 
+input, textarea {
+  padding: 7px;
+  border-radius: 10px;
+  border: 2px solid #34595e;
+}
+
 label {
   font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
   font-size: 18px;
   height: 20px;
+  padding-bottom: 10px;
 }
 
 main {
@@ -602,7 +622,7 @@ textarea {
   margin-bottom: 30px;
   padding: 20px;
   color: #000000;
-  border-radius: 25px;
+  border-radius: 35px;
   position: relative;
   overflow: hidden;
   /*animation: glowRotate 4s infinite linear;*/
@@ -878,6 +898,7 @@ textarea {
     background-color: #171921;
     color: #B8EEF5;
     font-weight: bold;
+    font-style: underline;
   }
   .page_link:hover.dark-mode {
     background-color: #19828A;
@@ -960,7 +981,7 @@ textarea {
     grid-row: 2/2;
   }
   #card1_contact {
-    grid-column: 1/1;
+    grid-column: 3/3;
     grid-row: 4/4;
   }
   #card1_interests {
@@ -976,8 +997,8 @@ textarea {
     grid-row: 2/2;
   }
   #card2_contact {
-    grid-column: 3/3;
-    grid-row: 4/4;
+    grid-column: 1/1;
+    grid-row: 6/6;
   }
   #card2_interests {
     grid-column: 3/3;
@@ -1001,7 +1022,7 @@ textarea {
   }
   #card3_contact {
     grid-column: 1/1;
-    grid-row: 6/6;
+    grid-row: 4/4;
   }
   #card4 {
     grid-column: 3/3;
@@ -1174,7 +1195,7 @@ textarea {
   }
   #card3_contact {
     grid-column: 3/3;
-    grid-row: 4/4;
+    grid-row: 2/2;
   }
   #card3_project {
     grid-column: 5/5;
@@ -1189,7 +1210,7 @@ textarea {
     grid-row: 4/4;
   }
   #card4_contact {
-    grid-column: 1/4;
+    grid-column: 1/1;
     grid-row: 2/2;
   }
   #card4_interests {

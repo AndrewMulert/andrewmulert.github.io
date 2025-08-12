@@ -131,6 +131,8 @@
       &:hover {
         @include colors($darkest-secondary-color, $lighter-secondary-color);
         font-weight: bold;
+        text-decoration: underline;
+        text-underline-offset: 5px;
         &.dark-mode {
           @include colors($secondary-color, $primary-font-color);
         }
