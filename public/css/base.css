@@ -6,7 +6,7 @@
 /* display */
 /* mixins */
 /* tags */
-a, h1, h2, h3, p, input, textarea {
+a, h1, h2, h3, p, input, textarea, button {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
@@ -342,6 +342,11 @@ textarea {
 
 #fname, #lname, #email, #tel {
   max-width: 50%;
+}
+
+#formStatus {
+  font-size: 1em;
+  border-radius: 15px;
 }
 
 #full_length {

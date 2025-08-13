@@ -6,7 +6,7 @@
 /* display */
 /* mixins */
 /* tags */
-a, h1, h2, h3, p, input, textarea {
+a, h1, h2, h3, p, input, textarea, button {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 

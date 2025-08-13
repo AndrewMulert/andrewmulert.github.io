@@ -79,31 +79,45 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const { fname, lname, email, tel, msg } = req.body;
 
-    const sentFrom = new Sender(process.env.MAILERSEND_SENDER_EMAIL, process.env.MAILERSEND_SENDER_NAME);
-    const recipients = [
-        new Recipient(process.env.EMAIL_RECIPIENT, "Andrew Mulert")
-    ];
-
-    const emailParams = new EmailParams()
-        .setFrom(sentFrom)
-        .setTo(recipients)
-        .setSubject(`New Contact Form Submission from ${fname} ${lname}`)
-        .setHtml(`
-            <h2><strong>Name:</strong> ${fname} ${lname}</h2>
-            <h3><strong>Email:</strong> ${email}</h3>
-            <h3><strong>Phone:</strong> ${tel || 'N/A'}</h3>
-            <p><strong>Message:</strong></p>
-            <p>${msg}</p>
-        `)
-        .setText(`Name: ${fname} ${lname}\nPhone: ${tel || 'N/A'}\nMessage:\n${msg}`);
-
-    emailParams.setReplyTo(new Sender(email, `${fname} ${lname}`));
+    if (!fname || fname.length < 2){
+        return res.status(400).json({ message: "A first name is required."});
+    } 
+    if (!lname || lname.length < 2){
+        return res.status(400).json({ message: "A last name is required."});
+    } 
+    if (!email || email.length < 11){
+        return res.status(400).json({ message: "An email is required."});
+    } 
+    if (!msg || msg.length < 2){
+        return res.status(400).json({ message: "A message is required."});
+    }
 
     try {
+        const sentFrom = new Sender(process.env.MAILERSEND_SENDER_EMAIL, process.env.MAILERSEND_SENDER_NAME);
+        const recipients = [
+            new Recipient(process.env.EMAIL_RECIPIENT, "Andrew Mulert")
+        ];
+
+        const emailParams = new EmailParams()
+            .setFrom(sentFrom)
+            .setTo(recipients)
+            .setSubject(`New Contact Form Submission from ${fname} ${lname}`)
+            .setHtml(`
+                <div>
+                    <h2>${fname} ${lname}</h2>
+                    <h3>${email}</h3>
+                    <h3><strong>Phone:</strong> ${tel || 'N/A'}</h3>
+                </div>
+                <p>${msg}</p>
+            `)
+            .setText(`Name: ${fname} ${lname}\nPhone: ${tel || 'N/A'}\nMessage:\n${msg}`);
+
+        emailParams.setReplyTo(new Sender(email, `${fname} ${lname}`));
         await mailerSend.email.send(emailParams);
         console.log('Email sent successfully via MailerSend!');
+        req.body.clear;
+        res.status(200).json({ message: 'Thank you for your message! Your email has been sent.' });
 
-        res.json({ message: 'Thank you for your message! Your email has been sent.' });
     } catch (error) {
         console.error('Error sending email:', error);
 

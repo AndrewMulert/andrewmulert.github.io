@@ -94,15 +94,34 @@ $('form').on('submit', (e) => {
   const tel = $('#tel').val().trim();
   const msg = $('#msg').val().trim();
   
-  const data = {
-    fname,
-    lname,
-    email,
-    tel,
-    msg
-  }
+  const data = { fname, lname, email, tel, msg };
 
-  $.post('/contact', data, function() {
-    console.log('Data has been received')
-  });
+  const formStatusLabel = $('#formStatus');
+  formStatusLabel.text('Sending your message...')
+  formStatusLabel.css({'color': '#3e4029', 'background-color': '#d2d98b', 'padding': '10px'});
+
+  $.ajax({
+    type: 'POST',
+    url: '/contact',
+    data: JSON.stringify(data),
+    contentType: 'application/json'
+  })
+  .done((response) => {
+    console.log('Data has been received:', response);
+    formStatusLabel.text(response.message), 60000;
+    formStatusLabel.css({'color': '#2b4029', 'background-color': '#91d98b', 'padding': '10px'});
+
+    $('form').trigger('reset');
+
+    setTimeout (() => {
+      formStatusLabel.text('');
+      formStatusLabel.css({'background-color': 'transparent', 'padding': '0'});
+    }, 6000);
+  })
+  .fail((jqXHR) => {
+    const errorMessage = jqXHR.responseJSON.message || 'An unknown error occurred.';
+    console.error('Submission failed:', errorMessage);
+    formStatusLabel.text(errorMessage);
+    formStatusLabel.css({'color': '#402f29', 'background-color': '#d9a08b', 'padding': '10px'});
+  })
 });

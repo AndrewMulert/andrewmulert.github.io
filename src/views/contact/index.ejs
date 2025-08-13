@@ -24,10 +24,15 @@
                     <% } %>
                     <p><%= contact.description %></p>
                     <% if (contact.form && contact.form.information && contact.form.information.length > 0) { %>
+                        <p><b>Required fields are labeled with *</b></p>
+                        <h3 id="formStatus"></h3>
                         <form id="emailForm">
                             <% contact.form.information.forEach(info => { %>
                                 <div class="formCluster">
-                                <label for="<%= info.label.for %>"><%= info.label.text %></label>
+                                <label for="<%= info.label.for %>">
+                                    <%= info.label.text %>
+                                    <% if (info.input.required) { %>*<% } %>
+                                </label>
                                 <% if (info.input.fieldType === 'input') { %>
                                     <input
                                         type="<%= info.input.inputType %>"
