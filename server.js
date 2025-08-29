@@ -75,7 +75,7 @@ if (mode.includes('dev')) {
 }
 
 
-app.listen(port, async () => {
+app.listen(port, '0.0.0.0', async () => {
     console.log(`Server running on http://127.0.0.1:${port}`);
 });
     } catch (error) {
