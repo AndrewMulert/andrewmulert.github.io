@@ -344,6 +344,11 @@ textarea {
   max-width: 50%;
 }
 
+#formStatus {
+  font-size: 1em;
+  border-radius: 15px;
+}
+
 #full_length {
   width: calc(100% - 22px);
   margin-right: auto;
@@ -655,6 +660,10 @@ textarea {
     grid-column: 1/1;
     grid-row: 6/6;
   }
+  #card6_project {
+    grid-column: 3/3;
+    grid-row: 6/6;
+  }
   #card1_skills {
     grid-column: 1/1;
     grid-row: 2/2;
@@ -845,6 +854,10 @@ textarea {
     grid-row: 4/4;
   }
   #card6_interests {
+    grid-column: 5/5;
+    grid-row: 4/4;
+  }
+  #card6_project {
     grid-column: 5/5;
     grid-row: 4/4;
   }

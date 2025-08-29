@@ -1,6 +1,6 @@
-@import "base.scss";
+@use "base.scss" as base;
 
-@mixin box-style-animated($background: $lighter-primary-color, $shadow: $secondary-font-color, $value: 0px, $value2: 20px) {
+@mixin box-style-animated($background: base.$lighter-primary-color, $shadow: base.$secondary-font-color, $value: 0px, $value2: 20px) {
   background-color: $background;
   box-shadow: $value $value 50px $value2 $shadow;
 }
@@ -43,15 +43,15 @@
         height: 60px;
         border-radius: 30px;
         transition: width 0.5s, height 0.5s, border-radius 0.5s;
-        @include colors($light-grey, $secondary-font-color);
+        @include base.colors(base.$light-grey, base.$secondary-font-color);
         animation: lightGlow 2s ease-in-out;
-        box-shadow: 0px 0px 50px 20px $secondary-font-color;
+        box-shadow: 0px 0px 50px 20px base.$secondary-font-color;
 
         &.dark-mode{
-          @include colors($dark-grey, $primary-font-color);
-            border-color: $light-grey;
+          @include base.colors(base.$dark-grey, base.$primary-font-color);
+            border-color: base.$light-grey;
             animation: darkGlow 2s ease-in-out;
-            box-shadow: 0px 0px 50px 20px $light-grey;
+            box-shadow: 0px 0px 50px 20px base.$light-grey;
           }
       }
     }
@@ -73,13 +73,13 @@
       left: -100%;
       width: 300%;
       height: 300%;
-      background: conic-gradient(from 0deg, $lighter-primary-color, $lighter-secondary-color, $lighter-primary-color);
+      background: conic-gradient(from 0deg, base.$lighter-primary-color, base.$lighter-secondary-color, base.$lighter-primary-color);
       filter: blur(80px);
       animation: glowRotate 4s infinite linear;
     }
 
     .glow.dark-mode::before{
-      background: conic-gradient(from 0deg, $primary-color, $secondary-color, $primary-color);
+      background: conic-gradient(from 0deg, base.$primary-color, base.$secondary-color, base.$primary-color);
     }
   
     .hero {
@@ -98,7 +98,7 @@
         max-width: 600px;
         border-radius: 25px;
         margin-bottom: 40px;
-        box-shadow: 10px 10px 50px $secondary-font-color;
+        box-shadow: 10px 10px 50px base.$secondary-font-color;
       }
 
       &_image {
@@ -129,12 +129,12 @@
       padding-bottom: 5px;
 
       &:hover {
-        @include colors($darkest-secondary-color, $lighter-secondary-color);
+        @include base.colors(base.$darkest-secondary-color, base.$lighter-secondary-color);
         font-weight: bold;
         text-decoration: underline;
         text-underline-offset: 5px;
         &.dark-mode {
-          @include colors($secondary-color, $primary-font-color);
+          @include base.colors(base.$secondary-color, base.$primary-font-color);
         }
       }
     }
@@ -144,7 +144,7 @@
 
         &_button {
            &:hover {
-            background-color: $darkest-secondary-color;
+            background-color: base.$darkest-secondary-color;
         }
         }
 
@@ -169,32 +169,32 @@
           width: calc(100% - 44px);
           height: calc(100% - 44px);
           background-color: #ffffffBF;
-          border: 2px solid $primary-color;
+          border: 2px solid base.$primary-color;
 
           &.dark-mode {
             background-color: #000000BF;
-            border: 2px solid $lighter-primary-color;
+            border: 2px solid base.$lighter-primary-color;
           }
         }
     }
 
     @keyframes lightGlow {
       0% {
-        @include box-style-animated($primary-font-color, $secondary-font-color, 0px, 0px);
+        @include box-style-animated(base.$primary-font-color, base.$secondary-font-color, 0px, 0px);
       }
 
       50% {
-        @include box-style-animated($primary-font-color, $secondary-font-color, 0px, 20px);
+        @include box-style-animated(base.$primary-font-color, base.$secondary-font-color, 0px, 20px);
       }
     }
 
     @keyframes darkGlow {
       0% {
-        @include box-style-animated($secondary-font-color, $dark-grey, 0px, 0px);
+        @include box-style-animated(base.$secondary-font-color, base.$dark-grey, 0px, 0px);
       }
 
       50% {
-        @include box-style-animated($secondary-font-color, $dark-grey, 0px, 20px);
+        @include box-style-animated(base.$secondary-font-color, base.$dark-grey, 0px, 20px);
       }
     }
   
@@ -321,6 +321,11 @@
 
     #card5_skills{
       grid-column: 1 /1;
+      grid-row: 6 /6;
+    }
+
+    #card6_project{
+      grid-column: 3 /3;
       grid-row: 6 /6;
     }
 
@@ -562,6 +567,11 @@
     }
 
     #card6_interests{
+      grid-column: 5 /5;
+      grid-row: 4 /4;
+    }
+
+    #card6_project{
       grid-column: 5 /5;
       grid-row: 4 /4;
     }

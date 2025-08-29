@@ -347,6 +347,11 @@ textarea {
   max-width: 50%;
 }
 
+#formStatus {
+  font-size: 1em;
+  border-radius: 15px;
+}
+
 #full_length {
   width: calc(100% - 22px);
   margin-right: auto;
@@ -420,6 +425,7 @@ body {
   background-color: #A08673;
   color: #000000;
 }
+
 body.dark-mode {
   background-color: #403a30;
   color: #ffffff;
@@ -430,6 +436,7 @@ form {
   margin-right: auto;
   padding: 10px;
 }
+
 form > button {
   margin-top: 10px;
 }
@@ -439,9 +446,11 @@ footer {
   background-color: #34595e;
   color: #ffffff;
 }
+
 footer.dark-mode {
   background-color: #171921 !important;
 }
+
 footer > p {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -477,11 +486,13 @@ nav {
   z-index: 2;
   box-shadow: 0px 10px 100px 15px #000000;
 }
+
 nav a {
   display: block;
   flex: 1 1 100%;
   text-decoration: none;
 }
+
 nav ul {
   text-align: center;
 }
@@ -511,6 +522,7 @@ textarea {
   box-shadow: 0px 0px 50px 0px #000000;
   z-index: 2;
 }
+
 .circle.dark-mode {
   border-color: #bbbbbb;
   color: #ffffff;
@@ -537,6 +549,7 @@ textarea {
   width: 80%;
   padding-bottom: 20px;
 }
+
 .footer_social > ul {
   list-style-type: none;
   text-align: left;
@@ -550,6 +563,7 @@ textarea {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .hero_text {
   display: block;
   padding: 20px;
@@ -558,20 +572,24 @@ textarea {
   color: #171921;
   text-align: center;
 }
+
 .hero_text.dark-mode {
   background-color: rgba(54, 62, 64, 0.7450980392);
   color: #ffffff;
 }
+
 .hero_text > p {
   margin: 10px;
   margin-bottom: 0px;
   margin-top: 6px;
   font-weight: 500;
 }
+
 .hero_text > h1 {
   margin: 5px;
   font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
 }
+
 .hero_text > h3 {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -580,6 +598,7 @@ textarea {
 .nav_bar {
   display: flex;
 }
+
 .nav_items {
   list-style-type: none;
   margin: 0;
@@ -589,15 +608,19 @@ textarea {
   background-color: #34595e;
   color: #ffffff;
 }
+
 .nav_items.dark-mode {
   background-color: #171921;
 }
+
 .nav_link_container {
   text-align: center;
 }
+
 .nav_link_container > a {
   font-size: 1.15em;
 }
+
 .nav_links {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -613,6 +636,7 @@ textarea {
   background-color: #34595e;
   color: #ffffff;
 }
+
 .page_link.dark-mode {
   background-color: #171921;
 }
@@ -629,6 +653,7 @@ textarea {
   background-color: #F5D2B8;
   box-shadow: 10px 10px 50px 0px #000000;
 }
+
 .row_content {
   /*background-color: #38383880;
   border: #B8EEF5 3px solid;
@@ -641,17 +666,21 @@ textarea {
   z-index: 1;
   position: relative;
 }
+
 .row.dark-mode {
   background-color: #A08673;
   color: #ffffff;
 }
+
 .row > p {
   max-width: 600px;
 }
+
 .row_image {
   margin-left: auto;
   margin-right: auto;
 }
+
 .row_image_horizontal {
   display: flex;
   min-width: 150px;
@@ -663,6 +692,7 @@ textarea {
   margin-top: auto;
   margin-bottom: auto;
 }
+
 .row_image_vertical {
   display: flex;
   min-width: 150px;
@@ -672,6 +702,7 @@ textarea {
   max-width: 250px;
   height: 334px;
 }
+
 .row_button {
   display: inline-block;
   padding: 9px;
@@ -685,14 +716,17 @@ textarea {
   font-size: 0.8em;
   font-weight: 500px;
 }
+
 .row_button.dark-mode {
   background-color: #34595e;
   border-color: #19828A;
 }
+
 .row_button.dark-mode:hover {
   background-color: #91B1B5;
   color: #000000;
 }
+
 .row_header {
   font-size: 1.7em;
   font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
@@ -700,9 +734,11 @@ textarea {
   margin-top: 15px;
   margin-bottom: 10px;
 }
+
 .row_header.dark-mode {
   color: #ffffff;
 }
+
 .row > h3 {
   font-size: 1em;
   color: #34595e;
@@ -732,6 +768,7 @@ textarea {
   border-radius: 20px;
   transition: background-color 1s;
 }
+
 #dropDown:focus {
   background-color: #171921;
   color: #B8EEF5;
@@ -740,6 +777,11 @@ textarea {
 
 #fname, #lname, #email, #tel {
   max-width: 50%;
+}
+
+#formStatus {
+  font-size: 1em;
+  border-radius: 15px;
 }
 
 #full_length {
@@ -767,15 +809,18 @@ textarea {
   flex-grow: 4;
   align-self: auto;
 }
+
 #home_link:hover {
   background-color: #171921;
   color: #ffffff;
   font-weight: bolder;
 }
+
 #home_link:hover.dark-mode {
   background-color: #19828A;
   color: #ffffff;
 }
+
 #home_link.dark-mode {
   background-color: #91B1B5;
 }
@@ -1053,6 +1098,10 @@ textarea {
     grid-column: 1/1;
     grid-row: 6/6;
   }
+  #card6_project {
+    grid-column: 3/3;
+    grid-row: 6/6;
+  }
   #card1_skills {
     grid-column: 1/1;
     grid-row: 2/2;
@@ -1243,6 +1292,10 @@ textarea {
     grid-row: 4/4;
   }
   #card6_interests {
+    grid-column: 5/5;
+    grid-row: 4/4;
+  }
+  #card6_project {
     grid-column: 5/5;
     grid-row: 4/4;
   }
