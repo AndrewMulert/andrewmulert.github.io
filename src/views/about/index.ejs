@@ -2,7 +2,7 @@
     <% if (about && about.length > 0) { %>
         <% about.forEach((about, index) => { %>
             <%
-                let cardClasses = 'row glow';
+                let cardClasses = 'row';
 
                 if (about.order && about.order.mediumView) {
                     cardClasses += ` md-grid-row-${about.order.mediumView.row} md-grid-col-${about.order.mediumView.column}`;
@@ -13,21 +13,19 @@
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>">
-                <div class="row_content">
-                    <h2 class="row_header"><%= about.title %></h2>
-                    <picture>
-                        <source srcset="<%= about.image.smallSrc %>" media="(max-width: 500px)">
-                        <source srcset="<%= about.image.mediumSrc %>" media="(max-width: 1000px)">
-                        <img class="row_image_<%= about.image.orientation %>" src="<%= about.image.minSrc %>" alt="<%= about.image.alt %>" loading="lazy">
-                    </picture>
-                    <h3 class="row_header"><%= about.timeStamp %></h3>
-                    <p><%= about.description %></p>
-                    <% if (about.button && about.button.length > 0) { %>
-                        <% about.button.forEach(btn => { %>
-                        <a href="<%= btn.href %>" target="_blank" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
-                        <% }) %>
-                    <% } %>
-                </div>
+                <h2 class="row_header"><%= about.title %></h2>
+                <picture>
+                    <source srcset="<%= about.image.smallSrc %>" media="(max-width: 500px)">
+                    <source srcset="<%= about.image.mediumSrc %>" media="(max-width: 1000px)">
+                    <img class="row_image_<%= about.image.orientation %>" src="<%= about.image.minSrc %>" alt="<%= about.image.alt %>" loading="lazy">
+                </picture>
+                <h3 class="row_header"><%= about.timeStamp %></h3>
+                <p><%= about.description %></p>
+                <% if (about.button && about.button.length > 0) { %>
+                    <% about.button.forEach(btn => { %>
+                    <a href="<%= btn.href %>" target="_blank" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
+                    <% }) %>
+                <% } %>
             </div>
         <% }) %>
     <% } else { %>

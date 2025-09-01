@@ -98,7 +98,7 @@ $('form').on('submit', (e) => {
 
   const formStatusLabel = $('#formStatus');
   formStatusLabel.text('Sending your message...')
-  formStatusLabel.css({'color': '#3e4029', 'background-color': '#d2d98b', 'padding': '10px'});
+  formStatusLabel.css({'color': '#2A2E01', 'background-color': '#EDED98', 'padding': '10px', 'border-color': '#2A2E01'});
 
   $.ajax({
     type: 'POST',
@@ -109,7 +109,7 @@ $('form').on('submit', (e) => {
   .done((response) => {
     console.log('Data has been received:', response);
     formStatusLabel.text(response.message), 60000;
-    formStatusLabel.css({'color': '#2b4029', 'background-color': '#91d98b', 'padding': '10px'});
+    formStatusLabel.css({'color': '#052E01', 'background-color': '#9fed98', 'padding': '10px', 'border-color': '#052E01'});
 
     $('form').trigger('reset');
 
@@ -122,6 +122,6 @@ $('form').on('submit', (e) => {
     const errorMessage = jqXHR.responseJSON.message || 'An unknown error occurred.';
     console.error('Submission failed:', errorMessage);
     formStatusLabel.text(errorMessage);
-    formStatusLabel.css({'color': '#402f29', 'background-color': '#d9a08b', 'padding': '10px'});
+    formStatusLabel.css({'color': '#2E0C01', 'background-color': '#EDAD98', 'padding': '10px', 'border-color': '#2E0C01'});
   })
 });

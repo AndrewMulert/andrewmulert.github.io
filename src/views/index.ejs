@@ -2,7 +2,7 @@
     <% if (home && home.length > 0) { %>
         <% home.forEach((home, index) => { %>
             <%
-                let cardClasses = 'row glow';
+                let cardClasses = 'row';
 
                 if (home.order && home.order.mediumView) {
                     cardClasses += ` md-grid-row-${home.order.mediumView.row} md-grid-col-${home.order.mediumView.column}`;
@@ -13,21 +13,19 @@
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>">
-                <div class="row_content">
-                    <h2 class="row_header"><%= home.title %></h2>
-                    <picture>
-                        <source srcset="<%= home.image.smallSrc %>" media="(max-width: 500px)">
-                        <source srcset="<%= home.image.mediumSrc %>" media="(max-width: 1000px)">
-                        <img class="row_image_<%= home.image.orientation %>" src="<%= home.image.minSrc %>" alt="<%= home.image.alt %>" loading="lazy">
-                    </picture>
-                    <h3 class="row_header"><%= home.timeStamp %></h3>
-                    <p><%= home.description %></p>
-                    <% if (home.button && home.button.length > 0) { %>
-                        <% home.button.forEach(btn => { %>
-                        <a href="<%= btn.href %>" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
-                        <% }) %>
-                    <% } %>
-                </div>
+                <h2 class="row_header"><%= home.title %></h2>
+                <picture>
+                    <source srcset="<%= home.image.smallSrc %>" media="(max-width: 500px)">
+                    <source srcset="<%= home.image.mediumSrc %>" media="(max-width: 1000px)">
+                    <img class="row_image_<%= home.image.orientation %>" src="<%= home.image.minSrc %>" alt="<%= home.image.alt %>" loading="lazy">
+                </picture>
+                <h3 class="row_header"><%= home.timeStamp %></h3>
+                <p><%= home.description %></p>
+                <% if (home.button && home.button.length > 0) { %>
+                    <% home.button.forEach(btn => { %>
+                    <a href="<%= btn.href %>" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
+                    <% }) %>
+                <% } %>
             </div>
         <% }) %>
     <% } else { %>

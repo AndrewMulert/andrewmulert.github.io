@@ -2,7 +2,7 @@
     <% if (projects && projects.length > 0) { %>
         <% projects.forEach((project, index) => { %>
             <%
-                let cardClasses = 'row glow';
+                let cardClasses = 'row';
 
                 if (project.order && project.order.mediumView) {
                     cardClasses += ` md-grid-row-${project.order.mediumView.row} md-grid-col-${project.order.mediumView.column}`;
@@ -13,23 +13,21 @@
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_project">
-                <div class="row_content">
-                    <h2 class="row_header"><%= project.title %></h2>
-                    <% if (project.image && project.image.minSrc) { %>
-                        <picture>
-                            <source srcset="<%= project.image.smallSrc %>" media="(max-width: 500px)">
-                            <source srcset="<%= project.image.mediumSrc %>" media="(max-width: 1000px)">
-                            <img class="row_image_<%= project.image.orientation %>" src="<%= project.image.minSrc %>" alt="<%= project.image.alt %>" loading="lazy">
-                        </picture>
-                    <% } %>
-                    <h3><%= project.languages %></h3>
-                    <p><%= project.description %></p>
-                    <% if (project.button && project.button.length > 0) { %>
-                        <% project.button.forEach(btn => { %>
-                            <a href="<%= btn.href %>" target="_blank" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
-                        <% }) %>
-                    <% } %>
-                </div>
+                <h2 class="row_header"><%= project.title %></h2>
+                <% if (project.image && project.image.minSrc) { %>
+                    <picture>
+                        <source srcset="<%= project.image.smallSrc %>" media="(max-width: 500px)">
+                        <source srcset="<%= project.image.mediumSrc %>" media="(max-width: 1000px)">
+                        <img class="row_image_<%= project.image.orientation %>" src="<%= project.image.minSrc %>" alt="<%= project.image.alt %>" loading="lazy">
+                    </picture>
+                <% } %>
+                <h3 class="row_languages"><%= project.languages %></h3>
+                <p><%= project.description %></p>
+                <% if (project.button && project.button.length > 0) { %>
+                    <% project.button.forEach(btn => { %>
+                        <a href="<%= btn.href %>" target="_blank" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
+                    <% }) %>
+                <% } %>
             </div>
         <% }) %>
     <% } else { %>

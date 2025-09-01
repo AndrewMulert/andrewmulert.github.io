@@ -2,7 +2,7 @@
     <% if (contacts && contacts.length > 0) { %>
         <% contacts.forEach((contact, index) => { %>
             <%
-                let cardClasses = 'row glow';
+                let cardClasses = 'row';
 
                 if (contact.order && contact.order.mediumView) {
                     cardClasses += ` md-grid-row-${contact.order.mediumView.row} md-grid-col-${contact.order.mediumView.column}`;
@@ -13,57 +13,55 @@
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_contact">
-                <div class="row_content">
-                    <h2 class="row_header"><%= contact.title %></h2>
-                    <% if (contact.image && contact.image.minSrc) { %>
-                        <picture>
-                            <source srcset="<%= contact.image.smallSrc %>" media="(max-width: 500px)">
-                            <source srcset="<%= contact.image.mediumSrc %>" media="(max-width: 1000px)">
-                            <img class="row_image_<%= contact.image.orientation %>" src="<%= contact.image.minSrc %>" alt="<%= contact.image.alt %>" loading="lazy">
-                        </picture>
-                    <% } %>
-                    <p><%= contact.description %></p>
-                    <% if (contact.form && contact.form.information && contact.form.information.length > 0) { %>
-                        <p><b>Required fields are labeled with *</b></p>
-                        <h3 id="formStatus"></h3>
-                        <form id="emailForm">
-                            <% contact.form.information.forEach(info => { %>
-                                <div class="formCluster">
-                                <label for="<%= info.label.for %>">
-                                    <%= info.label.text %>
-                                    <% if (info.input.required) { %>*<% } %>
-                                </label>
-                                <% if (info.input.fieldType === 'input') { %>
-                                    <input
-                                        type="<%= info.input.inputType %>"
-                                        id="<%= info.input.inputName %>"
-                                        name="<%= info.input.inputName %>"
-                                        placeholder="<%= info.input.placeholder || '' %>"
-                                        <% if (info.input.required) { %>required<% } %>
-                                        <% if (info.input.pattern) { %> pattern="<%= info.input.pattern %>"<% } %>
-                                >
-                                <% } else if (info.input.fieldType === 'textarea')  { %>
-                                    <textarea
-                                        id="<%= info.input.inputName %>"
-                                        name="<%= info.input.inputName %>"
-                                        placeholder="<%= info.input.placeholder || '' %>"
-                                        <% if (info.input.required) { %>required<% } %>
-                                        <% if (info.input.pattern) { %> pattern="<%= info.input.pattern %>"<% } %>
-                                ></textarea>
-                                <% } %>
-                                </div>
-                            <% }) %>
-                        <% if (contact.form.submitButtonText) { %>
-                            <button type="submit" class="row_button"><%= contact.form.submitButtonText %></button>
+                <h2 class="row_header"><%= contact.title %></h2>
+                <% if (contact.image && contact.image.minSrc) { %>
+                    <picture>
+                        <source srcset="<%= contact.image.smallSrc %>" media="(max-width: 500px)">
+                        <source srcset="<%= contact.image.mediumSrc %>" media="(max-width: 1000px)">
+                        <img class="row_image_<%= contact.image.orientation %>" src="<%= contact.image.minSrc %>" alt="<%= contact.image.alt %>" loading="lazy">
+                    </picture>
+                <% } %>
+                <p><%= contact.description %></p>
+                <% if (contact.form && contact.form.information && contact.form.information.length > 0) { %>
+                    <p><b>Required fields are labeled with *</b></p>
+                    <h3 id="formStatus"></h3>
+                    <form id="emailForm">
+                        <% contact.form.information.forEach(info => { %>
+                            <div class="formCluster">
+                            <label for="<%= info.label.for %>">
+                                <%= info.label.text %>
+                                <% if (info.input.required) { %>*<% } %>
+                            </label>
+                            <% if (info.input.fieldType === 'input') { %>
+                                <input
+                                    type="<%= info.input.inputType %>"
+                                    id="<%= info.input.inputName %>"
+                                    name="<%= info.input.inputName %>"
+                                    placeholder="<%= info.input.placeholder || '' %>"
+                                    <% if (info.input.required) { %>required<% } %>
+                                    <% if (info.input.pattern) { %> pattern="<%= info.input.pattern %>"<% } %>
+                            >
+                            <% } else if (info.input.fieldType === 'textarea')  { %>
+                                <textarea
+                                    id="<%= info.input.inputName %>"
+                                    name="<%= info.input.inputName %>"
+                                    placeholder="<%= info.input.placeholder || '' %>"
+                                    <% if (info.input.required) { %>required<% } %>
+                                    <% if (info.input.pattern) { %> pattern="<%= info.input.pattern %>"<% } %>
+                            ></textarea>
                             <% } %>
-                        </form>
-                    <% } %>
-                    <% if (contact.button && contact.button.length > 0) { %>
-                        <% contact.button.forEach(btn => { %>
-                            <a href="<%= btn.href %>" target="_blank" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
+                            </div>
                         <% }) %>
-                    <% } %>
-                </div>
+                    <% if (contact.form.submitButtonText) { %>
+                        <button type="submit" class="row_button"><%= contact.form.submitButtonText %></button>
+                        <% } %>
+                    </form>
+                <% } %>
+                <% if (contact.button && contact.button.length > 0) { %>
+                    <% contact.button.forEach(btn => { %>
+                        <a href="<%= btn.href %>" target="_blank" class="row_button" <% if (btn.id) { %> id="<%= btn.id %>"<% } %>><%= btn.text %></a>
+                    <% }) %>
+                <% } %>
             </div>
         <% }) %>
     <% } else { %>

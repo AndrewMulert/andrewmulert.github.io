@@ -1,10 +1,5 @@
 @use "base.scss" as base;
 
-@mixin box-style-animated($background: base.$lighter-primary-color, $shadow: base.$secondary-font-color, $value: 0px, $value2: 20px) {
-  background-color: $background;
-  box-shadow: $value $value 50px $value2 $shadow;
-}
-
 @media screen and (min-width: 40em) {
 
 
@@ -43,15 +38,12 @@
         height: 60px;
         border-radius: 30px;
         transition: width 0.5s, height 0.5s, border-radius 0.5s;
-        @include base.colors(base.$light-grey, base.$secondary-font-color);
-        animation: lightGlow 2s ease-in-out;
-        box-shadow: 0px 0px 50px 20px base.$secondary-font-color;
+        @include base.colors(base.$medium-color, base.$darkest-color);
+        box-shadow: 0px 0px 25px 10px base.$black;
 
         &.dark-mode{
-          @include base.colors(base.$dark-grey, base.$primary-font-color);
-            border-color: base.$light-grey;
-            animation: darkGlow 2s ease-in-out;
-            box-shadow: 0px 0px 50px 20px base.$light-grey;
+          @include base.colors(base.$darker-color, base.$lighter-color);
+            box-shadow: 0px 0px 25px 10px base.$white;
           }
       }
     }
@@ -61,25 +53,6 @@
       width: 40%;
       margin-bottom: 20px;
       padding: 15px;
-    }
-
-    .glow::before {
-      content: "";
-      border-radius: 35px;
-      position: absolute;
-      inset: -10px;
-      z-index: 1; 
-      top: -100%;
-      left: -100%;
-      width: 300%;
-      height: 300%;
-      background: conic-gradient(from 0deg, base.$lighter-primary-color, base.$lighter-secondary-color, base.$lighter-primary-color);
-      filter: blur(80px);
-      animation: glowRotate 4s infinite linear;
-    }
-
-    .glow.dark-mode::before{
-      background: conic-gradient(from 0deg, base.$primary-color, base.$secondary-color, base.$primary-color);
     }
   
     .hero {
@@ -98,7 +71,7 @@
         max-width: 600px;
         border-radius: 25px;
         margin-bottom: 40px;
-        box-shadow: 10px 10px 50px base.$secondary-font-color;
+        box-shadow: 10px 10px 50px base.$black;
       }
 
       &_image {
@@ -129,23 +102,33 @@
       padding-bottom: 5px;
 
       &:hover {
-        @include base.colors(base.$darkest-secondary-color, base.$lighter-secondary-color);
+        @include base.colors(base.$light-color, base.$darkest-color);
         font-weight: bold;
         text-decoration: underline;
         text-underline-offset: 5px;
         &.dark-mode {
-          @include base.colors(base.$secondary-color, base.$primary-font-color);
+          @include base.colors(base.$darker-color, base.$white);
         }
       }
     }
   
     .row {
         margin-top: 5px;
+        margin-bottom: 0px;
 
         &_button {
            &:hover {
-            background-color: base.$darkest-secondary-color;
-        }
+            background-color: base.$darkest-color;
+            border-color: base.$darkest-color;
+            color: base.$white;
+          }
+
+          &.dark-mode {
+            &:hover {
+              border-color: base.$lightest-color;
+              @include base.colors(base.$white, base.$black);
+            }
+          }
         }
 
         &_image {
@@ -162,40 +145,6 @@
                 max-width: 225px;
             }
         }
-
-        &_content {
-          border-radius: 15px;
-          padding: 20px;
-          width: calc(100% - 44px);
-          height: calc(100% - 44px);
-          background-color: #ffffffBF;
-          border: 2px solid base.$primary-color;
-
-          &.dark-mode {
-            background-color: #000000BF;
-            border: 2px solid base.$lighter-primary-color;
-          }
-        }
-    }
-
-    @keyframes lightGlow {
-      0% {
-        @include box-style-animated(base.$primary-font-color, base.$secondary-font-color, 0px, 0px);
-      }
-
-      50% {
-        @include box-style-animated(base.$primary-font-color, base.$secondary-font-color, 0px, 20px);
-      }
-    }
-
-    @keyframes darkGlow {
-      0% {
-        @include box-style-animated(base.$secondary-font-color, base.$dark-grey, 0px, 0px);
-      }
-
-      50% {
-        @include box-style-animated(base.$secondary-font-color, base.$dark-grey, 0px, 20px);
-      }
     }
   
   
@@ -216,10 +165,9 @@
     }
 
     #infinitytrain:hover {
-      background-color: #89EC92;
-      color: #0e180f;
-      border-color: #bdecc1;
-      box-shadow: 0px 0px 50px 15px #25EE37;
+      background-color: #012e05;
+      border-color: #012e05;
+      box-shadow: 0px 0px 50px 15px #89EC92;
     }
 
     #home_link {
@@ -401,7 +349,7 @@
     }
 
     .row{
-      margin-top: 20px;
+      margin-top: 10px;
       margin-bottom: 40px;
     }
 

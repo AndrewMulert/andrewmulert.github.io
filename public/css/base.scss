@@ -3,7 +3,21 @@
 
 /* variables */
 
-/* colors */
+/*new colors*/
+
+$white: #FAFCFB;
+$lightest-color: #CDFAE3;
+$transparent-lightest-color: #E4F7DADE;
+$lighter-color: #98EDD1;
+$light-color: #65D6C3;
+$medium-color: #35B5B5;
+$dark-color: #167487;
+$darker-color: #063F5C;
+$transparent-darker-color: #01172EDE;
+$darkest-color: #01172E;
+$black: #000103;
+
+/* old colors
 
 $lighter-primary-color: #F5D2B8;
 $primary-color: #A08673;
@@ -20,7 +34,7 @@ $transparent-darker-secondary-color: #363e40be;
 $primary-font-color:#ffffff;
 $secondary-font-color: #000000;
 $dark-grey:#666666;
-$light-grey: #bbbbbb;
+$light-grey: #bbbbbb; */
 
 /* fonts */
 
@@ -40,24 +54,19 @@ $display-flex: flex;
     margin-bottom: 30px;
 }
 
-@mixin box-style($background: $lighter-primary-color, $shadow: $secondary-font-color, $value: 0px) {
-    background-color: $background;
-    box-shadow: $value $value 50px 0px $shadow;
-}
-
 @mixin margin-auto($auto: auto) {
     margin-left: $auto;
     margin-right: $auto;
 }
 
-@mixin border-values($style: none, $color: $dark-grey, $width: 2px, $radius: 2px) {
+@mixin border-values($style: none, $color: $medium-color, $width: 2px, $radius: 2px) {
     border-style: $style;
     border-color: $color;
     border-width: $width;
     border-radius: $radius;
 }
 
-@mixin colors($background: $secondary-font-color, $text: $secondary-font-color) {
+@mixin colors($background: $white, $text: $black) {
     background-color: $background;
     color: $text;
 }
@@ -76,10 +85,10 @@ article {
 
 body {
     margin: 0px;
-    @include colors($primary-color, $secondary-font-color);
+    @include colors($white, $darker-color);
 
     &.dark-mode {
-        @include colors($darker-primary-color, $primary-font-color);
+        @include colors($black, $lightest-color);
     }
 }
 
@@ -95,10 +104,10 @@ form {
 
 footer {
     margin: 0px;
-    @include colors($darker-secondary-color, $primary-font-color);
+    @include colors($dark-color, $white);
 
     &.dark-mode{
-        background-color: $darkest-secondary-color !important;
+        @include colors($darker-color, $lightest-color);
     }
 
     > p{
@@ -112,7 +121,7 @@ footer {
 input, textarea {
     padding: 7px;
     border-radius: 10px;
-    border: 2px solid $darker-secondary-color;
+    border: 2px solid $medium-color;
 }
 
 label {
@@ -134,7 +143,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 2;
-    box-shadow: 0px 10px 100px 15px $secondary-font-color;
+    box-shadow: 0px 10px 100px 15px $black;
 
     a {
         display: block;
@@ -165,23 +174,24 @@ textarea {
     width: 50px;
     height: 50px;
     transition: width 0.5s, height 0.5s, border-radius 0.5s;
-    font-size: 2.25em;
-    @include border-values(solid, $dark-grey, 3px, 25px);
-    @include box-style($primary-font-color, $secondary-font-color, 0px);
+    font-size: 2.5em;
+    box-shadow: 0px 0px 25px 10px $darkest-color;
+    @include border-values(solid, $dark-color, 3px, 25px);
+    @include colors($lighter-color, $darkest-color);
     z-index: 2;
     
     &.dark-mode {
-        border-color: $light-grey;
-        color: $primary-font-color;
-        @include box-style($secondary-font-color, $dark-grey, 0px);
+        border-color: $light-color;
+        box-shadow: 0px 0px 25px 10px $lightest-color;
+        @include colors($darkest-color, $lighter-color);
     }
 }
 
 .dark_mode {
-    color: $primary-font-color;
+    color: $white;
     padding: 20px;
     border-radius: 25px;
-    @include box-style($primary-color, $secondary-font-color, 10px);
+    background-color: $light-color;
 }
 
 .formCluster {
@@ -214,11 +224,11 @@ textarea {
         display: block;
         padding: 20px;
         margin-top: -20px;
-        @include colors($transparent-secondary-color, $darkest-secondary-color);
+        @include colors($transparent-lightest-color, $darkest-color);
         text-align: center;
 
         &.dark-mode{
-            @include colors($transparent-darker-secondary-color, $primary-font-color);
+            @include colors($transparent-darker-color, $lightest-color);
         }
 
         > p {
@@ -251,10 +261,10 @@ textarea {
         padding-left: 0px;
         overflow: hidden;
         width: 100%;
-        @include colors($darker-secondary-color, $primary-font-color);
+        @include colors($darker-color, $light-color);
 
         &.dark-mode{
-            background-color: $darkest-secondary-color;
+            @include colors($darkest-color, $medium-color);
         }
     }
 
@@ -278,38 +288,26 @@ textarea {
     padding-bottom: 10px;
     display: block;
     font-weight: 500;
-    @include colors($darker-secondary-color, $primary-font-color);
+    @include colors($dark-color, $white);
 
     &.dark-mode {
-        background-color: $darkest-secondary-color;
+         @include colors($darker-color, $lightest-color);
     }
 }
 
 .row {
     @include margin;
     padding: 20px;
-    color: $secondary-font-color;
+    color: $black;
     border-radius: 35px;
+    border: 2px solid $darker-color;
     position: relative;
     overflow: hidden;
-    /*animation: glowRotate 4s infinite linear;*/
-    @include box-style ($lighter-primary-color, $secondary-font-color, 10px);
-
-    &_content{
-        /*background-color: #38383880;
-        border: #B8EEF5 3px solid;
-        padding: 20px;
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        display: grid;
-        grid-template-rows: 48px 1fr 1fr 40px;*/
-        border-radius: 25px;
-        z-index: 1;
-        position: relative;
-    }
+    background-color: $lightest-color;
 
     &.dark-mode{
-        @include colors($primary-color, $primary-font-color);
+        @include colors($darkest-color, $white);
+        border-color: $lighter-color;
     }
 
     > p {
@@ -344,38 +342,37 @@ textarea {
     &_button {
         display: inline-block;
         padding: 9px;
-        @include colors($secondary-color, $primary-font-color);
-        @include border-values (solid, $darker-secondary-color, 2px, 15px);
+        @include colors($darker-color, $lighter-color);
+        @include border-values (solid, $darker-color, 2px, 15px);
         text-decoration: none;
         font-size: 0.8em;
-        font-weight: 500px;
+        font-weight: 600;
 
         &.dark-mode {
-            background-color: $darker-secondary-color;
-            border-color: $secondary-color;
-
-            &:hover {
-                background-color: $medium-secondary-color;
-                color: $secondary-font-color;
-            }
+            @include colors($lighter-color, $darkest-color);
+            @include border-values (solid, $lighter-color, 2px, 15px);
         }
     }
 
     &_header {
         font-size: 1.7em;
         font-family:  'Crimson Pro', Georgia, 'Times New Roman', serif;
-        color: $darkest-primary-color;
+        color: $darker-color;
         margin-top: 15px;
         margin-bottom: 10px;
 
         &.dark-mode{
-            color: $primary-font-color;
+            color: $lightest-color;
         }
     }
 
     > h3 {
-        font-size: 1em;
-        color: $darker-secondary-color;
+        font-size: 1.5em;
+        color: $darker-color;
+    }
+
+    h3.row_languages {
+        font-size: 1.125em;
     }
 }
 
@@ -398,13 +395,13 @@ textarea {
     z-index: 2;
     height: 40px;
     width: 40px;
-    @include colors ($darker-secondary-color, $primary-font-color);
+    @include colors ($lighter-color, $darker-color);
     border-style: none;
     border-radius: 20px;
     transition: background-color 1s;
 
     &:focus {
-        @include colors($darkest-secondary-color, $lighter-secondary-color);
+        @include colors($light-color, $darkest-color);
         transition: background-color 1s;
       }
 }
@@ -416,6 +413,7 @@ textarea {
 #formStatus {
     font-size: 1em;
     border-radius: 15px;
+    border: transparent solid 2px;
 }
 
 #full_length{
@@ -427,7 +425,7 @@ textarea {
   
 #hidden_link {
     text-decoration: none;
-    @include colors($darker-secondary-color, $primary-font-color);
+    @include colors($darker-color, $white);
 }
 
 #home_link {
@@ -437,21 +435,21 @@ textarea {
     font-weight: 700;
     height: 30px;
     padding-top: 10px;
-    @include colors($lighter-secondary-color, $secondary-font-color);
+    @include colors($darker-color, $white);
     flex-grow: 4;
     align-self: auto;
 
     &:hover {
-        @include colors($darkest-secondary-color, $primary-font-color);
+        @include colors($light-color, $darkest-color);
         font-weight: bolder;
 
         &.dark-mode {
-            @include colors($secondary-color, $primary-font-color);
+            @include colors($darker-color, $white);
         }
     }
 
     &.dark-mode {
-        background-color: $medium-secondary-color;
+        background-color: $darkest-color;
     }
 }
 

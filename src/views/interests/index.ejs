@@ -2,7 +2,7 @@
     <% if (interests && interests.length > 0) { %>
         <% interests.forEach((interest, index) => { %>
             <%
-                let cardClasses = 'row glow';
+                let cardClasses = 'row';
 
                 if (interest.order && interest.order.mediumView) {
                     cardClasses += ` md-grid-row-${interest.order.mediumView.row} md-grid-col-${interest.order.mediumView.column}`;
@@ -13,18 +13,16 @@
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_interests">
-                <div class="row_content">
-                    <h2 class="row_header"><%= interest.title %></h2>
-                    <picture>
-                        <source srcset="<%= interest.image.smallSrc %>" media="(max-width: 500px)">
-                        <source srcset="<%= interest.image.mediumSrc %>" media="(max-width: 1000px)">
-                        <img class="row_image_<%= interest.image.orientation %>" src="<%= interest.image.minSrc %>" alt="<%= interest.image.alt %>" loading="lazy">
-                    </picture>
-                    <p><%= interest.description %></p>
-                    <% if (interest.button && interest.button.href && interest.button.text) { %>
-                        <a href="<%= interest.button.href %>" target="_blank" class="row_button" <% if (interest.button.id) { %> id="<%= interest.button.id %>"<% } %>><%= interest.button.text %></a>
-                    <% } %>
-                </div>
+                <h2 class="row_header"><%= interest.title %></h2>
+                <picture>
+                    <source srcset="<%= interest.image.smallSrc %>" media="(max-width: 500px)">
+                    <source srcset="<%= interest.image.mediumSrc %>" media="(max-width: 1000px)">
+                    <img class="row_image_<%= interest.image.orientation %>" src="<%= interest.image.minSrc %>" alt="<%= interest.image.alt %>" loading="lazy">
+                </picture>
+                <p><%= interest.description %></p>
+                <% if (interest.button && interest.button.href && interest.button.text) { %>
+                    <a href="<%= interest.button.href %>" target="_blank" class="row_button" <% if (interest.button.id) { %> id="<%= interest.button.id %>"<% } %>><%= interest.button.text %></a>
+                <% } %>
             </div>
         <% }) %>
     <% } else { %>

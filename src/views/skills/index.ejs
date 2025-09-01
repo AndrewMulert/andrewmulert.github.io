@@ -2,7 +2,7 @@
     <% if (skills && skills.length > 0) { %>
         <% skills.forEach((skill, index) => { %>
             <%
-                let cardClasses = 'row glow';
+                let cardClasses = 'row';
 
                 if (skill.order && skill.order.mediumView) {
                     cardClasses += ` md-grid-row-${skill.order.mediumView.row} md-grid-col-${skill.order.mediumView.column}`;
@@ -13,18 +13,16 @@
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_skills">
-                <div class="row_content">
-                    <h2 class="row_header"><%= skill.title %></h2>
-                    <picture>
-                        <source srcset="<%= skill.image.smallSrc %>" media="(max-width: 500px)">
-                        <source srcset="<%= skill.image.mediumSrc %>" media="(max-width: 1000px)">
-                        <img class="row_image_<%= skill.image.orientation %>" src="<%= skill.image.minSrc %>" alt="<%= skill.image.alt %>" loading="lazy">
-                    </picture>
-                    <p><%= skill.description %></p>
-                    <% if (skill.button && skill.button.href && skill.button.text) { %>
-                        <a href="<%= skill.button.href %>" target="_blank" class="row_button" <% if (skill.button.id) { %> id="<%= skill.button.id %>"<% } %>><%= skill.button.text %></a>
-                    <% } %>
-                </div>
+                <h2 class="row_header"><%= skill.title %></h2>
+                <picture>
+                    <source srcset="<%= skill.image.smallSrc %>" media="(max-width: 500px)">
+                    <source srcset="<%= skill.image.mediumSrc %>" media="(max-width: 1000px)">
+                    <img class="row_image_<%= skill.image.orientation %>" src="<%= skill.image.minSrc %>" alt="<%= skill.image.alt %>" loading="lazy">
+                </picture>
+                <p><%= skill.description %></p>
+                <% if (skill.button && skill.button.href && skill.button.text) { %>
+                    <a href="<%= skill.button.href %>" target="_blank" class="row_button" <% if (skill.button.id) { %> id="<%= skill.button.id %>"<% } %>><%= skill.button.text %></a>
+                <% } %>
             </div>
         <% }) %>
     <% } else { %>
