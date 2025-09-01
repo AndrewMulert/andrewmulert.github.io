@@ -81,7 +81,7 @@ router.post('/', async (req, res) => {
     const spamWords = spamWordsString.split(',');
     
     const swearWordsString = process.env.SWEAR_WORDS;
-    const SwearWords = swearWordsString.split(',');
+    const swearWords = swearWordsString.split(',');
 
     const { fname, lname, email, tel, msg } = req.body;
 
