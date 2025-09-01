@@ -77,49 +77,12 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const spamWords = [
-  'affiliate', 'affiliates',
-  'backlinks', 'bitcoin', 'boost', 'business',
-  'check site', 'clients', 'collaboration', 'crypto',
-  'deal', 'digital',
-  'earn', 'exclusive',
-  'free',
-  'guaranteed', 'get paid',
-  'invest',
-  'limited time',
-  'money', 'monkeydigital',
-  'offer', 'opportunity',
-  'platform', 'promotions', 'proposals', 'profit',
-  'ranking',
-  'security alert', 'seo', 'service', 'solution', 'speed-seo', 'strictlydigital', 'suspicious activity',
-  'telegram', 'traffic',
-  'verify',
-  'whatsapp'
-];
-    const swearWords = [
-  'abusing', 'anal', 'analisis', 'arse', 'ass', 'asshole',
-  'bitch', 'bitches', 'boob', 'boobs', 'bondage', 'breast', 'breasts', 'butthole',
-  'chink', 'chode', 'clit', 'cock', 'cum', 'cunt', 'ching chong',
-  'damn god', 'damn jesus', 'damn lord', 'dammit', 'dammit to hell', 'dyke',
-  'erome',
-  'fag', 'faggot', 'fck', 'fkn', 'fvck', 'fucking', 'fuck', 'fancentro',
-  'g_d', 'gawd', 'gay', 'god', 'goddamn', 'goddamnit', 'go back to where you came from',
-  'harass', 'harassing', 'harassment', 'harrass', 'harrassing', 'harrassment', 'hate', 'hell', 'hoe', 'homicide',
-  'incest', 'injun',
-  'jesus christ', 'jesus h christ', 'jism', 'jizz',
-  'k!ll yourself', 'kill yourself', 'knob',
-  'lesbian', 'linktr.ee', 'linktree',
-  'masturbate', 'mfker', 'molest', 'molesting', 'motherfucker', 'motherfuck', 'murder', 'my god',
-  'nazi', 'nipple', 'nipples', 'naked', 'nude', 'nword',
-  'oh my god', 'onlyfans', 'oral', 'orgy', 'orgasm',
-  'penis', 'porn', 'pornography', 'pornhub', 'prick',
-  'racism', 'racist', 'rape', 'raping', 'redtube', 'retard', 'spic',
-  'sh!t', 'shitting', 'shit', 'slut', 'slutty', 's_e_x', 'sex', 'sexual', 'sexting', 'stripping', 'suicidal', 'suicide', 'suck my dick',
-  'terrorist', 'threesome', 'threat', 'threatening', 'tit', 'tits', 'tittie', 'titties', 'tranny',
-  'vagina', 'violence', 'violent', 'vos',
-  'whore', 'white power', 'wop',
-  'xhamster', 'xnxx', 'xvideos'
-];
+    const spamWordsString = process.env.SPAM_WORDS;
+    const spamWords = spamWordsString.split(',');
+    
+    const swearWordsString = process.env.SWEAR_WORDS;
+    const SwearWords = swearWordsString.split(',');
+
     const { fname, lname, email, tel, msg } = req.body;
 
     const lowerCaseMsg = msg.toLowerCase();
