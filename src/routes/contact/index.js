@@ -77,7 +77,54 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+    const spamWords = [
+  'affiliate', 'affiliates',
+  'backlinks', 'bitcoin', 'boost', 'business',
+  'check site', 'clients', 'collaboration', 'crypto',
+  'deal', 'digital',
+  'earn', 'exclusive',
+  'free',
+  'guaranteed', 'get paid',
+  'invest',
+  'limited time',
+  'money', 'monkeydigital',
+  'offer', 'opportunity',
+  'platform', 'promotions', 'proposals', 'profit',
+  'ranking',
+  'security alert', 'seo', 'service', 'solution', 'speed-seo', 'strictlydigital', 'suspicious activity',
+  'telegram', 'traffic',
+  'verify',
+  'whatsapp'
+];
+    const swearWords = [
+  'abusing', 'anal', 'analisis', 'arse', 'ass', 'asshole',
+  'bitch', 'bitches', 'boob', 'boobs', 'bondage', 'breast', 'breasts', 'butthole',
+  'chink', 'chode', 'clit', 'cock', 'cum', 'cunt', 'ching chong',
+  'damn god', 'damn jesus', 'damn lord', 'dammit', 'dammit to hell', 'dyke',
+  'erome',
+  'fag', 'faggot', 'fck', 'fkn', 'fvck', 'fucking', 'fuck', 'fancentro',
+  'g_d', 'gawd', 'gay', 'god', 'goddamn', 'goddamnit', 'go back to where you came from',
+  'harass', 'harassing', 'harassment', 'harrass', 'harrassing', 'harrassment', 'hate', 'hell', 'hoe', 'homicide',
+  'incest', 'injun',
+  'jesus christ', 'jesus h christ', 'jism', 'jizz',
+  'k!ll yourself', 'kill yourself', 'knob',
+  'lesbian', 'linktr.ee', 'linktree',
+  'masturbate', 'mfker', 'molest', 'molesting', 'motherfucker', 'motherfuck', 'murder', 'my god',
+  'nazi', 'nipple', 'nipples', 'naked', 'nude', 'nword',
+  'oh my god', 'onlyfans', 'oral', 'orgy', 'orgasm',
+  'penis', 'porn', 'pornography', 'pornhub', 'prick',
+  'racism', 'racist', 'rape', 'raping', 'redtube', 'retard', 'spic',
+  'sh!t', 'shitting', 'shit', 'slut', 'slutty', 's_e_x', 'sex', 'sexual', 'sexting', 'stripping', 'suicidal', 'suicide', 'suck my dick',
+  'terrorist', 'threesome', 'threat', 'threatening', 'tit', 'tits', 'tittie', 'titties', 'tranny',
+  'vagina', 'violence', 'violent', 'vos',
+  'whore', 'white power', 'wop',
+  'xhamster', 'xnxx', 'xvideos'
+];
     const { fname, lname, email, tel, msg } = req.body;
+
+    const lowerCaseMsg = msg.toLowerCase();
+    const containsSpam = spamWords.some(word => lowerCaseMsg.includes(word));
+    const containsSwears = swearWords.some(word => lowerCaseMsg.includes(word));
 
     if (!fname || fname.length < 2){
         return res.status(400).json({ message: "A first name is required."});
@@ -90,6 +137,14 @@ router.post('/', async (req, res) => {
     } 
     if (!msg || msg.length < 2){
         return res.status(400).json({ message: "A message is required."});
+    }
+    if (containsSpam) {
+        console.log('Blocked spam message from:', email);
+        return res.status(400).json({ message: "Your message was flagged as spam and could not be sent. If this is an error, please try again without using any promotional keywords."})
+    }
+    if (containsSwears) {
+        console.log('Blocked inappropriate message from:', email);
+        return res.status(400).json({ message: "Your message was flagged as inappropriate due to the use of certain keywords and could not be sent. Please review your message for any language, including slang, profanity, or threat-related terms, and try again."});
     }
 
     try {
