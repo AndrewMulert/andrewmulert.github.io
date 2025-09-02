@@ -29,6 +29,9 @@ const homeSchema = new mongoose.Schema({
         mediumView: {
             row: Number,
             column: Number
+        },
+        position: {
+            type: Number
         }
     }
 },

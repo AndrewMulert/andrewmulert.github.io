@@ -321,6 +321,9 @@ textarea {
 .row h3.row_languages {
   font-size: 1.125em;
 }
+.row h3.row_languages.dark-mode {
+  color: #98EDD1;
+}
 
 .show {
   display: none;

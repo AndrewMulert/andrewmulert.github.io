@@ -2,14 +2,10 @@
     <% if (about && about.length > 0) { %>
         <% about.forEach((about, index) => { %>
             <%
-                let cardClasses = 'row';
+                let cardClasses = 'row row_home';
 
-                if (about.order && about.order.mediumView) {
-                    cardClasses += ` md-grid-row-${about.order.mediumView.row} md-grid-col-${about.order.mediumView.column}`;
-                }
-
-                if (about.order && about.order.largeView) {
-                    cardClasses += ` lg-grid-row-$about.order.largeView.row} lg-grid-col-${about.order.largeView.column}`;
+                if (about.order) {
+                    cardClasses += ` md-grid-${about.order.position} lg-grid-${about.order.position}`;
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>">

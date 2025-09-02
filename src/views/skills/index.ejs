@@ -2,14 +2,14 @@
     <% if (skills && skills.length > 0) { %>
         <% skills.forEach((skill, index) => { %>
             <%
-                let cardClasses = 'row';
+                let cardClasses = 'row ';
 
                 if (skill.order && skill.order.mediumView) {
-                    cardClasses += ` md-grid-row-${skill.order.mediumView.row} md-grid-col-${skill.order.mediumView.column}`;
+                    cardClasses += ` md-grid-${skill.order.position} `;
                 }
 
                 if (skill.order && skill.order.largeView) {
-                    cardClasses += ` lg-grid-row-${skill.order.largeView.row} lg-grid-col-${skill.order.largeView.column}`;
+                    cardClasses += ` lg-grid-${skill.order.position} `;
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_skills">

@@ -373,6 +373,10 @@ textarea {
 
     h3.row_languages {
         font-size: 1.125em;
+
+        &.dark-mode{
+            color: $lighter-color;
+        }
     }
 }
 

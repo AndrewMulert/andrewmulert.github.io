@@ -37,6 +37,9 @@ const skillSchema = new mongoose.Schema({
         largeView: {
             row: Number,
             column: Number
+        },
+        position: {
+            type: Number
         }
     }
 },

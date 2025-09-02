@@ -1,15 +1,11 @@
-<article>
+<article id="articleProjects">
     <% if (projects && projects.length > 0) { %>
         <% projects.forEach((project, index) => { %>
             <%
                 let cardClasses = 'row';
 
-                if (project.order && project.order.mediumView) {
-                    cardClasses += ` md-grid-row-${project.order.mediumView.row} md-grid-col-${project.order.mediumView.column}`;
-                }
-
-                if (project.order && project.order.largeView) {
-                    cardClasses += ` lg-grid-row-${project.order.largeView.row} lg-grid-col-${project.order.largeView.column}`;
+                if (project.order) {
+                    cardClasses += ` md-grid-${project.order.position} lg-grid-${project.order.position}`;
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_project">

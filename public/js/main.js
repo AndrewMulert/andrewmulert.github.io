@@ -63,7 +63,7 @@ function handleScroll() {
 
 function toggleDarkMode(enabled) {
   document.body.classList.toggle('dark-mode', enabled);
-  const elements = document.querySelectorAll('.row, .row_header, .row_content, .circle, .row_button, .page_link, footer, #home_link, .nav_items, .glow, .hero_text, #infinitytraingradient');
+  const elements = document.querySelectorAll('.row, .row_header, .row_content, .row_languages, .circle, .row_button, .page_link, footer, #home_link, .nav_items, .glow, .hero_text, #infinitytraingradient');
   elements.forEach(element => element.classList.toggle('dark-mode', enabled));
 }
 

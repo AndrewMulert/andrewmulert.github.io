@@ -5,11 +5,11 @@
                 let cardClasses = 'row';
 
                 if (contact.order && contact.order.mediumView) {
-                    cardClasses += ` md-grid-row-${contact.order.mediumView.row} md-grid-col-${contact.order.mediumView.column}`;
+                    cardClasses += ` md-grid-${contact.order.position}_contact `;
                 }
 
                 if (contact.order && contact.order.largeView) {
-                    cardClasses += `lg-grid-row-${contact.order.largeView.row} lg-grid-col-${contact.order.largeView.column}`;
+                    cardClasses += ` lg-grid-${contact.order.position}_contact `;
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_contact">

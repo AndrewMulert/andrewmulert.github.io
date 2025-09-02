@@ -33,6 +33,9 @@ const contactSchema = new mongoose.Schema({
         largeView: {
             row: Number,
             column: Number
+        },
+        position: {
+            type: Number
         }
     },
     form: {

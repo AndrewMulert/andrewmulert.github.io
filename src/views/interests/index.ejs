@@ -5,11 +5,11 @@
                 let cardClasses = 'row';
 
                 if (interest.order && interest.order.mediumView) {
-                    cardClasses += ` md-grid-row-${interest.order.mediumView.row} md-grid-col-${interest.order.mediumView.column}`;
+                    cardClasses += ` md-grid-${interest.order.position} `;
                 }
 
                 if (interest.order && interest.order.largeView) {
-                    cardClasses += ` lg-grid-row-${interest.order.largeView.row} lg-grid-col-${interest.order.largeView.column}`;
+                    cardClasses += ` lg-grid-${interest.order.position} `;
                 }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_interests">
