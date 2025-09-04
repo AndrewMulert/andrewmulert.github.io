@@ -324,6 +324,9 @@ textarea {
 .row h3.row_languages {
   font-size: 1.125em;
 }
+.row h3.row_languages.dark-mode {
+  color: #98EDD1;
+}
 
 .show {
   display: none;
@@ -768,6 +771,10 @@ textarea {
   font-size: 1.125em;
 }
 
+.row h3.row_languages.dark-mode {
+  color: #98EDD1;
+}
+
 .show {
   display: none;
 }
@@ -1046,9 +1053,9 @@ textarea {
   }
   #articleProjects {
     grid-template-columns: 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-rows: 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
   }
-  #card6_project #card5_skills {
+  #card6_project, #card5_skills, #card2_contact {
     margin-bottom: 20px;
   }
   #dropDown {
@@ -1173,7 +1180,7 @@ textarea {
     grid-template-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-rows: 20px 1fr 20px 1fr 20px 1fr 20px;
   }
-  #card6_project #card5skills {
+  #card6_project, #card5skills, #card2_contact {
     margin-bottom: 0px;
   }
   #infinitytraingradient_card1 {
