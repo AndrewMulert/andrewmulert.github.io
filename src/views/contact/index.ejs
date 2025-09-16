@@ -28,28 +28,28 @@
                     <form id="emailForm">
                         <% contact.form.information.forEach(info => { %>
                             <div class="formCluster">
-                            <label for="<%= info.label.for %>">
-                                <%= info.label.text %>
-                                <% if (info.input.required) { %>*<% } %>
-                            </label>
-                            <% if (info.input.fieldType === 'input') { %>
-                                <input
-                                    type="<%= info.input.inputType %>"
-                                    id="<%= info.input.inputName %>"
-                                    name="<%= info.input.inputName %>"
-                                    placeholder="<%= info.input.placeholder || '' %>"
-                                    <% if (info.input.required) { %>required<% } %>
-                                    <% if (info.input.pattern) { %> pattern="<%= info.input.pattern %>"<% } %>
-                            >
-                            <% } else if (info.input.fieldType === 'textarea')  { %>
-                                <textarea
-                                    id="<%= info.input.inputName %>"
-                                    name="<%= info.input.inputName %>"
-                                    placeholder="<%= info.input.placeholder || '' %>"
-                                    <% if (info.input.required) { %>required<% } %>
-                                    <% if (info.input.pattern) { %> pattern="<%= info.input.pattern %>"<% } %>
-                            ></textarea>
-                            <% } %>
+                                <label for="<%= info.label.for %>">
+                                    <%= info.label.text %>
+                                    <% if (info.input.required) { %>*<% } %>
+                                </label>
+                                <% if (info.input.fieldType === 'input') { %>
+                                    <input
+                                        type="<%= info.input.inputType %>"
+                                        id="<%= info.input.inputName %>"
+                                        name="<%= info.input.inputName %>"
+                                        placeholder="<%= info.input.placeholder || '' %>"
+                                        <% if (info.input.required) { %>required<% } %>
+                                        <% if (info.input.pattern) { %> pattern="<%= info.input.pattern %>"<% } %>
+                                >
+                                <% } else if (info.input.fieldType === 'textarea')  { %>
+                                    <textarea
+                                        id="<%= info.input.inputName %>"
+                                        name="<%= info.input.inputName %>"
+                                        placeholder="<%= info.input.placeholder || '' %>"
+                                        <% if (info.input.required) { %>required<% } %>
+                                        <% if (info.input.pattern) { %> pattern="<%= info.input.pattern %>"<% } %>
+                                    ></textarea>
+                                <% } %>
                             </div>
                         <% }) %>
                     <% if (contact.form.submitButtonText) { %>

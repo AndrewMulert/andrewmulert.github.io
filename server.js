@@ -32,52 +32,52 @@ async function startServer() {
         await connectDB();
 
         app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'src/views'));
+        app.set('views', path.join(__dirname, 'src/views'));
 
-app.set('layout default', 'default');
-app.set('layouts', path.join(__dirname, 'src/views/layouts'));
-app.use(layouts);
-
-
-app.use(express.json());
-
-app.use(express.urlencoded({ extended: true }));
+        app.set('layout default', 'default');
+        app.set('layouts', path.join(__dirname, 'src/views/layouts'));
+        app.use(layouts);
 
 
-app.use('/', homeRoute);
-app.use('/about', aboutRoute);
-app.use('/contact', contactRoute);
-app.use('/interests', interestsRoute);
-app.use('/projects', projectsRoute);
-app.use('/skills', skillsRoute);
+        app.use(express.json());
 
-//app.use(notFoundHandler);
-//app.use(globalErrorHandler);
+        app.use(express.urlencoded({ extended: true }));
 
 
-if (mode.includes('dev')) {
-    const ws = await import('ws');
+        app.use('/', homeRoute);
+        app.use('/about', aboutRoute);
+        app.use('/contact', contactRoute);
+        app.use('/interests', interestsRoute);
+        app.use('/projects', projectsRoute);
+        app.use('/skills', skillsRoute);
 
-    try {
-        const wsPort = parseInt(port) + 1;
-        const wsServer = new ws.WebSocketServer({ port: wsPort });
+        //app.use(notFoundHandler);
+        //app.use(globalErrorHandler);
 
-        wsServer.on('listening', () => {
-            console.log(`WebSocket server is running on port ${wsPort}`);
+
+        if (mode.includes('dev')) {
+            const ws = await import('ws');
+
+            try {
+                const wsPort = parseInt(port) + 1;
+                const wsServer = new ws.WebSocketServer({ port: wsPort });
+
+                wsServer.on('listening', () => {
+                    console.log(`WebSocket server is running on port ${wsPort}`);
+                });
+
+                wsServer.on('error', (error) => {
+                    console.error('WebSocket server error:', error);
+                });
+            } catch (error) {
+                console.error('Failed to start WebSocket server:', error);
+            }
+        }
+
+
+        app.listen(port, '0.0.0.0', async () => {
+            console.log(`Server running on http://127.0.0.1:${port}`);
         });
-
-        wsServer.on('error', (error) => {
-            console.error('WebSocket server error:', error);
-        });
-    } catch (error) {
-        console.error('Failed to start WebSocket server:', error);
-    }
-}
-
-
-app.listen(port, '0.0.0.0', async () => {
-    console.log(`Server running on http://127.0.0.1:${port}`);
-});
     } catch (error) {
         console.error('Failed to start server due to database connection error:', error);
         process.exit(1);
