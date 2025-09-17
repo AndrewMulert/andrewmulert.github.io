@@ -78,6 +78,7 @@ input, textarea {
   padding: 7px;
   border-radius: 10px;
   border: 2px solid #35B5B5;
+  resize: none;
 }
 
 label {
@@ -116,6 +117,7 @@ svg {
 
 textarea {
   height: 100px;
+  width: auto;
 }
 
 /* classes */
@@ -498,6 +500,7 @@ input, textarea {
   padding: 7px;
   border-radius: 10px;
   border: 2px solid #35B5B5;
+  resize: none;
 }
 
 label {
@@ -538,6 +541,7 @@ svg {
 
 textarea {
   height: 100px;
+  width: auto;
 }
 
 /* classes */

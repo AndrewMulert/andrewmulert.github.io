@@ -122,6 +122,7 @@ input, textarea {
     padding: 7px;
     border-radius: 10px;
     border: 2px solid $medium-color;
+    resize: none;
 }
 
 label {
@@ -162,6 +163,7 @@ svg {
 
 textarea {
     height: 100px;
+    width: auto;
 }
 
 
