@@ -728,7 +728,7 @@ textarea {
     grid-template-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-rows: 20px 1fr 20px 1fr 20px 1fr 20px;
   }
-  #card6_project, #card5skills, #card2_contact {
+  #card6_project, #card5skills, #card2_contact, #card5_project {
     margin-bottom: 0px;
   }
   #infinitytraingradient_card1 {
