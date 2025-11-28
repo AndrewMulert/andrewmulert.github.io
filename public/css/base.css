@@ -87,7 +87,7 @@ label {
 
 main {
   display: grid;
-  grid-template-columns: 20px 1fr 20px;
+  grid-template-columns: 5% 1fr 5%;
   margin-top: 30px;
 }
 
@@ -180,6 +180,7 @@ textarea {
   background-color: rgba(228, 247, 218, 0.8705882353);
   color: #01172E;
   text-align: center;
+  border-bottom: 2px solid #063F5C;
 }
 .hero_text.dark-mode {
   background-color: rgba(1, 23, 46, 0.8705882353);

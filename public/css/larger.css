@@ -87,7 +87,7 @@ label {
 
 main {
   display: grid;
-  grid-template-columns: 20px 1fr 20px;
+  grid-template-columns: 5% 1fr 5%;
   margin-top: 30px;
 }
 
@@ -180,6 +180,7 @@ textarea {
   background-color: rgba(228, 247, 218, 0.8705882353);
   color: #01172E;
   text-align: center;
+  border-bottom: 2px solid #063F5C;
 }
 .hero_text.dark-mode {
   background-color: rgba(1, 23, 46, 0.8705882353);
@@ -475,12 +476,13 @@ textarea {
     min-width: 325px;
     width: 60%;
     max-width: 600px;
+    border-bottom: none;
     border-radius: 25px;
     margin-bottom: 40px;
     box-shadow: 10px 10px 50px #000103;
   }
   .hero_image {
-    max-height: 725px;
+    max-height: 525px;
   }
   .md-grid-1 {
     grid-column: 1/1;
@@ -750,5 +752,10 @@ textarea {
   }
   #infinitytraingradient_card8.dark-mode:hover::before {
     background: conic-gradient(from 0deg, #0c4e12, #169621, #0c4e12);
+  }
+}
+@media screen and (min-width: 100em) {
+  .hero_image {
+    max-height: 725px;
   }
 }/*# sourceMappingURL=larger.css.map */

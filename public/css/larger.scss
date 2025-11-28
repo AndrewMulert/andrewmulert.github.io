@@ -69,13 +69,14 @@
       min-width: 325px;
       width: 60%;
       max-width: 600px;
+      border-bottom: none;
       border-radius: 25px;
       margin-bottom: 40px;
       box-shadow: 10px 10px 50px base.$black;
     }
 
     &_image {
-      max-height: 725px;
+      max-height: 525px;
     }
   }
 
@@ -278,8 +279,10 @@
     grid-template-rows: none;
   }
     
-  .hero_text {
-    top: 35%;
+  .hero{
+    &_text {
+      top: 35%;
+    }
   }
 
   .lg-grid-{
@@ -429,5 +432,13 @@
 
   #infinitytraingradient_card8.dark-mode:hover::before {
     background: conic-gradient(from 0deg, #0c4e12, #169621, #0c4e12);
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .hero{
+    &_image{
+      max-height: 725px;
+    }
   }
 }

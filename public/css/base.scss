@@ -134,7 +134,7 @@ label {
 
 main {
     display: $display-grid;
-    grid-template-columns: 20px 1fr 20px;
+    grid-template-columns: 5% 1fr 5%;
     margin-top: 30px;
 }
 
@@ -228,6 +228,7 @@ textarea {
         margin-top: -20px;
         @include colors($transparent-lightest-color, $darkest-color);
         text-align: center;
+        border-bottom: 2px solid $darker-color;
 
         &.dark-mode{
             @include colors($transparent-darker-color, $lightest-color);

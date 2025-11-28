@@ -936,7 +936,7 @@ textarea {
     box-shadow: 10px 10px 50px #000103;
   }
   .hero_image {
-    max-height: 725px;
+    max-height: 525px;
   }
   .md-grid-1 {
     grid-column: 1/1;
@@ -1090,6 +1090,9 @@ textarea {
     grid-template-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-rows: none;
   }
+  .hero_image {
+    max-height: 725px;
+  }
   .hero_text {
     top: 35%;
   }
@@ -1184,7 +1187,7 @@ textarea {
     grid-template-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-rows: 20px 1fr 20px 1fr 20px 1fr 20px;
   }
-  #card6_project, #card5skills, #card2_contact {
+  #card6_project, #card5skills, #card2_contact, #card5_project {
     margin-bottom: 0px;
   }
   #infinitytraingradient_card1 {
