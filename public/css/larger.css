@@ -606,7 +606,7 @@ textarea {
     grid-template-rows: 40px 1fr 40px 1fr 40px 1fr 40px 1fr;
   }
   #card6_project, #card5_skills, #card2_contact, #card5_project {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   #dropDown {
     display: none;
@@ -708,7 +708,7 @@ textarea {
     grid-row: 8/8;
   }
   .row {
-    margin-top: 10px;
+    margin-top: 0px;
   }
   .row_home {
     margin-bottom: 40px;
@@ -730,7 +730,7 @@ textarea {
     grid-template-columns: 1fr 40px 1fr 40px 1fr;
     grid-template-rows: 40px 1fr 40px 1fr 40px 1fr 40px;
   }
-  #card6_project, #card5skills, #card2_contact, #card5_project {
+  #card6_project, #card5_skills, #card2_contact, #card5_project {
     margin-bottom: 0px;
   }
   #infinitytraingradient_card1 {
