@@ -87,7 +87,7 @@ label {
 
 main {
   display: grid;
-  grid-template-columns: 5% 1fr 5%;
+  grid-template-columns: 10% 1fr 10%;
   margin-top: 30px;
 }
 
@@ -422,8 +422,8 @@ textarea {
 @media screen and (min-width: 40em) {
   article {
     display: grid;
-    grid-template-columns: 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 10px 1fr 20px;
+    grid-template-columns: 1fr 40px 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr 40px;
   }
   footer {
     display: flex;
@@ -569,7 +569,7 @@ textarea {
     color: #FAFCFB;
   }
   .row {
-    margin-top: 5px;
+    margin-top: 0px;
     margin-bottom: 0px;
   }
   .row_button:hover {
@@ -594,16 +594,16 @@ textarea {
   }
   /* IDs*/
   #articleInterests {
-    grid-template-columns: 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px;
+    grid-template-columns: 1fr 40px 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px;
   }
   #articleContact {
-    grid-template-columns: 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 20px 1fr 20px;
+    grid-template-columns: 1fr 40px 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr 40px;
   }
   #articleProjects {
-    grid-template-columns: 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 40px 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr 40px 1fr 40px 1fr;
   }
   #card6_project, #card5_skills, #card2_contact, #card5_project {
     margin-bottom: 20px;
@@ -633,7 +633,7 @@ textarea {
 }
 @media screen and (min-width: 70em) {
   article {
-    grid-template-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
     grid-template-rows: none;
   }
   .hero_text {
@@ -715,20 +715,20 @@ textarea {
   }
   /* ID's */
   #articleContact {
-    grid-template-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 10px 1fr 20px;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
+    grid-template-rows: 40px 1fr 10px 1fr 40px;
   }
   #articleSkills {
-    grid-template-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 10px 1fr 20px;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr 40px;
   }
   #articleInterests {
-    grid-template-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 10px 1fr 20px 1fr 20px 1fr 20px;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr 40px 1fr 40px 1fr 40px;
   }
   #articleProjects {
-    grid-template-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-rows: 20px 1fr 20px 1fr 20px 1fr 20px;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr 40px 1fr 40px;
   }
   #card6_project, #card5skills, #card2_contact, #card5_project {
     margin-bottom: 0px;
