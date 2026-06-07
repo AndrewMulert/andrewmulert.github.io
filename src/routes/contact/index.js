@@ -93,6 +93,9 @@ router.post('/', async (req, res) => {
     const fnameContainsSpam = spamWords.some(word => lowerCaseFname.includes(word));
     const fnameContainsSwears = swearWords.some(word => lowerCaseFname.includes(word));
     const lnameContainsSwears = swearWords.some(word => lowerCaseLname.includes(word));
+    const emailDomain = email.split('@')[1]?.toLowerCase();
+    const blockedDomains = ['immenseignite.info'];
+    const gibberishRegex = /[^aeiouy\s]{7,}/i;
 
     if (!fname || fname.length < 2){
         return res.status(400).json({ message: "A first name is required."});
@@ -125,6 +128,14 @@ router.post('/', async (req, res) => {
     if (lnameContainsSwears) {
         console.log('Blocked inappropriate message from:', email);
         return res.status(400).json({ message: "Your last name was flagged as inappropriate due to the use of certain keywords and could not be sent. Please review your message for any language, including slang, profanity, or threat-related terms, and try again."});
+    }
+    if (blockedDomains.includes(emailDomain)) {
+        console.log(`Blocked submission from banned domain: ${email}`);
+        return res.status(400).json({ message: "Your message could not be sent." });
+    }
+    if (gibberishRegex.test(fname) || gibberishRegex.test(lname) || gibberishRegex.test(msg)) {
+        console.log('Blocked suspected automated gibberish submission.');
+        return res.status(400).json({ message: "Your message was flagged as automated spam." });
     }
 
     try {
