@@ -201,6 +201,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
 .nav_bar {
   display: flex;
 }
@@ -601,7 +605,7 @@ textarea {
   }
   #articleContact {
     grid-template-columns: 1fr 40px 1fr;
-    grid-template-rows: 40px 1fr 40px 1fr 40px;
+    grid-template-rows: 40px 1fr 40px;
   }
   #articleProjects {
     grid-template-columns: 1fr 40px 1fr;
@@ -718,7 +722,7 @@ textarea {
   /* ID's */
   #articleContact {
     grid-template-columns: 1fr 40px 1fr 40px 1fr;
-    grid-template-rows: 40px 1fr 10px 1fr 40px;
+    grid-template-rows: 40px 1fr 40px;
   }
   #articleSkills {
     grid-template-columns: 1fr 40px 1fr 40px 1fr;

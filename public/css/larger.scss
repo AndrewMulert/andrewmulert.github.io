@@ -231,7 +231,7 @@
 
   #articleContact {
     grid-template-columns: 1fr 40px 1fr;
-    grid-template-rows: 40px 1fr 40px 1fr 40px;
+    grid-template-rows: 40px 1fr 40px /*1fr 40px*/;
   }
 
   #articleProjects {
@@ -386,7 +386,7 @@
 
   #articleContact {
     grid-template-columns: 1fr 40px 1fr 40px 1fr;
-    grid-template-rows: 40px 1fr 10px 1fr 40px;
+    grid-template-rows: 40px 1fr /*10px 1fr*/ 40px;
   }
 
   #articleSkills {
