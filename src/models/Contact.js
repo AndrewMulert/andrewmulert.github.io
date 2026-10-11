@@ -6,6 +6,9 @@ const contactSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    class: [{
+        name: { type: String }
+    }],
     description: {
         type: String,
         required: true
