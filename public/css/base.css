@@ -125,7 +125,7 @@ textarea {
   width: 50px;
   height: 50px;
   transition: width 0.5s, height 0.5s, border-radius 0.5s;
-  font-size: 2.5em;
+  font-size: 1.5em;
   box-shadow: 0px 0px 25px 10px #01172E;
   border-style: solid;
   border-color: #167487;
