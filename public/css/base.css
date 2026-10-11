@@ -201,6 +201,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
 .nav_bar {
   display: flex;
 }
