@@ -11,6 +11,10 @@
                 if (contact.order && contact.order.largeView) {
                     cardClasses += ` lg-grid-${contact.order.position}_contact `;
                 }
+
+                if (contact.class & contact.class.length > 0) {
+                    cardClasses += ` ${contact.class} `;
+                }
             %>
             <div class="<%= cardClasses %>" id="card<%= index + 1 %>_contact">
                 <h2 class="row_header"><%= contact.title %></h2>
